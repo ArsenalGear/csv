@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  //outline: 0;
+  //letter-spacing: 0.5px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 400 1rem/1.125rem;
+  font-family: $font-main, Arial, sans-serif;
+  color: $text;
+  background: $white;
+}
+
+main {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $text;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 3.34rem;
+}
+h2 {
+  font-size: 1.5rem;
+  line-height: 3.16rem;
+}
+h3 {
+  font-size: 1.17rem;
+  line-height: 3.17rem;
+}
+h4 {
+  font-size: 1rem;
+  line-height: 1.33rem;
+}
+h5 {
+  font-size: 0.83rem;
+  line-height: 1.67rem;
+}
+h6 {
+  font-size: 0.67rem;
+  line-height: 2.33rem;
+}
+
+p {
+  font: inherit;
+  color: $text;
+}
+
+b, strong {
+  color: inherit;
+  font: inherit;
+  font-weight: bold;
+}
+
+ul {
+  padding: 0;
+  margin:  0;
+}
+
+li {
+  list-style: none;
+}
+
+fieldset {
+  border: 0;
+}
+
+label {
+  margin: 0;
+}
+
+input {
+
+  &[type=checkbox],
+  &[type=radio]
+  {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &::-ms-clear {
+      display: none;
+    }
+  }
+
+  &[type=number] {
+    -moz-appearance: textfield;
+
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+a, button, input {
+  //outline: 0;
+
+  &:focus {
+    //outline: 0;
+  }
+}
+
+textarea {
+  resize: none;
+  //outline: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: underline;
+  cursor: pointer;
+  //font: 700 0.875rem/1.125rem $font-main;
+  transition: $transition-default;
+
+  &:hover,
+  &:focus {
+    color: $link-color;
+    text-decoration: none;
+    transition: $transition-default;
+    //opacity: 0.9;
+  }
+
+  &:active {
+    //кликнул, но не отпустил
+    opacity: 0.8;
+    color: $link-color;
+  }
+
+  &:visited {
+    color: palevioletred;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+blockquote {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-color: grey;
+}
+body::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
