@@ -8,51 +8,53 @@ $warning-color: #b8b900;
 $error-color: #ff3743;
 
 // Button-color
-$btn-light-green: #74b92b;
-$btn-dark-green: #4f8a10;
-$btn-orange: #ef9d08;
+$btn-light-yellow: #fff200;
+$btn-light-red: #f33733;
 
 // Backgrounds colors
-$bg-light-color: #efefef;
+$bg-light-color: #f4f4f4;
+$bg-light-yellow: #fff200;
+$bg-light-blue: #333340;
+$bg-dark-blue: #06121c;
 $bg-main-color: $white;
 
 // Borders colors
-$border-main-color: #e5e5e5;
-$border-light-color: $white;
+$border-main-color: #31bcfe;
+$border-red-color: #f33733;
+$border-dark-color: #222222;
+$border-grey-color: #f0f0f0;
 
 // Texts colors
-$text: #222328;
-$text-placeholder-color: #c5c5c5;
-$text-light-color: $white;
-$link-color:  blue;
+$text: #06121c;
+$text-main: #222222;
+$text-title: #303030;
+$text-btn: #303030;
+$text-placeholder-color: #757575;
+$text-white: #fff;
+$text-blue: #31bcfe;
+$text-red: #f33733;
+$text-grey: #bfbfbf;
+$text-footer: #6d6d6d;
+$text-footer-light: #bfbfbf;;
+
+$link-color:  #31bcfe;
 
 // Fonts
 $icons-font-regular: 'FontAwesome Solid';
 $icons-font-solid: 'FontAwesome Solid';
 $icons-font-brands: 'FontAwesome Brands';
-$font-main: Montserrat, sans-serif;
+$font-main: GothamPro, sans-serif;
 
 @font-face {
-  font-family: 'Montserrat';
-  src: local('Montserrat'), url('../fonts/Montserrat/montserrat.woff2') format('woff2'), url('../fonts/Montserrat/montserrat.woff') format('woff'), url('../fonts/Montserrat/montserrat.ttf') format('truetype');
-  font-weight: 400;
+  font-family: 'GothamPro';
+  src: local('GothamPro'), url('../fonts/gotham-pro/GothamPro-Light.woff') format('woff'), url('../fonts/gotham-pro/GothamPro-Light.ttf') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Montserrat';
-  src: local('Montserrat'), url('../fonts/montserrat/montserrat-v12-latin-500.woff2') format('woff2'), url('../fonts/montserrat/montserrat-v12-latin-500.woff') format('woff'), url('../fonts/montserrat/montserrat-v12-latin-500.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: local('Montserrat'), url('../fonts/montserrat/montserrat-v12-latin-600.woff2') format('woff2'), url('../fonts/montserrat/montserrat-v12-latin-600.woff') format('woff'), url('../fonts/montserrat/montserrat-v12-latin-600.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Montserrat';
-  src: local('Montserrat'), url('../fonts/Montserrat/montserrat.woff2') format('woff2'), url('../fonts/Montserrat/montserrat.woff') format('woff'), url('../fonts/Montserrat/montserrat.ttf') format('truetype');
+  font-family: 'GothamPro';
+  src: local('GothamPro'), url('../fonts/gotham-pro/GothamPro-Bold.woff') format('woff'), url('../fonts/gotham-pro/GothamPro-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -82,9 +84,9 @@ $box-shadow-default: 0 0 .25rem 0 rgba($black,.12);
 
 // border-radius
 $border-radius-default: .188rem;
-$bor-rad-btn: 1.1875rem;
-$bor-rad-btn-mini: 	0.8125rem;
-$bor-rad-inpt: 1.625rem;
+$bor-rad-btn: 1rem;
+//$bor-rad-btn-mini: 	0.8125rem;
+$bor-rad-inpt: 1rem;
 
 // Animations by CSS 3
 $transition-default: all .33s;

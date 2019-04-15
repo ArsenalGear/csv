@@ -9,7 +9,7 @@ var autoprefixer = require('gulp-autoprefixer'),
     imagemin     = require('gulp-imagemin'),
     notify       = require('gulp-notify'),
     plumber      = require('gulp-plumber'),
-    pngquant     = require('imagemin-pngquant'),
+    // pngquant     = require('imagemin-pngquant'),
     pug          = require('gulp-pug'),
     sass         = require('gulp-sass'),
 	typograf     = require('gulp-typograf'),
@@ -52,14 +52,14 @@ gulp.task('js-libs', function () {
         // 'node_modules/jquery.scrollbar/jquery.scrollbar.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
 		// 'node_modules/jquery-ui/ui/widgets/datepicker.js',
-		// 'node_modules/jquery-ui/ui/widgets/slider.js',
+		'node_modules/jquery-ui/ui/widgets/slider.js',
 		// 'node_modules/jquery-ui/ui/i18n/datepicker-ru.js',
         // './src/libs/share42.custom/share42.custom.min.js',
-        // './src/libs/jquery-ui-1.12.1.custom/jquery-ui.js', //datepicker + slider
+        './src/libs/jquery-ui-1.12.1.custom/jquery-ui.js', //datepicker + slider
 		// 'node_modules/timepicker/jquery.timepicker.js',
-        // 'node_modules/select2/dist/js/select2.full.js',
+        'node_modules/select2/dist/js/select2.full.js',
         // 'node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.js',
-        // 'node_modules/select2/dist/js/i18n/ru.js',
+        'node_modules/select2/dist/js/i18n/ru.js',
         'node_modules/select2/dist/js/i18n/ru.js',
         'node_modules/slick-carousel/slick/slick.js'
     ])
@@ -72,13 +72,13 @@ gulp.task('css-libs', function () {
     return gulp.src([
         'node_modules/bootstrap/dist/css/bootstrap-grid.css',
         // 'node_modules/jquery.scrollbar/jquery.scrollbar.css',
-        // './src/libs/jquery-ui-1.12.1.custom/jquery-ui.css', //datepicker + slider
+        './src/libs/jquery-ui-1.12.1.custom/jquery-ui.css', //datepicker + slider
         'node_modules/magnific-popup/dist/magnific-popup.css',
         // 'node_modules/jquery-ui/themes/base/datepicker.css',
-        // 'node_modules/jquery-ui/themes/base/slider.css',
-        // 'node_modules/jquery-ui/themes/base/theme.css',
+        'node_modules/jquery-ui/themes/base/slider.css',
+        'node_modules/jquery-ui/themes/base/theme.css',
         // 'node_modules/timepicker/jquery.timepicker.css',
-        // 'node_modules/select2/dist/css/select2.css',
+        'node_modules/select2/dist/css/select2.css',
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/slick-carousel/slick/slick-theme.css'
     ])
@@ -109,8 +109,7 @@ gulp.task('img', function () {
         .pipe(cache(imagemin({
             interlaced: true,
             progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            une: [pngquant()]
+            svgoPlugins: [{removeViewBox: false}]
         })))
         .pipe(gulp.dest('dist/img'));
 });
