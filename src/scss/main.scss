@@ -9,13 +9,175 @@
 
 }
 
-.header {
+.drop-down {
+  display: flex;
 
+  & ul {
+    display: flex;
+  }
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem 0;
+  background-color: $bg-dark-blue;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    position: relative;
+    display: flex;
+    padding-right: 4.375rem;
+
+    &:before {
+      content: '.ru';
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(-44deg) translate(-89%, -58%);
+      display: block;
+      width: 25px;
+      height: 25px;
+      font: 700 1.1875rem/2rem $font-main;
+      color: #fff200;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(4%, -12%);
+      display: block;
+      //top: -5px;
+      //right: -13px;
+      width: 80px;
+      height: 50px;
+      background-size: contain;
+      background-position: center center;
+      background: url(../img/logo.png) no-repeat;
+    }
+  }
+
+  &__sravni {
+    color: #f1f1f1;
+    font: 700 2.25rem/2.5rem $font-main;
+    letter-spacing: -1.8px;
+  }
+
+  &__price {
+    color: #fff200;
+    font: 700 2.25rem/2.5rem $font-main;
+    letter-spacing: -1.8px;
+  }
+
+  &__menu-btn {
+    width: 100%;
+    max-width: 8.75rem;
+    height: 2.625rem;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 20px;
+
+    &:hover, &:focus {
+      opacity: 1;
+      text-decoration: none;
+    }
+
+    & div {
+      text-transform: uppercase;
+      font: 700 1rem/1.2rem $font-main;
+      color: $text;
+    }
+  }
+
+  &__sale {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    font: 700 1rem/1.2rem $font-main;
+    color: $text-white;
+
+    &:before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-120%, -25%);
+      display: block;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+      background-color: $bg-light-yellow;
+    }
+
+    &:after {
+      content: '%';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-157%, -23%);
+      font: 700 2rem/2rem $font-main;
+      color: $text;
+    }
+  }
+
+  &__search {
+    position: relative;
+    width: 100%;
+    max-width: 19.375rem;
+    height: 100%;
+    max-height: 42px;
+    display: block;
+    padding-right: 3.125rem;
+    border: none;
+    border-radius: 32px;
+    outline: none;
+
+    & input {
+      width: 100%;
+      max-width: 19.375rem;
+      height: 100%;
+      max-height: 42px;
+      display: block;
+      border: none;
+      outline: none;
+    }
+
+    &:after {
+      content: '1';
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 3.125rem;
+      height: 42px;
+      background-color: $text-blue;
+      transform: translate(0%, 0%);
+      font: 700 2rem/2rem $font-main;
+      color: $text;
+    }
+  }
 }
 
 .main {
 
 }
+
+
 
 @import "modals";
 @import "media";

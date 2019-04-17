@@ -38,8 +38,8 @@ h1 {
   line-height: 3.34rem;
 }
 h2 {
-  font-size: 1.5rem;
-  line-height: 3.16rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 h3 {
   font-size: 1.17rem;
@@ -60,7 +60,7 @@ h6 {
 
 p {
   font: inherit;
-  color: $text;
+  color: $text-main;
 }
 
 b, strong {
@@ -128,28 +128,28 @@ textarea {
 }
 
 a {
-  color: $link-color;
+  color: $link-main;
   text-decoration: underline;
   cursor: pointer;
-  //font: 700 0.875rem/1.125rem $font-main;
+  font: 300 1rem/1.25rem $font-main;
   transition: $transition-default;
 
   &:hover,
   &:focus {
-    color: $link-color;
+    color: $link-main;
     text-decoration: none;
     transition: $transition-default;
-    //opacity: 0.9;
+    opacity: 0.8;
   }
 
   &:active {
     //кликнул, но не отпустил
     opacity: 0.8;
-    color: $link-color;
+    color: $link-main;
   }
 
   &:visited {
-    color: palevioletred;
+    color: $link-main;
   }
 }
 

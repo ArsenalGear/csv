@@ -5,30 +5,142 @@
     <meta charset="utf-8">
     <title>Добавление экскурсии — Калькулятор</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Добавление экскурсии"><!-- Twitter Card data-->
+    <meta name="description" content="Добавление экскурсии">
+    <!-- Twitter Card data-->
     <meta name="twitter:title" content="Добавление экскурсии - Калькулятор">
     <meta name="twitter:description" content="Добавление экскурсии">
-    <meta name="twitter:image" content="/img/content/shares/twitter.jpg"><!-- Open Graph data-->
+    <meta name="twitter:image" content="/img/content/shares/twitter.jpg">
+    <!-- Open Graph data-->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Добавление экскурсии - Калькулятор">
     <meta property="og:description" content="Добавление экскурсии">
-    <meta property="og:image" content="/img/content/shares/facebook.jpg"><!-- Vkontakte data-->
-    <link rel="image_src" href="/img/content/shares/vkontakte.jpg"><!-- Favicons-->
-    <link rel="icon" href="/img/content/favicons/favicon.png" sizes="32x32"><!-- Stylesheets-->
+    <meta property="og:image" content="/img/content/shares/facebook.jpg">
+    <!-- Vkontakte data-->
+    <link rel="image_src" href="/img/content/shares/vkontakte.jpg">
+    <!-- Favicons-->
+    <link rel="icon" href="/img/content/favicons/favicon.png" sizes="32x32">
+    <!-- Stylesheets-->
     <link href="css/libs.min.css" type="text/css" rel="stylesheet" media="screen">
-    <link href="css/main.css" type="text/css" rel="stylesheet" media="screen"><!-- Scripts-->
+    <link href="css/main.css" type="text/css" rel="stylesheet" media="screen">
+    <!-- Scripts-->
     <script src="js/libs.min.js"></script>
     <!--script(src='http://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js')-->
     <script src="js/common.js"></script>
 </head>
 
 <body>
-    <header class="header" id="header"></header>
+    <header class="header" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="header__wrapper">
+                    <a class="header__logo" href="/" title="На главную">
+                        <span class="header__sravni">Sravni</span>
+                        <span class="header__price">Price</span>
+                    </a>
+                    <a class="header__menu-btn button-yellow" id="menuBtn">
+                        <button class="header__button menu-btn button button-yellow" value="товары" type="button">
+                            <span></span>
+                        </button>
+                        <div>товары</div>
+                    </a>
+                    <span class="header__sale">Скидки</span>
+                    <div class="header__search input-default">
+                        <input placeholder="Какой товар ищите" type="text" />
+                    </div>
+                    <select class="header__select" name="town" data-placeholder="Москва">
+                        <option value="1">Тамбов</option>
+                        <option value="2">Курск</option>
+                        <option value="3">Липецк</option>
+                    </select>
+                </div>
+                <nav class="drop-down">
+                    <ul>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/washing_machine.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Бытовая техника</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/sport_tourism.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Спорт и туризм</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/audio_video.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Аудио, видео, фото</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/mobile.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Мобильная связь</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/for_home.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Все для дома</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/computers.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Компьютеры</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/for_kids.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Товары для детей</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/construction_repair.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Строительство и ремонт</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/auto_moto.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Авто и мото</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/health_beauty.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Красота и здоровье</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/clothes_shoes.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Одежда и обувь</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="drop-down__link" href="#" title="#">
+                                <img class="drop-down__img" src="img/header/drop/for_office.png" alt="" role="presentation" />
+                                <span class="drop-down__desc">Все для офиса</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     <div class="breadcrumbs">
         <div class="container">
             <ol class="breadcrumbs__list">
-                <li class="breadcrumbs__item"><a href="#">Личный кабинет менеджера</a></li>
-                <li class="breadcrumbs__item"><a href="#">Дополнительные экскурсии</a></li>
+                <li class="breadcrumbs__item">
+                    <a href="#">Личный кабинет менеджера</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="#">Дополнительные экскурсии</a>
+                </li>
                 <li class="breadcrumbs__item">Добавить экскурсию</li>
             </ol>
         </div>
@@ -38,26 +150,84 @@
             <h1 class="page-title">Добавить экскурсию</h1>
         </div>
     </main>
-    <div class="footer">
+    <section class="footer">
         <div class="container">
-            <!--+e('div').info-blocks-->
-            <!--    .row-->
-            <!--        .col-lg-5.order-lg-2.order-sm-1.order-2-->
-            <!--            +e('ul').additional-menu-->
-            <!--                +e('li').additional-menu-item-->
-            <!--                    +e('a').additional-menu-link(href='#') Условия использования-->
-            <!--                +e('li').additional-menu-item-->
-            <!--                    +e('a').additional-menu-link(href='#') Политика конфиденциальности-->
-            <!--                +e('li').additional-menu-item-->
-            <!--                    +e('a').additional-menu-link(href='#') Карта сайта-->
-            <!--        .col-lg-4.col-sm-6.order-lg-1.order-sm-2.order-3-->
-            <!--            +e('p').copyright TravelClass© 2018. Все права защищены-->
-            <!--        .col-lg-3.col-sm-6.order-lg-3.order-sm-3.order-1-->
-            <!--            +e('div').callback-->
-            <!--                +e('a').phone(href='tel:' + tel)= phone-->
-            <!--                +e('a').free-call(href='#') Бесплатный звонок-->
+            <div class="row">
+                <ul>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                    <li>
+                        <a class="footer__link" href="#" title="#">Бытовая тнхника</a>
+                    </li>
+                </ul>
+                <div class="sub-footer">
+                    <p class="sub-footer__all-rights">с 2019</p>
+                    <a class="sub-footer__add-shop" href="#" title="#">
+                        <span class="sub-footer__plus">+</span>
+                        <span class="sub-footer__desc">Подключить магазин</span>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
     <!--+b('form')#add-video-modal.popup.white-popup-block.mfp-hide(autocomplete='off')-->
     <!--    +e('p').title Добавить ссылку на видеоролик-->
     <!--    +e('p').desc Добавьте ссылку на видео о школе, источники: youtube, vimeo-->

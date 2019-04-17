@@ -1,6 +1,284 @@
 extends layouts/site
 
 block content
-    +b('header').main-page
+
+
+    +b('section').slider#slider
         .container
             .row
+                +e('ul').wrapper
+                    +e('li').slide
+                        +e('a').link(href="#" title="#")
+                            +e('img').img(src="https://via.placeholder.com/1200x586.png")
+                    +e('li').slide
+                        +e('a').link(href="#" title="#")
+                            +e('img').img(src="https://via.placeholder.com/1200x586.png")
+                    +e('li').slide
+                        +e('a').link(href="#" title="#")
+                            +e('img').img(src="https://via.placeholder.com/1200x586.png")
+
+
+
+    +b('section').popular#popular
+        .container
+            .row
+                +e('h2').title популярные товары
+            .row
+                .col-12.col-sm-6.col-md-4.col-lg-3
+                    +e('div').card
+                        +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                        +e('a').img-link(href="#" title="#")
+                            +e('img').img(src="img/card/card1.png" alt="#")
+                        +e('a').img-link(href="#" title="#") Товар с хорошими качествами и отличной ценой со скидкой
+                        +e('a').price.button-yellow(href="#" title="#") от
+                            +e('span').total-price 5490
+                .col-12.col-sm-6.col-md-4.col-lg-3
+                    +e('div').card
+                        +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                        +e('a').img-link(href="#" title="#")
+                            +e('img').img(src="img/card/card2.png" alt="#")
+                        +e('a').img-link(href="#" title="#") Товар с хорошими качествами и отличной ценой со скидкой
+                        +e('a').price.button-yellow(href="#" title="#") от
+                            +e('span').total-price 5490
+                .col-12.col-sm-6.col-md-4.col-lg-3
+                    +e('div').card
+                        +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                        +e('a').img-link(href="#" title="#")
+                            +e('img').img(src="img/card/card3.png" alt="#")
+                        +e('a').img-link(href="#" title="#") Товар с хорошими качествами и отличной ценой со скидкой
+                        +e('a').price.button-yellow(href="#" title="#") от
+                            +e('span').total-price 5490
+                .col-12.col-sm-6.col-md-4.col-lg-3
+                    +e('div').card
+                        +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                        +e('a').img-link(href="#" title="#")
+                            +e('img').img(src="img/card/card4.png" alt="#")
+                        +e('a').img-link(href="#" title="#") Товар с хорошими качествами и отличной ценой со скидкой
+                        +e('a').price.button-yellow(href="#" title="#") от
+                            +e('span').total-price 5490
+                .col-12.col-sm-6.col-md-4.col-lg-3
+                    +e('div').card
+                        +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                        +e('a').img-link(href="#" title="#")
+                            +e('img').img(src="img/card/card5.png" alt="#")
+                        +e('a').img-link(href="#" title="#") Товар с хорошими качествами и отличной ценой со скидкой
+                        +e('a').price.button-yellow(href="#" title="#") от
+                            +e('span').total-price 5490
+                .col-12.col-sm-6.col-md-4.col-lg-3
+                    +e('div').card
+                        +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                        +e('a').img-link(href="#" title="#")
+                            +e('img').img(src="img/card/card6.png" alt="#")
+                        +e('a').img-link(href="#" title="#") Товар с хорошими качествами и отличной ценой со скидкой
+                        +e('a').price.button-yellow(href="#" title="#") от
+                            +e('span').total-price 5490
+                .col-12.col-sm-6.col-md-4.col-lg-3
+                    +e('div').card
+                        +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                        +e('a').img-link(href="#" title="#")
+                            +e('img').img(src="img/card/card7.png" alt="#")
+                        +e('a').img-link(href="#" title="#") Товар с хорошими качествами и отличной ценой со скидкой
+                        +e('a').price.button-yellow(href="#" title="#") от
+                            +e('span').total-price 5490
+                .col-12.col-sm-6.col-md-4.col-lg-3
+                    +e('div').card
+                        +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                        +e('a').img-link(href="#" title="#")
+                            +e('img').img(src="img/card/card8.png" alt="#")
+                        +e('a').img-link(href="#" title="#") Товар с хорошими качествами и отличной ценой со скидкой
+                        +e('a').price.button-yellow(href="#" title="#") от
+                            +e('span').total-price 5490
+            +e('div').show-block
+                +e('a').show-btn.button-blue(href="#" title="#") показать еще
+    +b('section').overview#overview
+        .container
+            .row
+                +e('h2').title обзоры товаров
+            .row
+                .col-12.col-sm-12.col-md-6.col-lg-5
+                    +e('div').big-feed
+                        +e('a').img-big-block(href="#" title="#")
+                            +e('img').img-big(src="img/overview/overviewBig.png" alt="#")
+                        +e('a').title(href="#" title="#")
+                            +e('h3').title-big Супер няни: ТОП-5 детских кресел-качалок
+                        +e('a').desc(href="#" title="#")
+                            +e('span').desc-big Лучший способ развязать на время руки мамы в первые месяцы жизни малыша и чем-то занять...Круговой обзор: ТОП-5 двухканальных видеорегистраторов
+                .col-12.col-sm-12.col-md-6.col-lg7
+                    .row
+                        .col-6.col-sm-3.col-md-3.col-lg-4
+                            +e('a').small-card(href="#" title="#")
+                                +e('span').img-small-block
+                                    +e('img').img-small(src="img/overview/overView1.png" alt="#")
+                                +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
+                        .col-6.col-sm-3.col-md-3.col-lg-4
+                            +e('a').small-card(href="#" title="#")
+                                +e('span').img-small-block
+                                    +e('img').img-small(src="img/overview/overView2.png" alt="#")
+                                +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
+                        .col-6.col-sm-3.col-md-3.col-lg-4
+                            +e('a').small-card(href="#" title="#")
+                                +e('span').img-small-block
+                                    +e('img').img-small(src="img/overview/overView3.png" alt="#")
+                                +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
+                        .col-6.col-sm-3.col-md-3.col-lg-4
+                            +e('a').small-card(href="#" title="#")
+                                +e('span').img-small-block
+                                    +e('img').img-small(src="img/overview/overView4.png" alt="#")
+                                +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
+                        .col-6.col-sm-3.col-md-3.col-lg-4
+                            +e('a').small-card(href="#" title="#")
+                                +e('span').img-small-block
+                                    +e('img').img-small(src="img/overview/overView5.png" alt="#")
+                                +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
+                        .col-6.col-sm-3.col-md-3.col-lg-4
+                            +e('a').small-card(href="#" title="#")
+                                +e('span').img-small-block
+                                    +e('img').img-small(src="img/overview/overView6.png" alt="#")
+                                +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
+            +e('div').show-block
+                +e('a').show-btn.button-blue(href="#" title="#") все материалы
+    +b('section').sale#sale
+        .container
+            .row
+                +e('div').title-block
+                    +e('h2').title Товары со скидкой
+
+            .row
+                +e('ul').slider
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        +e('li').item-card
+                            +e('div').top-card
+                                +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                                +e('a').img-block(href="#" title="#")
+                                    +e('img').img(src="img/card/card9.png" alt="#")
+                                +e('a').title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, veniam.
+                                +e('div').price-block
+                                    +e('span').price-with-sale 4167
+                                    +e('span').old-price 5555
+                            +e('div').bottom-card
+                                +e('a').btn-sale(href="#" title="#") Скидка
+                                    +e('span').sale-val 10
+                                    +e('span').sale-percent %
+                                +e('a').main-shop от
+                                    +e('span').shop-title от Яндекс.ру
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        +e('li').item-card
+                            +e('div').top-card
+                                +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                                +e('a').img-block(href="#" title="#")
+                                    +e('img').img(src="img/card/card10.png" alt="#")
+                                +e('a').title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, veniam.
+                                +e('div').price-block
+                                    +e('span').price-with-sale 4167
+                                    +e('span').old-price 5555
+                            +e('div').bottom-card
+                                +e('a').btn-sale(href="#" title="#") Скидка
+                                    +e('span').sale-val 10
+                                    +e('span').sale-percent %
+                                +e('a').main-shop от
+                                    +e('span').shop-title от Яндекс.ру
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        +e('li').item-card
+                            +e('div').top-card
+                                +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                                +e('a').img-block(href="#" title="#")
+                                    +e('img').img(src="img/card/card11.png" alt="#")
+                                +e('a').title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, veniam.
+                                +e('div').price-block
+                                    +e('span').price-with-sale 4167
+                                    +e('span').old-price 5555
+                            +e('div').bottom-card
+                                +e('a').btn-sale(href="#" title="#") Скидка
+                                    +e('span').sale-val 10
+                                    +e('span').sale-percent %
+                                +e('a').main-shop от
+                                    +e('span').shop-title от Яндекс.ру
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        +e('li').item-card
+                            +e('div').top-card
+                                +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                                +e('a').img-block(href="#" title="#")
+                                    +e('img').img(src="img/card/card12.png" alt="#")
+                                +e('a').title Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, veniam.
+                                +e('div').price-block
+                                    +e('span').price-with-sale 4167
+                                    +e('span').old-price 5555
+                            +e('div').bottom-card
+                                +e('a').btn-sale(href="#" title="#") Скидка
+                                    +e('span').sale-val 10
+                                    +e('span').sale-percent %
+                                +e('a').main-shop от
+                                    +e('span').shop-title от Яндекс.ру
+            .row
+                +e('div').show-block
+                    +e('a').show-btn.button-blue(href="#" title="#") показать еще
+    +b('section').subscribe#subscribe
+        .container
+            .row
+                .col-12.col-sm-12.col-md-12.col-lg-6
+                    +e('div').subscribe-social-block
+                        +e('h3').title подпишись на все лучшие цены от <span id="shop-calc">5 230</span> интернет-магазинов:
+
+                    +e('form').form(action="#" name="subscribe" id="subscribe")
+                        +e('input').email(type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail")
+                        +e('button').btn-subsc(type="submit" value="подписаться") подписаться
+
+                    +b('div').social-entry
+                        +e('p').title Через соцсети
+                        +e('ul').social-block
+                            +e('li').item
+                                +e('a').link(href="#" title="#")
+                                    +e('img').img(src="img/theme/socials/twitter.svg" alt="twitter")
+                            +e('li').item(href="#" title="#")
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/vk.svg" alt="vk")
+                            +e('li').item(href="#" title="#")
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/youtube.svg" alt="youtube")
+                            +e('li').item(href="#" title="#")
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/facebook.svg" alt="facebook")
+                            +e('li').item(href="#" title="#")
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/google-plus.svg.svg" alt="google-plus")
+                            +e('li').item(href="#" title="#")
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/instagram.svg" alt="instagram")
+
+                .col-12.col-sm-12.col-md-12.col-lg-6
+                    +b('div').shop-add
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('img').img(src="img/theme/shop/brand.png" alt="#")
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('img').img(src="img/theme/shop/brand2.png" alt="#")
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('img').img(src="img/theme/shop/brand3.png" alt="#")
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('img').img(src="img/theme/shop/brand4.png" alt="#")
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('img').img(src="img/theme/shop/brand5.png" alt="#")
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('img').img(src="img/theme/shop/brand6.png" alt="#")
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('img').img(src="img/theme/shop/brand7.png" alt="#")
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('img').img(src="img/theme/shop/brand8.png" alt="#")
+                        .col-6.col-sm-3.col-md-4.col-lg-4
+                            +e('a').shop-card(href="#" title="#")
+                                +e('span').add +
+                                +e('span').add-shop-link Подключить магазин
+    +b('section').service#service
+        .container
+            .row
+                +e('h3').title Сервис поиска товаров и цен
+                +e('p').desc-title Сервис SravniPrice.ru ищет лучшие цены на все, что продается в Москве. Здесь можно сравнить цены на 23 млн товаров и среди 6 тысяч магазинов выбрать именно тот, который предлагает самую низкую стоимость. SravniPrice.ru ежедневно собирает 100 000 скидок и 5000 промокодов со всех интернет-магазинов, чтобы купить выгодно.
+                +e('p').desc Мы не продаём товары и не организовываем их доставку, мы работаем для того, чтобы покупатель мог быстро и удобно найти самое выгодное предложение. Для тех, кто определяется с выбором, в каждом разделе есть подбор по параметрам и возможность сравнить товары между собой. Доступен и удобный текстовый поиск, позволяющий искать как нужные разделы, так и конкретные товары по названию. А на странице каждой модели есть подробная информация, которая поможет принять решение: описание, технические характеристики, фото и видео, полезные ссылки и отзывы. Там же находится блок «Где купить?» со списком интернет-магазинов, ценами и прямыми ссылками на страницу покупкию
+                +e('p').desc К системе SravniPrice.ru подключено более 1000 магазинов, данные по которым постоянно обновляются. Благодаря этому вы сможете не только выбрать подходящий товар, но и купить его по самым выгодным условиям!

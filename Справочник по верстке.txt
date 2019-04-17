@@ -1,3 +1,6 @@
+bemep@email-host.info
+morf6673
+
 -JS
 	-JavaScript – это язык, чувствительный к регистру символов
 
