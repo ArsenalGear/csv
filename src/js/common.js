@@ -2,8 +2,8 @@
 $(function () {
 
     // Убираем плейсхолдер у поля формы при фокусе на нем
-    if ($('input,textarea').length > 0) {
-        $('input,textarea').focus(function () {
+    if ($('input, textarea').length > 0) {
+        $('input, textarea').focus(function () {
             $(this).data('placeholder', $(this).attr('placeholder'))
                 .attr('placeholder', '');
         }).blur(function () {
@@ -19,7 +19,19 @@ $(function () {
     $('#menuBtn').on('click', function(e) {
         e.preventDefault();
         $(this).toggleClass('menu-btn_active');
-        $('.menu').toggleClass('menu_active');
+        $('.drop-down').toggleClass('hidden');
+    });
+
+    $('.header__select').select2();
+
+    $('#slider-main').slick({
+        // autoplaySpeed: 2,
+        // dots: true,
+        speed: 300,
+        infinite: true,
+        arrows: true,
+        adaptiveHeight: true,
+        cssEase: 'linear'
     });
 
 

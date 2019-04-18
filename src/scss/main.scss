@@ -10,10 +10,76 @@
 }
 
 .drop-down {
-  display: flex;
+  min-height: 9.375rem;
+  display: none;
+  background-color: $bg-dark-blue;
 
   & ul {
+    width: 100%;
+    height: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & li {
+      height: 100%;
+      max-height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+
+      &:hover, &:focus, &:active {
+        background-color: $bg-blue-color;
+        text-decoration: none;
+      }
+
+      &:hover a, &:focus a, &:active a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  & a {
+    height: 100%;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    &:hover, &:focus, &:active {
+      //background-color: $bg-blue-color;
+      text-decoration: none;
+    }
+  }
+
+  & a span {
+    text-align: center;
+    font: 700 0.875rem/1.125rem $font-main;
+    color: $text-white;
+
+    &:hover, &:focus, &:active {
+      color: $text-white;
+    }
+  }
+
+  &__img-block {
+    display: flex;
+    flex-direction: column;
+
+    width: auto;
+    max-width: unset;
+    min-height: 3.6rem;
+  }
+
+  &__img {
+    margin-bottom: 1.25rem;
+  }
+
+  &__desc {
+    color: #000;
   }
 }
 
@@ -22,7 +88,7 @@
   width: 100%;
   max-width: 100%;
   padding: 1rem 0;
-  background-color: $bg-dark-blue;
+  background-color: $bg-light-blue;
 
   &__wrapper {
     width: 100%;
@@ -36,6 +102,7 @@
     position: relative;
     display: flex;
     padding-right: 4.375rem;
+    text-decoration: none;
 
     &:before {
       content: '.ru';
@@ -58,13 +125,17 @@
       right: 0;
       transform: translate(4%, -12%);
       display: block;
-      //top: -5px;
-      //right: -13px;
       width: 80px;
       height: 50px;
       background-size: contain;
       background-position: center center;
       background: url(../img/logo.png) no-repeat;
+    }
+
+    &:hover, &:focus, &:active {
+      border: none;
+      outline: none;
+      text-decoration: none;
     }
   }
 
@@ -86,8 +157,9 @@
     height: 2.625rem;
     display: flex;
     align-items: center;
+    margin-right: 2rem;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: $bor-rad-btn;
 
     &:hover, &:focus {
       opacity: 1;
@@ -105,6 +177,7 @@
     position: relative;
     display: block;
     text-transform: uppercase;
+    text-decoration: none;
     font: 700 1rem/1.2rem $font-main;
     color: $text-white;
 
@@ -132,6 +205,11 @@
       font: 700 2rem/2rem $font-main;
       color: $text;
     }
+
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $white;
+    }
   }
 
   &__search {
@@ -143,8 +221,9 @@
     display: block;
     padding-right: 3.125rem;
     border: none;
-    border-radius: 32px;
+    border-radius: $bor-rad-inpt;
     outline: none;
+    cursor: pointer;
 
     & input {
       width: 100%;
@@ -157,7 +236,7 @@
     }
 
     &:after {
-      content: '1';
+      content: '';
       z-index: 2;
       position: absolute;
       top: 0;
@@ -165,9 +244,12 @@
       display: block;
       width: 3.125rem;
       height: 42px;
-      background-color: $text-blue;
+      //background-color: $text-blue;
+      background-size: contain;
+      background: #31bcfe url(../img/header/search.png) center center no-repeat;
+      border-top-right-radius: 2rem;
+      border-bottom-right-radius: 2rem;
       transform: translate(0%, 0%);
-      font: 700 2rem/2rem $font-main;
       color: $text;
     }
   }
@@ -175,6 +257,166 @@
 
 .main {
 
+}
+
+.overview {
+  position: relative;
+  height: 100%;
+
+  padding: 2rem 0;
+  background-color: $white;
+
+
+  &__overview-main-desc {
+    height: 8.4375rem;
+    padding: 1.2rem 3.5rem 1.2em 1.5625rem;
+    background-color: $bg-blue-color;
+    overflow-y: hidden;
+  }
+
+  &__img-big-block {
+    display: block;
+    height: 16.5625rem;
+    overflow-y: hidden;
+  }
+
+  &__title-big {
+    text-decoration: none;
+    color: $white!important;
+  }
+
+  &__title {
+    display: block;
+    text-align: left;
+    font: 700 1.5rem/1.5rem $font-main;
+    margin-bottom: 0.5rem;
+    color: $text-white;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      color: $text-white!important;
+    }
+  }
+
+  &__desc {
+    text-decoration: none;
+    font: 400 1rem/1.2rem $font-main;
+    color: $text-white;
+
+    &:hover, &:focus {
+      color: $text-white;
+    }
+  }
+}
+
+.popular {
+  position: relative;
+  padding: 2rem 0;
+  background-color: $bg-light-color;
+
+  &__heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 35%);
+    cursor: pointer;
+  }
+
+  &__card {
+    padding: 1.2rem 1.875rem 1.2rem 1.875rem;
+    min-height: 25rem;
+    margin-bottom: 2rem;
+    border: 3px solid $white;
+    border-radius: 5px;
+    background-color: $white;
+
+    &:hover, &:focus {
+      border: 3px solid $border-main-color;
+      box-shadow: 0 5px 24px rgba(49, 188, 254, 0.6);
+    }
+  }
+
+  &__img-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 15rem;
+  }
+
+  &__img-link-desc {
+    display: block;
+    min-height: 3.5625rem;
+    font: 300 1rem/1.2rem $font-main;
+    color: $text-main;
+  }
+
+  &__price {
+    width: 100%;
+    padding: 0.84rem 1rem;
+    margin-top: 1rem;
+    border-radius: $bor-rad-btn;
+  }
+
+  &__show-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.slider {
+
+  padding: 2rem 0;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  & .slick-prev {
+    left: 0;
+    transform: translate(-140%, -52%);
+    width: 5.0625rem;
+    height: 5.0625rem;
+    border-radius: 50%;
+    background: $bg-light-color url(../img/slider/Arrow_Right_2.svg) center center no-repeat;
+
+    &:hover {
+      width: 81px;
+      height: 81px;
+      background-color: $bg-light-yellow;
+      box-shadow: 0 13px 21px rgba(255, 242, 0, 0.32);
+      border-radius: 50%;
+    }
+
+    &:before {
+      content: '';
+    }
+  }
+
+  & .slick-next {
+    right: 0;
+    transform: translate(140% , -52%);
+    width: 5.0625rem;
+    height: 5.0625rem;
+    border-radius: 50%;
+    background: $bg-light-color url(../img/slider/Arrow_Right_22.svg) center center no-repeat;
+    //background: $bg-light-color url(../img/slider/sliderRight.svg) center center no-repeat;
+
+    &:hover {
+      width: 81px;
+      height: 81px;
+      background: $bg-light-yellow url(../img/slider/sliderRight.svg) center center no-repeat;
+      box-shadow: 0 13px 21px rgba(255, 242, 0, 0.32);
+      border-radius: 50%;
+    }
+
+    &:before {
+      content: '';
+    }
+  }
 }
 
 

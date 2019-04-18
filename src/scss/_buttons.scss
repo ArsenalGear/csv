@@ -8,11 +8,10 @@
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+
   text-overflow: ellipsis;
   cursor: pointer;
-  border-radius: $bor-rad-btn;
   transition: $transition-default;
-  text-transform: uppercase;
   font: 700 1rem/1.125rem $font-main;
   //letter-spacing: 1.1px;
 
@@ -24,10 +23,11 @@
   &-yellow {
     background-color: $btn-light-yellow;
     color: $text;
+    border: 2px solid $btn-light-yellow;
 
-    &:hover,
-    &:focus {
-      background-color: $btn-light-yellow;
+    &:hover {
+      background-color: $white;
+      border: 2px solid $btn-light-yellow;
       color: $text;
 
     }
@@ -42,7 +42,8 @@
 
     &:hover,
     &:focus {
-      background-color: transparent;
+      background-color: $white;
+      border: 2px solid $border-main-color;
       color: $text-blue;
     }
   }
@@ -72,39 +73,41 @@
   z-index: 3;
   margin-left: 10px;
   margin-right: 10px;
-}
-.menu-btn span,
-.menu-btn span::before,
-.menu-btn span::after {
-  position: absolute;
-  top: 50%; margin-top: -1px;
-  left: 50%; margin-left: -10px;
-  width: 20px;
-  height: 2px;
-  background-color: #222;
-}
-.menu-btn span::before,
-.menu-btn span::after {
-  content: '';
-  display: block;
-  transition: 0.2s;
-}
-.menu-btn span::before {
-  transform: translateY(-5px);
-}
-.menu-btn_active span {
-  height: 0;
-}
-.menu-btn span::after {
-  transform: translateY(5px);
-}
-.menu-btn_active span:before {
-  transform: rotate(-45deg);
-  transform-origin: center;
-}
-.menu-btn_active span:after {
-  transform: rotate(45deg);
-  transform-origin: center;
-}
 
+  & span, & span::before, & span::after{
+    position: absolute;
+    top: 50%; margin-top: -1px;
+    left: 50%; margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #222;
+  }
 
+  & span::before, & span::after {
+    content: '';
+    display: block;
+    transition: 0.2s;
+  }
+
+  & span::before {
+    transform: translateY(-5px);
+  }
+
+  &_active span {
+    height: 0;
+  }
+
+  & span::after {
+    transform: translateY(5px);
+  }
+
+  &_active span:before {
+    transform: rotate(-45deg);
+    transform-origin: center;
+  }
+
+  &_active span:after {
+    transform: rotate(45deg);
+    transform-origin: center;
+  }
+}
