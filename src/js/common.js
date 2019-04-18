@@ -34,5 +34,17 @@ $(function () {
         cssEase: 'linear'
     });
 
+    $('#sale-slider').slick({
+        // autoplaySpeed: 2,
+        // dots: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        speed: 300,
+        infinite: true,
+        arrows: true,
+        adaptiveHeight: true,
+        cssEase: 'linear'
+    });
+
 
 });

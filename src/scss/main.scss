@@ -5,8 +5,83 @@
 @import "selects";
 @import "mixins";
 
-.footer {
+.service {
+  padding: 3.75rem 0;
 
+  &__desc-title {
+    font: 700 1rem/1.5rem $font-main;
+    color: #000;
+  }
+
+  &__desc {
+    font: 300 1rem/1.5rem $font-main;
+  }
+}
+
+.footer {
+  padding: 3.4375rem 0;
+  background-color: $bg-light-blue;
+
+  & ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  & li {
+    width: 100%;
+    max-width: 12.5rem;
+  }
+
+  & a {
+    text-decoration: none;
+    font: 300 0.875rem/2.25rem $font-main;
+    color: $text-footer-light;
+    
+    &:hover, &:focus {
+      color: $link-yellow;
+    }
+  }
+}
+
+.sub-footer {
+  width: 100%;
+  max-width: 100%;
+  min-height: 5.625rem;
+  display: flex;
+  align-items: center;
+  background-color: $bg-dark-blue;
+
+  &__all-rights {
+    color: $text-footer;
+    font: 300 0.875rem/2.25rem $font-main;
+    margin-right: 7.5rem;
+  }
+
+  &__plus {
+    padding: 0.5rem;
+    width: 35px;
+    height: 35px;
+    display: block;
+    margin-right: 0.5rem;
+    border: 2px dashed $border-main-color;
+    font: 700 1.5rem/1rem $font-main;
+    border-radius: 50%;
+  }
+
+  &__add-shop {
+    display: flex;
+    align-items: center;
+    color: $text-blue;
+    text-decoration: none;
+    font: 700 1rem/1.25rem $font-main;
+
+    &:hover, &:focus {
+      color: $text-blue;
+      text-decoration: none;
+    }
+  }
 }
 
 .drop-down {
@@ -262,10 +337,8 @@
 .overview {
   position: relative;
   height: 100%;
-
   padding: 2rem 0;
   background-color: $white;
-
 
   &__overview-main-desc {
     height: 8.4375rem;
@@ -282,7 +355,7 @@
 
   &__title-big {
     text-decoration: none;
-    color: $white!important;
+    color: $white !important;
   }
 
   &__title {
@@ -294,7 +367,37 @@
     text-decoration: none;
 
     &:hover, &:focus {
-      color: $text-white!important;
+      color: $text-white !important;
+    }
+  }
+
+  &__small-card {
+    height: 11.5625rem;
+    margin-bottom: 0.9rem;
+    display: block;
+    border: 1px solid $border-grey-color;
+    border-radius: 5px;
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      border: 1px solid $border-grey-color;
+      text-decoration: none;
+      box-shadow: 0 6px 21px rgba(0, 0, 0, 0.16);
+      color: $link-color;
+    }
+  }
+
+  &__desc-small {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    font: 300 0.9375rem/1.125rem $font-main;
+    color: $text-main;
+
+    &:hover, &:focus {
+      color: $link-color;
     }
   }
 
@@ -306,6 +409,13 @@
     &:hover, &:focus {
       color: $text-white;
     }
+  }
+
+  &__show-block {
+    margin: 2rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -346,13 +456,14 @@
   &__img-link-desc {
     display: block;
     min-height: 3.5625rem;
+    text-align: center;
     font: 300 1rem/1.2rem $font-main;
     color: $text-main;
   }
 
   &__price {
     width: 100%;
-    padding: 0.84rem 1rem;
+    padding: 0.84rem 1.8rem 0.84rem 1rem;
     margin-top: 1rem;
     border-radius: $bor-rad-btn;
   }
@@ -363,11 +474,237 @@
     justify-content: center;
   }
 
+  &__total-price {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      content: '\f158';
+      display: block;
+      top: 0;
+      right: 0;
+      transform: translate(130%, 7%);
+      font: 700 0.75rem/1.125rem $icons-font-regular;
+      cursor: pointer;
+      color: $text;
+    }
+  }
+
+}
+
+.sale {
+  padding: 2rem 0;
+  background-image: url('../img/theme/bg/yellow_bg.png');
+  background-color: $bg-light-yellow;
+
+  &__title-block {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    height: 5.3125rem;
+    border: 2px dashed $border-red-color;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 28%;
+      transform: translate(0%, -54%);
+      display: block;
+      width: 36px;
+      height: 28px;
+      background-size: contain;
+      background-position: center center;
+      background: url(../img/theme/icons/scissors.png) no-repeat;
+    }
+
+    & h2 {
+      margin: 0;
+    }
+  }
+
+  &__slider {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+
+    & .slick-prev {
+      left: 0;
+      transform: translate(-140%, -52%);
+      width: 5.0625rem;
+      height: 5.0625rem;
+      border-radius: 50%;
+      background: $bg-light-color url(../img/slider/Arrow_Right_2.svg) center center no-repeat;
+
+      &:hover {
+        width: 81px;
+        height: 81px;
+        background-color: $bg-light-yellow;
+        box-shadow: 0 13px 21px rgba(255, 242, 0, 0.32);
+        background: $bg-light-yellow url(../img/slider/Arrow_Right_21.svg) center center no-repeat;
+        border-radius: 50%;
+      }
+
+      &:before {
+        content: '';
+      }
+    }
+
+    & .slick-next {
+      right: 0;
+      transform: translate(140%, -52%);
+      width: 5.0625rem;
+      height: 5.0625rem;
+      border-radius: 50%;
+      background: $bg-light-color url(../img/slider/Arrow_Right_22.svg) center center no-repeat;
+      //background: $bg-light-color url(../img/slider/sliderRight.svg) center center no-repeat;
+
+      &:hover {
+        width: 81px;
+        height: 81px;
+        background: $bg-light-yellow url(../img/slider/sliderRight.svg) center center no-repeat;
+        box-shadow: 0 13px 21px rgba(255, 242, 0, 0.32);
+        border-radius: 50%;
+      }
+
+      &:before {
+        content: '';
+      }
+    }
+  }
+
+  &__main-shop {
+    width: 100%;
+    text-align: center;
+    font: 300 0.875rem/1.1875rem $font-main;
+    text-decoration: none;
+    color: $text-blue;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+      color: $text-blue;
+    }
+  }
+
+  &__item-card {
+    width: 100%;
+    max-width: 270px;
+    background-color: $bg-main-color;
+    border-radius: 5px;
+  }
+
+  &__heart {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 35%);
+    cursor: pointer;
+  }
+
+  &__img-block {
+    min-height: 16.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-main-color;
+  }
+  
+  &__title {
+    display: block;
+    padding: 0 0.8rem;
+    text-align: center;
+    font: 300 1rem/1.1875rem $font-main;
+    color: $text-main;
+  }
+
+  &__bottom-card {
+    min-height: 6.25rem;
+    padding: 0 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-main-color;
+  }
+
+  &__btn-sale {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &__price-block {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__price-with-sale {
+    position: relative;
+    padding-right: 1.5rem;
+    font: 700 1.125rem/1.5rem $font-main;
+    color: $text-red;
+
+    &:after {
+      position: absolute;
+      content: '\f158';
+      display: block;
+      top: 0;
+      right: 0;
+      transform: translate(-90%, 15%);
+      font: 700 0.875rem/1.125rem $icons-font-regular;
+      cursor: pointer;
+      color: $text-red;
+    }
+  }
+
+  &__old-price {
+    font: 700 0.9375rem/1.125rem $font-main;
+    color: $text-red;
+    text-decoration: line-through;
+
+    & .strike {
+      color: #9d9c9c;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '\f158';
+        display: block;
+        top: 0;
+        right: 0;
+        transform: translate(130% , 0%);
+        font: 700 0.875rem/1.125rem $icons-font-regular;
+        cursor: pointer;
+        color: #9d9c9c;
+      }
+    }
+  }
+
+  & + .show-block {
+    width: 100%;
+    max-width: 100%;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-light-yellow;
+  }
 }
 
 .slider {
-
   padding: 2rem 0;
+
+  &__slide {
+    height: 100%;
+    max-height: 572px;
+  }
 
   &__wrapper {
     width: 100%;
@@ -388,6 +725,7 @@
       height: 81px;
       background-color: $bg-light-yellow;
       box-shadow: 0 13px 21px rgba(255, 242, 0, 0.32);
+      background: $bg-light-yellow url(../img/slider/Arrow_Right_21.svg) center center no-repeat;
       border-radius: 50%;
     }
 
@@ -398,7 +736,7 @@
 
   & .slick-next {
     right: 0;
-    transform: translate(140% , -52%);
+    transform: translate(140%, -52%);
     width: 5.0625rem;
     height: 5.0625rem;
     border-radius: 50%;
@@ -418,6 +756,7 @@
     }
   }
 }
+
 
 
 
