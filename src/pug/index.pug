@@ -2,21 +2,22 @@ extends layouts/site
 
 block content
 
-
     +b('section').slider#slider
-        +e('ul').wrapper#slider-main
-            +e('li').slide
+        +e('div').wrapper#slider-main
+            +e('div').slide
                 +e('a').link(href="#" title="#")
-                    +e('img').img(src="img/slider/slider_1.png")
-            +e('li').slide
+                    //+e('img').img(src="https://via.placeholder.com/1100x590.png")
+                    +e('img').img(src="img/slider/slide1.png")
+
+            +e('div').slide
                 +e('a').link(href="#" title="#")
-                    +e('img').img(src="img/slider/slider_2.png")
-            +e('li').slide
+                    //+e('img').img(src="https://via.placeholder.com/1200x530.png")
+                    +e('img').img(src="img/slider/slide2.png")
+
+            +e('div').slide
                 +e('a').link(href="#" title="#")
-                    +e('img').img(src="img/slider/slider_3.png")
-            +e('li').slide
-                +e('a').link(href="#" title="#")
-                    +e('img').img(src="img/slider/slider_4.png")
+                    //+e('img').img(src="https://via.placeholder.com/1300x610.png")
+                    +e('img').img(src="img/slider/slide3.png")
 
 
 
@@ -57,6 +58,7 @@ block content
                         +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой
                         +e('a').price.button.button-yellow(href="#" title="#") от
                             +e('span').total-price 5490
+            .row
                 .col-12.col-sm-6.col-md-4.col-lg-3
                     +e('div').card
                         +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
@@ -142,77 +144,83 @@ block content
             .row
                 +e('div').title-block
                     +e('h2') Товары со скидкой
-        +e('ul').slider#sale-slider
-            +e('li').item-card
-                +e('div').top-card
-                    +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
-                    +e('a').img-block(href="#" title="#")
-                        +e('img').img(src="img/card/card9.png" alt="#")
-                    +e('a').title Рюкзак Trek Planet Colorado 55 Синий
-                    +e('div').price-block
-                        +e('span').price-with-sale 4 167
-                        +e('span').old-price <span class="strike">5 555</span>
-                +e('div').bottom-card
-                    +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
-                        +e('span').sale-val 10
-                        +e('span').sale-percent %
-                    +e('a').main-shop от Яндекс.ру
-            +e('li').item-card
-                +e('div').top-card
-                    +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
-                    +e('a').img-block(href="#" title="#")
-                        +e('img').img(src="img/card/card10.png" alt="#")
-                    +e('a').title Рюкзак Trek Planet Colorado 55 Синий
-                    +e('div').price-block
-                        +e('span').price-with-sale 4 167
-                        +e('span').old-price <span class="strike">5 555</span>
-                +e('div').bottom-card
-                    +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
-                        +e('span').sale-val 10
-                        +e('span').sale-percent %
-                    +e('a').main-shop от Яндекс.ру
-            +e('li').item-card
-                +e('div').top-card
-                    +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
-                    +e('a').img-block(href="#" title="#")
-                        +e('img').img(src="img/card/card11.png" alt="#")
-                    +e('a').title Рюкзак Trek Planet Colorado 55 Синий
-                    +e('div').price-block
-                        +e('span').price-with-sale 4 167
-                        +e('span').old-price <span class="strike">5 555</span>
-                +e('div').bottom-card
-                    +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
-                        +e('span').sale-val 10
-                        +e('span').sale-percent %
-                    +e('a').main-shop от Яндекс.ру
-            +e('li').item-card
-                +e('div').top-card
-                    +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
-                    +e('a').img-block(href="#" title="#")
-                        +e('img').img(src="img/card/card12.png" alt="#")
-                    +e('a').title Рюкзак Trek Planet Colorado 55 Синий
-                    +e('div').price-block
-                        +e('span').price-with-sale 4 167
-                        +e('span').old-price <span class="strike">5 555</span>
-                +e('div').bottom-card
-                    +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
-                        +e('span').sale-val 10
-                        +e('span').sale-percent %
-                    +e('a').main-shop от Яндекс.ру
-            +e('li').item-card
-                +e('div').top-card
-                    +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
-                    +e('a').img-block(href="#" title="#")
-                        +e('img').img(src="img/card/card12.png" alt="#")
-                    +e('a').title Рюкзак Trek Planet Colorado 55 Синий
-                    +e('div').price-block
-                        +e('span').price-with-sale 4 167
-                        +e('span').old-price <span class="strike">5 555</span>
-                +e('div').bottom-card
-                    +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
-                        +e('span').sale-val 10
-                        +e('span').sale-percent %
-                    +e('a').main-shop от Яндекс.ру
+        .container
+            +e('div').slider#sale-slider
+                +e('div').slide-wrapper
+                    +e('div').item-card
+                        +e('div').top-card
+                            +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                            +e('a').img-block(href="#" title="#")
+                                +e('img').img(src="img/card/card9.png" alt="#")
+                            +e('a').title Рюкзак Trek Planet Colorado 55 Синий
+                            +e('div').price-block
+                                +e('span').price-with-sale 4 167
+                                +e('span').old-price <span class="strike">5 555</span>
+                        +e('div').bottom-card
+                            +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
+                                +e('span').sale-val 10
+                                +e('span').sale-percent %
+                            +e('a').main-shop от Яндекс.ру
+                +e('div').slide-wrapper
+                    +e('div').item-card
+                        +e('div').top-card
+                            +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                            +e('a').img-block(href="#" title="#")
+                                +e('img').img(src="img/card/card10.png" alt="#")
+                            +e('a').title Рюкзак Trek Planet Colorado 55 Синий
+                            +e('div').price-block
+                                +e('span').price-with-sale 4 167
+                                +e('span').old-price <span class="strike">5 555</span>
+                        +e('div').bottom-card
+                            +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
+                                +e('span').sale-val 10
+                                +e('span').sale-percent %
+                            +e('a').main-shop от Яндекс.ру
+                +e('div').slide-wrapper
+                    +e('div').item-card
+                        +e('div').top-card
+                            +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                            +e('a').img-block(href="#" title="#")
+                                +e('img').img(src="img/card/card11.png" alt="#")
+                            +e('a').title Рюкзак Trek Planet Colorado 55 Синий
+                            +e('div').price-block
+                                +e('span').price-with-sale 4 167
+                                +e('span').old-price <span class="strike">5 555</span>
+                        +e('div').bottom-card
+                            +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
+                                +e('span').sale-val 10
+                                +e('span').sale-percent %
+                            +e('a').main-shop от Яндекс.ру
+                +e('div').slide-wrapper
+                    +e('div').item-card
+                        +e('div').top-card
+                            +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                            +e('a').img-block(href="#" title="#")
+                                +e('img').img(src="img/card/card12.png" alt="#")
+                            +e('a').title Рюкзак Trek Planet Colorado 55 Синий
+                            +e('div').price-block
+                                +e('span').price-with-sale 4 167
+                                +e('span').old-price <span class="strike">5 555</span>
+                        +e('div').bottom-card
+                            +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
+                                +e('span').sale-val 10
+                                +e('span').sale-percent %
+                            +e('a').main-shop от Яндекс.ру
+                +e('div').slide-wrapper
+                    +e('div').item-card
+                        +e('div').top-card
+                            +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
+                            +e('a').img-block(href="#" title="#")
+                                +e('img').img(src="img/card/card12.png" alt="#")
+                            +e('a').title Рюкзак Trek Planet Colorado 55 Синий
+                            +e('div').price-block
+                                +e('span').price-with-sale 4 167
+                                +e('span').old-price <span class="strike">5 555</span>
+                        +e('div').bottom-card
+                            +e('a').btn-sale.button.button-red(href="#" title="#") Скидка
+                                +e('span').sale-val 10
+                                +e('span').sale-percent %
+                            +e('a').main-shop от Яндекс.ру
 
     +e('div').show-block
         +e('a').show-btn.button.button-dark(href="#" title="#") показать все товары
@@ -221,64 +229,65 @@ block content
             .row
                 .col-12.col-sm-12.col-md-12.col-lg-6
                     +e('div').subscribe-social-block
-                        +e('h3').title подпишись на все лучшие цены от <span id="shop-calc">5 230</span> интернет-магазинов:
+                        +e('h3').title Подпишись на все лучшие цены от <span class="subscribe__title-shop" id="shop-calc">5 230</span> <span class="subscribe__title-shop-other">интернет-магазинов:</span>
 
                     +e('form').form(action="#" name="subscribe" id="subscribe")
-                        +e('input').email(type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail")
-                        +e('button').btn-subsc(type="submit" value="подписаться") подписаться
+                        +e('input').email.input-default(type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail")
+                        +e('button').btn-subsc.button.button-yellow(type="submit" value="подписаться") подписаться
 
                     +b('div').social-entry
-                        +e('p').title Через соцсети
+                        +e('h4').title Через соцсети:
                         +e('ul').social-block
                             +e('li').item
                                 +e('a').link(href="#" title="#")
-                                    +e('img').img(src="img/theme/socials/twitter.svg" alt="twitter")
+                                    +e('img').img(src="img/theme/socials/twitter.png" alt="twitter")
                             +e('li').item(href="#" title="#")
                                 +e('a').link
-                                    +e('img').img(src="img/theme/socials/vk.svg" alt="vk")
+                                    +e('img').img(src="img/theme/socials/vk.png" alt="vk")
                             +e('li').item(href="#" title="#")
                                 +e('a').link
                                     +e('img').img(src="img/theme/socials/youtube.png" alt="youtube")
                             +e('li').item(href="#" title="#")
                                 +e('a').link
-                                    +e('img').img(src="img/theme/socials/facebook.svg" alt="facebook")
+                                    +e('img').img(src="img/theme/socials/facebook500.png" alt="facebook")
                             +e('li').item(href="#" title="#")
                                 +e('a').link
-                                    +e('img').img(src="img/theme/socials/google-plus.svg" alt="google-plus")
+                                    +e('img').img(src="img/theme/socials/googleplus.png" alt="google-plus")
                             +e('li').item(href="#" title="#")
                                 +e('a').link
-                                    +e('img').img(src="img/theme/socials/instagram.svg" alt="instagram")
+                                    +e('img').img(src="img/theme/socials/instagram.png" alt="instagram")
 
                 .col-12.col-sm-12.col-md-12.col-lg-6
                     +b('div').shop-add
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('img').img(src="img/theme/shop/brand.png" alt="#")
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('img').img(src="img/theme/shop/brand2.png" alt="#")
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('img').img(src="img/theme/shop/brand3.png" alt="#")
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('img').img(src="img/theme/shop/brand4.png" alt="#")
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('img').img(src="img/theme/shop/brand5.png" alt="#")
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('img').img(src="img/theme/shop/brand6.png" alt="#")
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('img').img(src="img/theme/shop/brand7.png" alt="#")
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('img').img(src="img/theme/shop/brand8.png" alt="#")
-                        .col-6.col-sm-3.col-md-4.col-lg-4
-                            +e('a').shop-card(href="#" title="#")
-                                +e('span').add +
-                                +e('span').add-shop-link Подключить магазин
+                        .row
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand.png" alt="#")
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand2.png" alt="#")
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand3.png" alt="#")
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand4.png" alt="#")
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand5.png" alt="#")
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand6.png" alt="#")
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand7.png" alt="#")
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand8.png" alt="#")
+                            .col-6.col-sm-3.col-md-4.col-lg-4
+                                +e('a').shop-card.shop-add__shop-card-no-border(href="#" title="#")
+                                    +e('span').add +
+                                    +e('span').add-shop-link Подключить магазин
     +b('section').service#service
         .container
             .row

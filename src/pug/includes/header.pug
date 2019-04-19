@@ -1,3 +1,4 @@
++b('div').overlay#overlay
 +b('header').header#header
     .container
         .row
@@ -13,8 +14,9 @@
 
                 +e('a').sale(href="#" title="Скидки") Скидки
 
-                +e('div').search.input-default
-                    +e('input')(placeholder="Какой товар ищите")
+                +e('form').search.input-default
+                    +e('input')#search-input(placeholder="Какой товар ищите")
+                    +e('button').button-search(type="submit")
 
                 +e('div').select-block
                     +e('select').select(name='town')
@@ -25,7 +27,7 @@
 
 +b('nav').drop-down
     .container
-        +e('ul')
+        +e('idv')
             +e('li')
                 +e('a').link(href="#" title="#")
                     +e('div').img-block

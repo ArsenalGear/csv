@@ -2,12 +2,13 @@
   display: block;
   width: 100%;
   max-width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0.66rem 1rem;
   background: $white;
-  //border: 1px solid $border-default-color;
+  border: 1px solid $border-grey-color;
+  outline: none;
   border-radius: $bor-rad-inpt;
-  font: 300 .875rem/1.125rem $font-main;
-  color: $text-main;
+  font: 300 1rem/1.125rem $font-main;
+  color: #000;
 
   &::placeholder {
     opacity: 1;

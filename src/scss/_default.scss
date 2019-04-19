@@ -35,21 +35,25 @@ h6 {
 h1 {
   font-size: 2rem;
   line-height: 3.34rem;
+  color: $text-title;
 }
 h2 {
   width: 100%;
   margin-bottom: 1.5rem;
   text-align: center;
   font: 700 2.25rem/2.5rem $font-main;
+  color: $text-title;
 }
 h3 {
   width: 100%;
   text-align: left;
   font: 700 1.5rem/1.7rem $font-main;
+  color: $text-title;
 }
 h4 {
-  font-size: 1rem;
-  line-height: 1.33rem;
+  text-align: left;
+  font: 700 1.125rem/1.25rem $font-main;
+  color: $text-title;
 }
 h5 {
   font-size: 0.83rem;
