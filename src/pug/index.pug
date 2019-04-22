@@ -2,22 +2,22 @@ extends layouts/site
 
 block content
 
-    +b('section').slider#slider
+    +b('div').slider#slider
         +e('div').wrapper#slider-main
             +e('div').slide
                 +e('a').link(href="#" title="#")
                     //+e('img').img(src="https://via.placeholder.com/1100x590.png")
-                    +e('img').img(src="img/slider/slide1.png")
+                    +e('img').img(src="img/slider/slider_4.png")
 
             +e('div').slide
                 +e('a').link(href="#" title="#")
                     //+e('img').img(src="https://via.placeholder.com/1200x530.png")
-                    +e('img').img(src="img/slider/slide2.png")
+                    +e('img').img(src="img/slider/slider_2.png")
 
             +e('div').slide
                 +e('a').link(href="#" title="#")
                     //+e('img').img(src="https://via.placeholder.com/1300x610.png")
-                    +e('img').img(src="img/slider/slide3.png")
+                    +e('img').img(src="img/slider/slider_3.png")
 
 
 
@@ -58,7 +58,6 @@ block content
                         +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой
                         +e('a').price.button.button-yellow(href="#" title="#") от
                             +e('span').total-price 5490
-            .row
                 .col-12.col-sm-6.col-md-4.col-lg-3
                     +e('div').card
                         +e('img').heart(src="img/theme/icons/Heart.png" alt="heart")
@@ -98,41 +97,41 @@ block content
             .row
                 +e('h2') Обзоры товаров
             .row
-                .col-12.col-sm-12.col-md-6.col-lg-5
+                .col-12.col-sm-12.col-md-12.col-lg-5
                     +e('div').big-feed
                         +e('a').img-big-block(href="#" title="#")
                             +e('img').img-big(src="img/overview/overviewBig.png" alt="#")
                         +e('div').overview-main-desc
                             +e('a').title(href="#" title="#") Супер няни: ТОП-5 детских кресел-качалок
                             +e('a').desc(href="#" title="#") Лучший способ развязать на время руки мамы в первые месяцы жизни малыша
-                .col-12.col-sm-12.col-md-6.col-lg-7
+                .col-12.col-sm-12.col-md-12.col-lg-7
                     .row
-                        .col-6.col-sm-3.col-md-3.col-lg-4
+                        .col-6.col-sm-3.col-md-4.col-lg-4
                             +e('a').small-card(href="#" title="#")
                                 +e('div').img-small-block
                                     +e('img').img-small(src="img/overview/overView1.png" alt="#")
-                                +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
-                        .col-6.col-sm-3.col-md-3.col-lg-4
+                                +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов Круговой обзор: ТОП-5 двухканальных видеорегистраторов
+                        .col-6.col-sm-3.col-md-4.col-lg-4
                             +e('a').small-card(href="#" title="#")
                                 +e('div').img-small-block
                                     +e('img').img-small(src="img/overview/overView2.png" alt="#")
                                 +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
-                        .col-6.col-sm-3.col-md-3.col-lg-4
+                        .col-6.col-sm-3.col-md-4.col-lg-4
                             +e('a').small-card(href="#" title="#")
                                 +e('div').img-small-block
                                     +e('img').img-small(src="img/overview/overView3.png" alt="#")
                                 +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
-                        .col-6.col-sm-3.col-md-3.col-lg-4
+                        .col-6.col-sm-3.col-md-4.col-lg-4
                             +e('a').small-card(href="#" title="#")
                                 +e('div').img-small-block
                                     +e('img').img-small(src="img/overview/overView4.png" alt="#")
                                 +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
-                        .col-6.col-sm-3.col-md-3.col-lg-4
+                        .col-6.col-sm-3.col-md-4.col-lg-4
                             +e('a').small-card(href="#" title="#")
                                 +e('div').img-small-block
                                     +e('img').img-small(src="img/overview/overView5.png" alt="#")
                                 +e('span').desc-small Круговой обзор: ТОП-5 двухканальных видеорегистраторов
-                        .col-6.col-sm-3.col-md-3.col-lg-4
+                        .col-6.col-sm-3.col-md-4.col-lg-4
                             +e('a').small-card(href="#" title="#")
                                 +e('div').img-small-block
                                     +e('img').img-small(src="img/overview/overView6.png" alt="#")
@@ -231,7 +230,7 @@ block content
                     +e('div').subscribe-social-block
                         +e('h3').title Подпишись на все лучшие цены от <span class="subscribe__title-shop" id="shop-calc">5 230</span> <span class="subscribe__title-shop-other">интернет-магазинов:</span>
 
-                    +e('form').form(action="#" name="subscribe" id="subscribe")
+                    +e('form').form(action="#" name="subscribe" id="subscribeForm")
                         +e('input').email.input-default(type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail")
                         +e('button').btn-subsc.button.button-yellow(type="submit" value="подписаться") подписаться
 
@@ -241,50 +240,50 @@ block content
                             +e('li').item
                                 +e('a').link(href="#" title="#")
                                     +e('img').img(src="img/theme/socials/twitter.png" alt="twitter")
-                            +e('li').item(href="#" title="#")
+                            +e('li').item
                                 +e('a').link
                                     +e('img').img(src="img/theme/socials/vk.png" alt="vk")
-                            +e('li').item(href="#" title="#")
+                            +e('li').item
                                 +e('a').link
                                     +e('img').img(src="img/theme/socials/youtube.png" alt="youtube")
-                            +e('li').item(href="#" title="#")
+                            +e('li').item
                                 +e('a').link
                                     +e('img').img(src="img/theme/socials/facebook500.png" alt="facebook")
-                            +e('li').item(href="#" title="#")
+                            +e('li').item
                                 +e('a').link
                                     +e('img').img(src="img/theme/socials/googleplus.png" alt="google-plus")
-                            +e('li').item(href="#" title="#")
+                            +e('li').item
                                 +e('a').link
                                     +e('img').img(src="img/theme/socials/instagram.png" alt="instagram")
 
                 .col-12.col-sm-12.col-md-12.col-lg-6
                     +b('div').shop-add
                         .row
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand.png" alt="#")
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand2.png" alt="#")
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand3.png" alt="#")
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand4.png" alt="#")
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand5.png" alt="#")
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand6.png" alt="#")
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand7.png" alt="#")
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand8.png" alt="#")
-                            .col-6.col-sm-3.col-md-4.col-lg-4
+                            .col-6.col-sm-4.col-md-4.col-lg-4
                                 +e('a').shop-card.shop-add__shop-card-no-border(href="#" title="#")
                                     +e('span').add +
                                     +e('span').add-shop-link Подключить магазин

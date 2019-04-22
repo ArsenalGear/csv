@@ -57,7 +57,7 @@ gulp.task('js-libs', function () {
         // './src/libs/share42.custom/share42.custom.min.js',
         // './src/libs/jquery-ui-1.12.1.custom/jquery-ui.js', //datepicker + slider
 		// 'node_modules/timepicker/jquery.timepicker.js',
-        'node_modules/select2/dist/js/select2.full.js',
+        // 'node_modules/select2/dist/js/select2.full.js',
         // 'node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.js',
         // 'node_modules/select2/dist/js/i18n/ru.js',
         'node_modules/slick-carousel/slick/slick.js'
@@ -77,7 +77,7 @@ gulp.task('css-libs', function () {
         // 'node_modules/jquery-ui/themes/base/slider.css',
         // 'node_modules/jquery-ui/themes/base/theme.css',
         // 'node_modules/timepicker/jquery.timepicker.css',
-        'node_modules/select2/dist/css/select2.css',
+        // 'node_modules/select2/dist/css/select2.css',
         'node_modules/slick-carousel/slick/slick.css',
         'node_modules/slick-carousel/slick/slick-theme.css'
     ])

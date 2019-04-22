@@ -22,12 +22,12 @@ $(function () {
         $('.drop-down').toggleClass('hidden');
     });
 
-    $('.header__select').select2();
+    // $('.header__select').select2();
 
     $('#slider-main').slick({
         // autoplaySpeed: 2,
         // dots: true,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 3000,
         speed: 1000,
         slidesToScroll: 1,
@@ -35,14 +35,15 @@ $(function () {
         arrows: true,
         fade: true,
         // adaptiveHeight: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+
     });
 
     $('#sale-slider').slick({
         // autoplaySpeed: 2,
         // dots: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
         // centerMode: true,
         // centerPadding: '10px',
         // customPaging: '50px',
@@ -55,7 +56,34 @@ $(function () {
         infinite: true,
         arrows: true,
         adaptiveHeight: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 568,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 
     $('#search-input').focus(function() {

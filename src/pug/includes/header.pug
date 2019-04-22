@@ -8,7 +8,7 @@
                     +e('span').price Price
 
                 +e('a').menu-btn.button-yellow#menuBtn(href="#" title="Товары")
-                    span.button.menu-btn
+                    span.menu-btn
                         +e('span')
                     +e('div') товары
 
@@ -19,15 +19,11 @@
                     +e('button').button-search(type="submit")
 
                 +e('div').select-block
-                    +e('select').select(name='town')
-                        +e('option')(value='Тамбов') Санкт - Петербург
-                        +e('option')(value='Курск') Курск
-                        +e('option')(value='Липецк') Липецк
-                        +e('option')(value='Волгоград') Волгоград
+                    +e('div').select(name='town') Санкт - Петербург
 
 +b('nav').drop-down
     .container
-        +e('idv')
+        +e('ul')
             +e('li')
                 +e('a').link(href="#" title="#")
                     +e('div').img-block

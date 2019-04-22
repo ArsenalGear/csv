@@ -3,23 +3,26 @@
 @import "buttons";
 @import "inputs";
 @import "selects";
-@import "mixins";
+//@import "mixins";
 
 .footer {
   padding: 3.4375rem 0;
   background-color: $bg-light-blue;
 
   & ul {
+    width: 100%;
     padding-left: 2rem;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
   }
 
   & li {
     width: 100%;
+    padding-right: 1rem;
     display: flex;
+    align-items: flex-start;
     flex: 0 0 20%;
     max-width: 20%;
   }
@@ -82,6 +85,7 @@
   }
 
   & a span {
+    padding: 0 0.5rem;
     text-align: center;
     font: 500 0.875rem/1.125rem $font-main;
     color: $text-white;
@@ -127,8 +131,10 @@
   &__logo {
     position: relative;
     display: flex;
+    margin-right: 1rem;
     padding-right: 4.375rem;
     text-decoration: none;
+    order: 1;
 
     &:before {
       content: '.ru';
@@ -186,6 +192,7 @@
     margin-right: 2rem;
     text-decoration: none;
     border-radius: $bor-rad-btn;
+    order: 2;
 
     &:hover, &:focus {
       opacity: 1;
@@ -201,11 +208,13 @@
 
   &__sale {
     position: relative;
+    margin-right: 1rem;
     display: block;
     text-transform: uppercase;
     text-decoration: none;
     font: 700 1rem/1.2rem $font-main;
     color: $text-white;
+    order: 3;
 
     &:before {
       content: '';
@@ -250,6 +259,7 @@
     border-radius: $bor-rad-inpt;
     outline: none;
     cursor: pointer;
+    order: 4;
 
     & input {
       width: 100%;
@@ -280,6 +290,52 @@
     border-bottom-right-radius: 2rem;
     transform: translate(0%, 0%);
     color: $text;
+  }
+
+  &__select {
+    cursor: pointer;
+    color: $text-blue;
+    position: relative;
+    min-width: 5rem;
+    padding-right: 1.2rem;
+  }
+
+  &__select-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.5rem;
+    cursor: pointer;
+    order: 5;
+
+    &:before {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 2rem;
+      height: 42px;
+      background-size: contain;
+      background: url(../img/header/Pointer.png) center center no-repeat;
+      transform: translate(-85%, -27%);
+    }
+
+    &:after {
+      content: '';
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 2rem;
+      height: 42px;
+      background-size: contain;
+      background: url(../img/header/arrowDown.png) center center no-repeat;
+      transform: translate(20%, -27%);
+    }
   }
 }
 
@@ -330,6 +386,9 @@
   }
 
   &__title {
+    min-height: 3rem;
+    max-height: 3.1rem;
+    overflow-y: hidden;
     display: block;
     text-align: left;
     font: 700 1.5rem/1.5rem $font-main;
@@ -358,11 +417,12 @@
     }
   }
 
-
-
   &__desc-small {
     width: 100%;
     max-width: 100%;
+    height: 100%;
+    max-height: 3.61rem;
+    overflow-y: hidden;
     display: block;
     padding: 0 0.75rem 0.75rem 0.75rem;
     font: 300 0.9375rem/1.125rem $font-main;
@@ -373,7 +433,27 @@
     }
   }
 
+  &__img-big {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__img-small {
+    height: 100%;
+    width: 100%;
+    min-height: 6.874rem;
+    max-height: 6.875rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
   &__desc {
+    display: block;
+    min-height: 2.25rem;
+    max-height: 2.3rem;
+    overflow-y: hidden;
     text-decoration: none;
     font: 400 1rem/1.2rem $font-main;
     color: $text-white;
@@ -426,12 +506,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 15rem;
+    min-height: 14.9rem;
+    height: 15rem;
+    width: 100%;
+    position: relative;
+  }
+
+  &__img {
+    object-fit: contain;
+    object-position: center;
+    height: 100%;
+    max-height: 15rem;
   }
 
   &__img-link-desc {
     display: block;
     min-height: 3.5625rem;
+    max-height: 3.6rem;
+    overflow-y: hidden;
     text-align: center;
     font: 300 1rem/1.2rem $font-main;
     color: $text-main;
@@ -568,9 +660,13 @@
 
   &__main-shop {
     width: 100%;
+    display: block;
     text-align: center;
     font: 300 0.875rem/1.1875rem $font-main;
     text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: $text-blue;
 
     &:hover, &:focus {
@@ -583,10 +679,20 @@
     padding: 0 15px;
   }
 
+  &__img {
+    height: 100%;
+    max-height: 15rem;
+    -o-object-fit: contain;
+    object-fit: contain;
+    -o-object-position: center;
+    object-position: center;
+  }
+
   &__item-card {
     position: relative;
     width: 100%;
     max-width: 270px;
+    padding: 0 1.875rem;
     background-color: $bg-main-color;
     border-radius: 5px;
     clip-path: polygon(100% 0, 100% 76%, 94% 78.7%, 100% 81.7%, 100% 100%, 0 100%, 0 82%, 6% 78.7%, 0 76%, 0 0);
@@ -596,7 +702,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-40%, 35%);
+    transform: translate(95%, 35%);
     cursor: pointer;
   }
 
@@ -610,6 +716,9 @@
   
   &__title {
     display: block;
+    min-height: 3.5625rem;
+    max-height: 3.6rem;
+    overflow-y: hidden;
     padding: 0 0.8rem;
     text-align: center;
     font: 300 1rem/1.1875rem $font-main;
@@ -718,7 +827,9 @@
 .shop-add {
 
   &__shop-card {
-    min-height: 5.875rem;
+    min-height: 5.874rem;
+    max-height: 5.875rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -756,19 +867,14 @@
     color: $text-blue;
     font: 700 1rem/1.25rem $font-main;
   }
-}
 
-.social-entry {
-  background-color: $bg-light-color;
-  padding: 1.1875rem;
-
-  &__title {
-    padding-left: 0.7rem;
-    margin-bottom: 1rem;
-  }
-
-  &__social-block {
-    display: flex;
+  &__img {
+    height: 100%;
+    max-height: 5.875rem;
+    width: 100%;
+    display: block;
+    object-fit: scale-down;
+    object-position: center;
   }
 }
 
@@ -848,6 +954,20 @@
   }
 }
 
+.social-entry {
+  background-color: $bg-light-color;
+  padding: 1.1875rem;
+
+  &__title {
+    padding-left: 0.7rem;
+    margin-bottom: 1rem;
+  }
+
+  &__social-block {
+    display: flex;
+  }
+}
+
 .sub-footer {
   width: 100%;
   max-width: 100%;
@@ -869,6 +989,7 @@
     height: 35px;
     display: block;
     margin-right: 0.5rem;
+    text-align: center;
     border: 2px dashed $border-main-color;
     font: 700 1.5rem/1rem $font-main;
     border-radius: 50%;
