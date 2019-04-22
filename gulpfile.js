@@ -91,6 +91,8 @@ gulp.task('browser-sync', function () {
         server: {
             baseDir: 'src'
         },
+        online: true,
+        tunnel: true,
         notify: false
     });
 });

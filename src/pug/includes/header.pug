@@ -23,7 +23,8 @@
 
 +b('nav').drop-down
     .container
-        +e('ul')
+        +e('ul')#drop-down
+            .modal__close-modal
             +e('li')
                 +e('a').link(href="#" title="#")
                     +e('div').img-block
