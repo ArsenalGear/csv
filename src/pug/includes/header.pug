@@ -19,12 +19,12 @@
                     +e('button').button-search(type="submit")
 
                 +e('a').select-block(href="#chooseRegion" title="Выбрать регион")
-                    +e('span').select(name='town') Санкт - Петербург
+                    +e('span').select Санкт - Петербург
 
 +b('nav').drop-down
     .container
         +e('ul')#drop-down
-            .modal__close-modal
+            div.modal__close-modal
             +e('li')
                 +e('a').link(href="#" title="#")
                     +e('div').img-block

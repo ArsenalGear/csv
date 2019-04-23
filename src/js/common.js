@@ -47,34 +47,33 @@ $(function () {
         $('header, main').toggleClass('opacity');
     });
 
+    //json города
     var countryArray = [
 
-        {id:0, text:'Москва', city: ['Москва1', 'Москва2'] },
-        {id:1, text:'Питер', city: ['Питер1', 'Питер2'] } ,
-        {id:2, text:'Новгород', city: ['Новгород1', 'Новгород2'] }
+        {id:0, text:'Москва', city: ['Апрелевка', 'Балашиха', 'Домодедово'] },
+        {id:1, text:'Питер', city: ['Пушкин', 'Петергоф'] } ,
+        {id:2, text:'Новгород', city: ['Боровичи', 'Великий Новгород', 'Чудово'] }
 
     ];
 
-    $('#countrySelect').select2({data: countryArray});
+    function changeSelect() {
+        switchCity = $("#countrySelect").val();
+
+        var tempCity = countryArray[switchCity].city;
+
+        $('.add-shop__regions-block').html('');
+
+        for (i=0; i<tempCity.length; i++) {
+            console.log(tempCity[i]);
+
+            var transferInput = '<a class="add-shop__region" href="#" title="#">' + tempCity[i] + '</a>';
+
+            $('.add-shop__regions-block').append(transferInput);
+        }
+    }
 
     $('#countrySelect').on('change', function() {
-
-        switch ( $("#countrySelect").val() ) {
-
-            case "0":
-                return console.log( countryArray[0].city );
-                break;
-
-            case "1":
-                return console.log( countryArray[1].city );
-                break;
-
-            case "2":
-                return console.log( countryArray[2].city );
-                break;
-        }
-
-        // console.log( $("#countrySelect").val() );
+        changeSelect();
     });
 
     $('#slider-main').slick({
@@ -183,13 +182,20 @@ $(function () {
         }
     });
 
+    //открытие модалки на выбо города
     $('.header__select-block').magnificPopup({
 
         preloader: true,
-        focus: '#fio',
 
         callbacks: {
             beforeOpen: function() {
+
+                $('#countrySelect').select2({
+                    data: countryArray,
+                });
+
+                changeSelect();
+
                 if($(window).width() < 700) {
                     this.st.focus = false;
                 } else {
@@ -199,9 +205,15 @@ $(function () {
         }
     });
 
-    $('.add-shop__close').on('click', function() {
+    //передача города в шапку
+    $('body').on('click', '.add-shop__region', function() {
+        var region = $(this).text();
+        $('.header__select').text(region);
+    });
+
+    $('body').on('click', '.add-shop__close, .add-shop__region', function() {
         $.magnificPopup.close();
-        $('input, textarea').val('');
+        $('input, textarea, select').val('');
     });
 
     $('#addShop').submit(function( e ) {
@@ -223,4 +235,5 @@ $(function () {
             // type: 'inline'
         });
     });
+
 });

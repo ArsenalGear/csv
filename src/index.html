@@ -50,7 +50,7 @@
                         <button class="header__button-search" type="submit"></button>
                     </form>
                     <a class="header__select-block" href="#chooseRegion" title="Выбрать регион">
-                        <span class="header__select" name="town">Санкт — Петербург</span>
+                        <span class="header__select">Санкт — Петербург</span>
                     </a>
                 </div>
             </div>
@@ -309,7 +309,7 @@
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-7">
                         <div class="row">
-                            <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView1.png" alt="#" title="" />
@@ -317,15 +317,15 @@
                                     <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView2.png" alt="#" title="" />
                                     </div>
-                                    <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
+                                    <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView3.png" alt="#" title="" />
@@ -333,7 +333,7 @@
                                     <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView4.png" alt="#" title="" />
@@ -341,7 +341,7 @@
                                     <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView5.png" alt="#" title="" />
@@ -349,7 +349,7 @@
                                     <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView6.png" alt="#" title="" />
@@ -703,7 +703,7 @@
             </div>
         </div>
     </div>
-    <form class="add-shop popup white-popup-block mfp-hide" id="addShop" a1utocomplete="off">
+    <form class="add-shop popup white-popup-block mfp-hide" id="addShop" autocomplete="off">
         <div class="add-shop__header">
             <h2 class="add-shop__title">Оставить заявку онлайн</h2>
             <div class="add-shop__close-btn">
@@ -714,7 +714,7 @@
             <input class="add-shop__input-default input-default" id="fio" type="text" name="fio" placeholder="ФИО" required="required" />
             <input class="add-shop__input-default input-default" id="phone" type="tel" name="tel" placeholder="Телефон" required="required" />
             <input class="add-shop__input-default input-default" id="eMail" type="email" name="eMail" placeholder="E - mail" required="required" />
-            <textarea class="add-shop__textarea-default input-default" id="eMail" rows="7" type="text" name="message" placeholder="Сообщение" required="required"></textarea>
+            <textarea class="add-shop__textarea-default input-default" id="message" rows="7" name="message" placeholder="Сообщение" required="required"></textarea>
             <div class="add-shop__send-block">
                 <div class="add-shop__confirm-block">
                     <label class="label-checkbox">
@@ -727,7 +727,7 @@
             </div>
         </div>
     </form>
-    <form class="add-shop popup white-popup-block mfp-hide" id="chooseRegion" a1utocomplete="off">
+    <form class="add-shop popup white-popup-block mfp-hide" id="chooseRegion" autocomplete="off">
         <div class="add-shop__header">
             <h2 class="add-shop__title">Выбор города</h2>
             <div class="add-shop__close-btn">
@@ -741,26 +741,15 @@
             </div>
             <div class="add-shop__row">
                 <p class="add-shop__country">Уточнить регион:</p>
-                <select class="add-shop__select-country" id="countrySelect" name="country" data-placeholder="">
-                    <!--+e('option')(value='0') Воронежская область-->
-                    <!--+e('option')(value='0') Воронежская область-->
-                    <!--+e('option')(value='0') Воронежская область-->
-                    <!--+e('option')(value='0') Воронежская область-->
-                    <!--+e('option')(value='0') Воронежская область-->
-                </select>
+                <select class="add-shop__select-country" id="countrySelect" name="country" data-placeholder=""></select>
             </div>
             <div class="add-shop__row">
                 <p class="add-shop__country">Выбрать город:</p>
             </div>
-            <div class="add-shop__regions-block input-default">
-                <a class="add-shop__region" href="#" title="#">Москва</a>
-                <a class="add-shop__region" href="#" title="#">Москва</a>
-                <a class="add-shop__region" href="#" title="#">Москва</a>
-                <a class="add-shop__region" href="#" title="#">Москва</a>
-            </div>
+            <div class="add-shop__regions-block input-default"></div>
         </div>
     </form>
-    <form class="add-shop popup white-popup-block mfp-hide" id="thanks" a1utocomplete="off">
+    <form class="add-shop popup white-popup-block mfp-hide" id="thanks" autocomplete="off">
         <div class="add-shop__header">
             <h2 class="add-shop__title">Спасибо!</h2>
             <div class="add-shop__close-btn">
@@ -768,7 +757,7 @@
             </div>
         </div>
         <div class="add-shop__body">
-            <p class="add-shop__thanks-text">Ваша заявка принята. </br> Наш специалист рассмотрит ваше обращение и обязательно свяжется с вами в ближайшее время.</p>
+            <p class="add-shop__thanks-text">Ваша заявка принята. <br> Наш специалист рассмотрит ваше обращение и обязательно свяжется с вами в ближайшее время.</p>
         </div>
     </form>
 </body>

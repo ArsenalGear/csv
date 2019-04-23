@@ -76,7 +76,11 @@
   .overview {
 
     &__img-big-block {
-      max-height: 14.6rem;
+      max-height: 17rem;
+    }
+
+    &__small-card {
+      margin-bottom: 0.7rem;
     }
   }
 
@@ -133,6 +137,10 @@
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   html {
     font-size: 16px;
+  }
+
+  .sale__heart {
+    transform: translate(25%, 35%);
   }
 }
 

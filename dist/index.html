@@ -39,7 +39,7 @@
                         <span class="header__price">Price</span>
                     </a>
                     <a class="header__menu-btn button-yellow" id="menuBtn" href="#" title="Товары">
-                        <span class="button menu-btn">
+                        <span class="menu-btn">
                             <span></span>
                         </span>
                         <div>товары</div>
@@ -49,21 +49,17 @@
                         <input id="search-input" placeholder="Какой товар ищите" type="text" />
                         <button class="header__button-search" type="submit"></button>
                     </form>
-                    <div class="header__select-block">
-                        <select class="header__select" name="town">
-                            <option value="Тамбов">Санкт — Петербург</option>
-                            <option value="Курск">Курск</option>
-                            <option value="Липецк">Липецк</option>
-                            <option value="Волгоград">Волгоград</option>
-                        </select>
-                    </div>
+                    <a class="header__select-block" href="#chooseRegion" title="Выбрать регион">
+                        <span class="header__select">Санкт — Петербург</span>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
     <nav class="drop-down">
         <div class="container">
-            <ul>
+            <ul id="drop-down">
+                <div class="modal__close-modal"></div>
                 <li>
                     <a class="drop-down__link" href="#" title="#">
                         <div class="drop-down__img-block">
@@ -240,8 +236,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                         <div class="popular__card">
                             <img class="popular__heart" src="img/theme/icons/Heart.png" alt="heart" title="" />
@@ -302,7 +296,7 @@
                     <h2>Обзоры товаров</h2>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-5">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-5">
                         <div class="overview__big-feed">
                             <a class="overview__img-big-block" href="#" title="#">
                                 <img class="overview__img-big" src="img/overview/overviewBig.png" alt="#" title="" />
@@ -313,25 +307,25 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-7">
                         <div class="row">
-                            <div class="col-6 col-sm-3 col-md-3 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView1.png" alt="#" title="" />
                                     </div>
-                                    <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
+                                    <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView2.png" alt="#" title="" />
                                     </div>
-                                    <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
+                                    <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView3.png" alt="#" title="" />
@@ -339,7 +333,7 @@
                                     <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView4.png" alt="#" title="" />
@@ -347,7 +341,7 @@
                                     <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView5.png" alt="#" title="" />
@@ -355,7 +349,7 @@
                                     <span class="overview__desc-small">Круговой обзор: ТОП-5 двухканальных видеорегистраторов</span>
                                 </a>
                             </div>
-                            <div class="col-6 col-sm-3 col-md-3 col-lg-4">
+                            <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                 <a class="overview__small-card" href="#" title="#">
                                     <div class="overview__img-small-block">
                                         <img class="overview__img-small" src="img/overview/overView6.png" alt="#" title="" />
@@ -518,8 +512,9 @@
                             </h3>
                         </div>
                         <form class="subscribe__form" action="#" name="subscribe" id="subscribeForm">
-                            <input class="subscribe__email input-default" type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail" />
-                            <button class="subscribe__btn-subsc button button-yellow" type="submit" value="подписаться">подписаться</button>
+                            <h3 class="subscribe__title-sucsess" id="subscrSuccsess">Вы успешно подписались</h3>
+                            <input class="subscribe__email input-default" required="required" type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail" />
+                            <button class="subscribe__btn-subsc button button-yellow" id="sucsessBtn" type="submit" value="подписаться">подписаться</button>
                         </form>
                         <div class="social-entry">
                             <h4 class="social-entry__title">Через соцсети:</h4>
@@ -560,48 +555,48 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                         <div class="shop-add">
                             <div class="row">
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                     <a class="shop-add__shop-card" href="#" title="#">
                                         <img class="shop-add__img" src="img/theme/shop/brand.png" alt="#" title="" />
                                     </a>
                                 </div>
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                     <a class="shop-add__shop-card" href="#" title="#">
                                         <img class="shop-add__img" src="img/theme/shop/brand2.png" alt="#" title="" />
                                     </a>
                                 </div>
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                     <a class="shop-add__shop-card" href="#" title="#">
                                         <img class="shop-add__img" src="img/theme/shop/brand3.png" alt="#" title="" />
                                     </a>
                                 </div>
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                     <a class="shop-add__shop-card" href="#" title="#">
                                         <img class="shop-add__img" src="img/theme/shop/brand4.png" alt="#" title="" />
                                     </a>
                                 </div>
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                     <a class="shop-add__shop-card" href="#" title="#">
                                         <img class="shop-add__img" src="img/theme/shop/brand5.png" alt="#" title="" />
                                     </a>
                                 </div>
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                     <a class="shop-add__shop-card" href="#" title="#">
                                         <img class="shop-add__img" src="img/theme/shop/brand6.png" alt="#" title="" />
                                     </a>
                                 </div>
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                     <a class="shop-add__shop-card" href="#" title="#">
                                         <img class="shop-add__img" src="img/theme/shop/brand7.png" alt="#" title="" />
                                     </a>
                                 </div>
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
                                     <a class="shop-add__shop-card" href="#" title="#">
                                         <img class="shop-add__img" src="img/theme/shop/brand8.png" alt="#" title="" />
                                     </a>
                                 </div>
-                                <div class="col-6 col-sm-3 col-md-4 col-lg-4">
-                                    <a class="shop-add__shop-card shop-add__shop-card-no-border" href="#" title="#">
+                                <div class="col-6 col-sm-4 col-md-4 col-lg-4">
+                                    <a class="shop-add__shop-card shop-add__shop-card-no-border" href="#addShop" title="#">
                                         <span class="shop-add__add">+</span>
                                         <span class="shop-add__add-shop-link">Подключить магазин</span>
                                     </a>
@@ -701,18 +696,70 @@
         <div class="container">
             <div class="row">
                 <p class="sub-footer__all-rights">© 2019 SravniPrice.ru All rights reserved.</p>
-                <a class="sub-footer__add-shop" href="#" title="#">
+                <a class="sub-footer__add-shop" href="#addShop" title="#">
                     <span class="sub-footer__plus">+</span>
                     <span class="sub-footer__desc-add-shop">Подключить магазин</span>
                 </a>
             </div>
         </div>
     </div>
-    <!--+b('form')#add-video-modal.popup.white-popup-block.mfp-hide(autocomplete='off')-->
-    <!--    +e('p').title Добавить ссылку на видеоролик-->
-    <!--    +e('p').desc Добавьте ссылку на видео о школе, источники: youtube, vimeo-->
-    <!--    +b('input').input-default_video(type='text', name='video', placeholder='Например: https://www.youtube.com/watch?v=SkgTxQm9DWM', required='required')-->
-    <!--    +e('input').submit.button_default(type='submit', value='Добавить видео')-->
+    <form class="add-shop popup white-popup-block mfp-hide" id="addShop" autocomplete="off">
+        <div class="add-shop__header">
+            <h2 class="add-shop__title">Оставить заявку онлайн</h2>
+            <div class="add-shop__close-btn">
+                <img class="add-shop__close" src="img/theme/icons/closeModal.svg" alt="закрыть" title="" />
+            </div>
+        </div>
+        <div class="add-shop__body">
+            <input class="add-shop__input-default input-default" id="fio" type="text" name="fio" placeholder="ФИО" required="required" />
+            <input class="add-shop__input-default input-default" id="phone" type="tel" name="tel" placeholder="Телефон" required="required" />
+            <input class="add-shop__input-default input-default" id="eMail" type="email" name="eMail" placeholder="E - mail" required="required" />
+            <textarea class="add-shop__textarea-default input-default" id="message" rows="7" name="message" placeholder="Сообщение" required="required"></textarea>
+            <div class="add-shop__send-block">
+                <div class="add-shop__confirm-block">
+                    <label class="label-checkbox">
+                        <input class="label-checkbox__input-hidden" required="required" checked="checked" type="checkbox" id="confirmData" name="confirmData" />
+                        <span class="label-checkbox__label-span"></span>
+                    </label>
+                    <p>Я соглашаюсь на обработку персональных данных</p>
+                </div>
+                <button class="add-shop__button button button-yellow" type="submit" value="отправить">отправить</button>
+            </div>
+        </div>
+    </form>
+    <form class="add-shop popup white-popup-block mfp-hide" id="chooseRegion" autocomplete="off">
+        <div class="add-shop__header">
+            <h2 class="add-shop__title">Выбор города</h2>
+            <div class="add-shop__close-btn">
+                <img class="add-shop__close" src="img/theme/icons/closeModal.svg" alt="закрыть" title="" />
+            </div>
+        </div>
+        <div class="add-shop__body">
+            <div class="add-shop__row">
+                <p class="add-shop__country">Страна:</p>
+                <p class="add-shop__country-choose">Россия</p>
+            </div>
+            <div class="add-shop__row">
+                <p class="add-shop__country">Уточнить регион:</p>
+                <select class="add-shop__select-country" id="countrySelect" name="country" data-placeholder=""></select>
+            </div>
+            <div class="add-shop__row">
+                <p class="add-shop__country">Выбрать город:</p>
+            </div>
+            <div class="add-shop__regions-block input-default"></div>
+        </div>
+    </form>
+    <form class="add-shop popup white-popup-block mfp-hide" id="thanks" autocomplete="off">
+        <div class="add-shop__header">
+            <h2 class="add-shop__title">Спасибо!</h2>
+            <div class="add-shop__close-btn">
+                <img class="add-shop__close" src="img/theme/icons/closeModal.svg" alt="закрыть" title="" />
+            </div>
+        </div>
+        <div class="add-shop__body">
+            <p class="add-shop__thanks-text">Ваша заявка принята. <br> Наш специалист рассмотрит ваше обращение и обязательно свяжется с вами в ближайшее время.</p>
+        </div>
+    </form>
 </body>
 
 </html>

@@ -705,7 +705,7 @@ body::-webkit-scrollbar {
     .overview__title:hover, .overview__title:focus {
       color: #fff !important; }
   .overview__small-card {
-    height: 11.5625rem;
+    height: 12.2rem;
     display: block;
     border: 1px solid #f0f0f0;
     border-radius: 5px;
@@ -721,11 +721,12 @@ body::-webkit-scrollbar {
     width: 100%;
     max-width: 100%;
     height: 100%;
-    max-height: 3.61rem;
+    max-height: 5rem;
     overflow-y: hidden;
+    word-break: break-all;
     display: block;
-    padding: 0 0.75rem 0.75rem 0.75rem;
-    font: 300 0.9375rem/1.125rem GothamPro, sans-serif;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    font: 300 0.9375rem/1.25rem GothamPro, sans-serif;
     color: #222222; }
     .overview__desc-small:hover, .overview__desc-small:focus {
       color: #31bcfe; }
@@ -1414,8 +1415,11 @@ body::-webkit-scrollbar {
         -ms-flex: 0 0 40%;
             flex: 0 0 40%; }
   .add-shop__regions-block {
+    min-height: 10rem;
+    max-height: 15rem;
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    overflow-y: auto; }
   .add-shop__region {
     display: block;
     padding: 0.5rem;
@@ -1498,7 +1502,9 @@ body::-webkit-scrollbar {
             order: 2;
     margin-bottom: 1rem; }
   .overview__img-big-block {
-    max-height: 14.6rem; }
+    max-height: 17rem; }
+  .overview__small-card {
+    margin-bottom: 0.7rem; }
   .popular__card {
     padding: 1rem; }
   .sale__item-card {
@@ -1520,7 +1526,10 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   html {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .sale__heart {
+    -webkit-transform: translate(25%, 35%);
+            transform: translate(25%, 35%); } }
 
 @media screen and (max-width: 991px) {
   .drop-down {

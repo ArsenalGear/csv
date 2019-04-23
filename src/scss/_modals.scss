@@ -112,8 +112,11 @@
   }
 
   &__regions-block {
+    min-height: 10rem;
+    max-height: 15rem;
     padding-left: 0;
     padding-right: 0;
+    overflow-y: auto;
   }
 
   &__region {
