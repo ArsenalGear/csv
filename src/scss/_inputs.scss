@@ -7,7 +7,7 @@
   border: 1px solid $border-grey-color;
   outline: none;
   border-radius: $bor-rad-inpt;
-  font: 300 1rem/1.125rem $font-main;
+  font: 500 1rem/1.125rem $font-main;
   color: #000;
 
   &::placeholder {
@@ -25,6 +25,25 @@
   }
 }
 
-@media screen and (max-width: 991px) {
+.label-checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
 
+  &__input-hidden {
+    @include vh();
+  }
+
+  &__label-span {
+    width: 20px;
+    height: 20px;
+    border: 3px solid $border-main-color;
+  }
+
+  &__input-hidden:checked + .label-checkbox__label-span {
+    width: 20px;
+    height: 20px;
+    background-color: $bg-blue-color;
+    border: 3px solid $border-main-color;
+  }
 }

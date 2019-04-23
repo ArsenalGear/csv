@@ -18,8 +18,8 @@
                     +e('input')#search-input(placeholder="Какой товар ищите")
                     +e('button').button-search(type="submit")
 
-                +e('div').select-block
-                    +e('div').select(name='town') Санкт - Петербург
+                +e('a').select-block(href="#chooseRegion" title="Выбрать регион")
+                    +e('span').select(name='town') Санкт - Петербург
 
 +b('nav').drop-down
     .container

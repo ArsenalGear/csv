@@ -101,7 +101,7 @@ jQuery(function ($) {
 
                         console.log('remove');
 
-                        var workId = parseInt($('#modal-id').text());
+                        var workId = parseInt($('#modalEditId').text());
                         var optionName = $(this).data('option-name');
                         var card_id = ui.item.attr('data-work-id');//получение id карточки
                         var url = "/change-work-blocked/" + window.project_id + "/" + card_id;
@@ -585,7 +585,7 @@ jQuery(function ($) {
             },
 
             remove: function (event, ui) {
-                var workId = parseInt($('#modal-id').text());
+                var workId = parseInt($('#modalEditId').text());
                 var optionName = $(this).data('option-name');
                 var card_id = ui.item.attr('data-work-id');//получение id карточки
                 var url = "/change-work-blocked/" + window.project_id + "/" + card_id;
@@ -1660,7 +1660,7 @@ jQuery(function ($) {
                     '\n' +
                     '                            </td>\n' +
                     '\n' +
-                    '                            <td class="modal-history__history-desc-block">\n' +
+                    '                            <td class="modal-history__history-desc-block w290">\n' +
                     '\n' +
                     '                                <p class="modal-history__history-desc">' + field_value + '</p>\n' +
                     '\n' +
@@ -1974,7 +1974,7 @@ jQuery(function ($) {
                     '                    <option value="0">м</option>\n' +
                     '                    <option value="1"> м &sup2;</option>\n' +
                     '                    <option value="2"> м &sup3;</option>\n' +
-                    '                    <option value="3">м/пог</option>\n' +
+                    '                    <option value="3">м\\пог</option>\n' +
                     '                    <option value="4">шт</option>\n' +
                     '                    <option value="5">компл</option>\n' +
                     '\n' +
@@ -2081,6 +2081,10 @@ jQuery(function ($) {
 
         openHistoryNameModal('nameAreaUpdate');
         $('#historyForm').attr('data-modal-id', 'name') ;
+        if ($(window).width() <= 575) {
+            $('.modal-history__middle-block').css('width', '290px');
+            $('.modal-history__modal-table').css('width', '585px');
+        }
     });
 
     $(document).on("click", '#valAreaUpdate, #amountUnitAreaUpdate', function () {
@@ -2207,7 +2211,7 @@ jQuery(function ($) {
 
             //Чат
             $('.chat__chat-block').html('');
-            chatConnection(project_id, card_id); //Подключаемся к чату
+
             window.processing = false;
             $(".chat__chat-block").mousewheel(function (e) {
 
@@ -2233,7 +2237,7 @@ jQuery(function ($) {
                     var JWT = localStorage.getItem('jwt_token');
                     var explodedJWT = JWT.split('.');
                     var jwtUserId = JSON.parse(atob(explodedJWT[1])).user_id;
-                    var workId = $('#modal-id').html();
+                    var workId = $('#modalEditId').html();
 
                     oldMessages = getChatMessages(window.project_id, workId, offset);
                     oldMessages.done(function () {
@@ -2272,7 +2276,7 @@ jQuery(function ($) {
 
             $('.footer').hide();
             $('.control-checked, .temp-check').prop('checked', false);
-
+            chatConnection(project_id, card_id); //Подключаемся к чату
             $.ajax({
 
                 type: "POST",
@@ -2556,20 +2560,30 @@ jQuery(function ($) {
     //к чату и обратно
     $('body').on("click", ".modal-edit__thumbler", function () {
 
-        if ($('.modal-edit__main').is(':visible')) {
+        if ( $('.chat').css('display') == 'none' ) {
+            console.log('показать чат');
 
-            $('.modal-edit__main').hide();
+            // $('.modal-edit__main').hide();
             $('.chat').show();
             $('.modal-edit__to-chat').text('К работе');
-            $('.modal-edit__chat-btn-img').attr("src", "/img/theme/icons/arrow/arrow-down-solid.svg");
+            $('.modal-edit').css('overflow-y', 'unset');
+            $('.modal-edit__main').css('overflow-y', 'hidden');
+            $('.modal-edit__wrapper').css('overflow-y', 'unset');
+            // $('.modal-edit__chat-btn-img').attr("src", "/img/theme/icons/arrow/arrow-down-solid.svg");
         }
 
-        else if ($('.chat').css('display') == 'block') {
+        else if ( $('.chat').css('display') == 'block' ) {
 
-            $('.modal-edit__main').show();
+            console.log('показать модалку работы');
+            console.log('показать модалку работы');
             $('.chat').hide();
+            $('.modal-edit').css('overflow-y', 'scroll');
+            $('.modal-edit__main').css('overflow-y', 'scroll');
+
+            $('.modal-edit__wrapper').css('overflow-y', 'scroll');
             $('.modal-edit__to-chat').text('К чату');
-            $('.modal-edit__chat-btn-img').attr("src", "/img/theme/icons/arrow/arrow-up-solid.svg");
+            // $('.modal-edit__chat-btn-img').attr("src", "/img/theme/icons/arrow/arrow-up-solid.svg");
+            $('.modal-edit__main').show();
         }
     });
 
@@ -3237,17 +3251,33 @@ jQuery(function ($) {
         //забираем значение селекта
         var textOfSelect = $('#valAmountHistory option:selected').text();
 
+        textOfSelect = textOfSelect.replace(/\s/g, "");
+
+        console.log(textOfSelect);
+
         var lastHistoryVal = $('#historyBody').find('.modal-history__history-row:last-child').find('.modal-history__history-desc').text();
+
+        console.log(lastHistoryVal);
 
         var lastHistoryValSplited = lastHistoryVal.split(' ');
 
-        var lastHistoryVal = $('#historyBody').find('.modal-history__history-row:last-child').find('.modal-history__history-desc').text();
+        console.log(lastHistoryValSplited);
+
+        // var lastHistoryVal = $('#historyBody').find('.modal-history__history-row:last-child').find('.modal-history__history-desc').text();
 
         //очищаем все буквы из текстового поля чтобы получить цифры
         var historyValWithousSymbols = lastHistoryVal.replace(/[^-0-9]/gim, ''); //последняя строка истории обжатая
+
+        console.log(historyValWithousSymbols);
+
+
         var newInputDataHistory = $('.modal-history__last-value').val(); //введеное значение в инпуте
 
+        console.log(newInputDataHistory);
+
         if (historyValWithousSymbols === newInputDataHistory && lastHistoryValSplited[1] == textOfSelect) {
+
+            console.log('none');
 
             $('.modal-history__btn-save').addClass("diabled-button").css('pointer-events', 'none');
         }
@@ -3838,7 +3868,7 @@ jQuery(function ($) {
     }
 
     //закрытие главной модалки c div
-    $(document).on("click", "#overlay", function () {
+    $(document).on("click", "#overlay, .modal-edit__close-modal", function () {
         modalClose();
         chatConnectionClose();
     });
@@ -4107,6 +4137,12 @@ jQuery(function ($) {
             $('.time-modal__input, .time-modal-wide__input, #datepicker-wide-input').css('background-color', 'transparent').removeAttr("disabled").prop('required', true);
             datesumm = 0;
         }
+    });
+
+    $('#datepicker-wide-input').datepicker({dateFormat:'dd M', minDate: 0,
+        // beforeShow: function() {
+        //     // $(this).datepicker('option', 'maxDate', $('#to').val());
+        // }
     });
 
     //datepicker в модалке переноса карточек
@@ -5277,7 +5313,7 @@ jQuery(function ($) {
 
     $('.chat__chat-form').on('submit', function (e) {
         e.preventDefault();
-        var workId = $('#modal-id').html();
+        var workId = $('#modalEditId').html();
         var message = $('.chat__input').val();
         if (message) {
             sendMessage(message, window.project_id, workId);

@@ -1,42 +1,10 @@
 @import "variables";
 @import "default";
 @import "buttons";
+@import "mixins";
 @import "inputs";
 @import "selects";
-//@import "mixins";
 
-.footer {
-  padding: 3.4375rem 0;
-  background-color: $bg-light-blue;
-
-  & ul {
-    width: 100%;
-    padding-left: 2rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  & li {
-    width: 100%;
-    padding-right: 1rem;
-    display: flex;
-    align-items: flex-start;
-    flex: 0 0 20%;
-    max-width: 20%;
-  }
-
-  & a {
-    text-decoration: none;
-    font: 300 0.875rem/2.25rem $font-main;
-    color: $text-footer-light;
-    
-    &:hover, &:focus {
-      color: $link-yellow;
-    }
-  }
-}
 
 .drop-down {
   min-height: 9.375rem;
@@ -111,6 +79,39 @@
 
   &__desc {
     color: #000;
+  }
+}
+
+.footer {
+  padding: 3.4375rem 0;
+  background-color: $bg-light-blue;
+
+  & ul {
+    width: 100%;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  & li {
+    width: 100%;
+    padding-right: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  & a {
+    text-decoration: none;
+    font: 300 0.875rem/2.25rem $font-main;
+    color: $text-footer-light;
+    
+    &:hover, &:focus {
+      color: $link-yellow;
+    }
   }
 }
 
@@ -348,6 +349,10 @@
 
 }
 
+.nav-opacity {
+  background-color: #808080;
+}
+
 .overlay {
   display: none;
   position: fixed;
@@ -477,10 +482,6 @@
   //background-color: #000;
 }
 
-.nav-opacity {
-  background-color: #808080;
-}
-
 .popular {
   position: relative;
   padding: 2rem 0;
@@ -495,6 +496,7 @@
     top: 0;
     right: 0;
     transform: translate(-100%, 35%);
+    z-index: 1;
     cursor: pointer;
   }
 
@@ -559,10 +561,10 @@
       position: absolute;
       content: '\f158';
       display: block;
-      top: 0;
+      top: 50%;
       right: 0;
-      transform: translate(130%, 7%);
-      font: 700 0.75rem/1.125rem $icons-font-regular;
+      transform: translate(150%, -50%);
+      font: 700 0.75rem $icons-font-regular;
       cursor: pointer;
       color: $text;
     }
@@ -1029,6 +1031,11 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 1.5rem;
+
+    &-sucsess {
+      display: none;
+      line-height: 2.6rem;
+    }
   }
 
   &__title-shop {

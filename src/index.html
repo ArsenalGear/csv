@@ -49,9 +49,9 @@
                         <input id="search-input" placeholder="Какой товар ищите" type="text" />
                         <button class="header__button-search" type="submit"></button>
                     </form>
-                    <div class="header__select-block">
-                        <div class="header__select" name="town">Санкт — Петербург</div>
-                    </div>
+                    <a class="header__select-block" href="#chooseRegion" title="Выбрать регион">
+                        <span class="header__select" name="town">Санкт — Петербург</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -512,8 +512,9 @@
                             </h3>
                         </div>
                         <form class="subscribe__form" action="#" name="subscribe" id="subscribeForm">
-                            <input class="subscribe__email input-default" type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail" />
-                            <button class="subscribe__btn-subsc button button-yellow" type="submit" value="подписаться">подписаться</button>
+                            <h3 class="subscribe__title-sucsess" id="subscrSuccsess">Вы успешно подписались</h3>
+                            <input class="subscribe__email input-default" required="required" type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail" />
+                            <button class="subscribe__btn-subsc button button-yellow" id="sucsessBtn" type="submit" value="подписаться">подписаться</button>
                         </form>
                         <div class="social-entry">
                             <h4 class="social-entry__title">Через соцсети:</h4>
@@ -595,7 +596,7 @@
                                     </a>
                                 </div>
                                 <div class="col-6 col-sm-4 col-md-4 col-lg-4">
-                                    <a class="shop-add__shop-card shop-add__shop-card-no-border" href="#" title="#">
+                                    <a class="shop-add__shop-card shop-add__shop-card-no-border" href="#addShop" title="#">
                                         <span class="shop-add__add">+</span>
                                         <span class="shop-add__add-shop-link">Подключить магазин</span>
                                     </a>
@@ -695,18 +696,81 @@
         <div class="container">
             <div class="row">
                 <p class="sub-footer__all-rights">© 2019 SravniPrice.ru All rights reserved.</p>
-                <a class="sub-footer__add-shop" href="#" title="#">
+                <a class="sub-footer__add-shop" href="#addShop" title="#">
                     <span class="sub-footer__plus">+</span>
                     <span class="sub-footer__desc-add-shop">Подключить магазин</span>
                 </a>
             </div>
         </div>
     </div>
-    <!--+b('form')#add-video-modal.popup.white-popup-block.mfp-hide(autocomplete='off')-->
-    <!--    +e('p').title Добавить ссылку на видеоролик-->
-    <!--    +e('p').desc Добавьте ссылку на видео о школе, источники: youtube, vimeo-->
-    <!--    +b('input').input-default_video(type='text', name='video', placeholder='Например: https://www.youtube.com/watch?v=SkgTxQm9DWM', required='required')-->
-    <!--    +e('input').submit.button_default(type='submit', value='Добавить видео')-->
+    <form class="add-shop popup white-popup-block mfp-hide" id="addShop" a1utocomplete="off">
+        <div class="add-shop__header">
+            <h2 class="add-shop__title">Оставить заявку онлайн</h2>
+            <div class="add-shop__close-btn">
+                <img class="add-shop__close" src="img/theme/icons/closeModal.svg" alt="закрыть" title="" />
+            </div>
+        </div>
+        <div class="add-shop__body">
+            <input class="add-shop__input-default input-default" id="fio" type="text" name="fio" placeholder="ФИО" required="required" />
+            <input class="add-shop__input-default input-default" id="phone" type="tel" name="tel" placeholder="Телефон" required="required" />
+            <input class="add-shop__input-default input-default" id="eMail" type="email" name="eMail" placeholder="E - mail" required="required" />
+            <textarea class="add-shop__textarea-default input-default" id="eMail" rows="7" type="text" name="message" placeholder="Сообщение" required="required"></textarea>
+            <div class="add-shop__send-block">
+                <div class="add-shop__confirm-block">
+                    <label class="label-checkbox">
+                        <input class="label-checkbox__input-hidden" required="required" checked="checked" type="checkbox" id="confirmData" name="confirmData" />
+                        <span class="label-checkbox__label-span"></span>
+                    </label>
+                    <p>Я соглашаюсь на обработку персональных данных</p>
+                </div>
+                <button class="add-shop__button button button-yellow" type="submit" value="отправить">отправить</button>
+            </div>
+        </div>
+    </form>
+    <form class="add-shop popup white-popup-block mfp-hide" id="chooseRegion" a1utocomplete="off">
+        <div class="add-shop__header">
+            <h2 class="add-shop__title">Выбор города</h2>
+            <div class="add-shop__close-btn">
+                <img class="add-shop__close" src="img/theme/icons/closeModal.svg" alt="закрыть" title="" />
+            </div>
+        </div>
+        <div class="add-shop__body">
+            <div class="add-shop__row">
+                <p class="add-shop__country">Страна:</p>
+                <p class="add-shop__country-choose">Россия</p>
+            </div>
+            <div class="add-shop__row">
+                <p class="add-shop__country">Уточнить регион:</p>
+                <select class="add-shop__select-country" id="countrySelect" name="country" data-placeholder="">
+                    <!--+e('option')(value='0') Воронежская область-->
+                    <!--+e('option')(value='0') Воронежская область-->
+                    <!--+e('option')(value='0') Воронежская область-->
+                    <!--+e('option')(value='0') Воронежская область-->
+                    <!--+e('option')(value='0') Воронежская область-->
+                </select>
+            </div>
+            <div class="add-shop__row">
+                <p class="add-shop__country">Выбрать город:</p>
+            </div>
+            <div class="add-shop__regions-block input-default">
+                <a class="add-shop__region" href="#" title="#">Москва</a>
+                <a class="add-shop__region" href="#" title="#">Москва</a>
+                <a class="add-shop__region" href="#" title="#">Москва</a>
+                <a class="add-shop__region" href="#" title="#">Москва</a>
+            </div>
+        </div>
+    </form>
+    <form class="add-shop popup white-popup-block mfp-hide" id="thanks" a1utocomplete="off">
+        <div class="add-shop__header">
+            <h2 class="add-shop__title">Спасибо!</h2>
+            <div class="add-shop__close-btn">
+                <img class="add-shop__close" src="img/theme/icons/closeModal.svg" alt="закрыть" title="" />
+            </div>
+        </div>
+        <div class="add-shop__body">
+            <p class="add-shop__thanks-text">Ваша заявка принята. </br> Наш специалист рассмотрит ваше обращение и обязательно свяжется с вами в ближайшее время.</p>
+        </div>
+    </form>
 </body>
 
 </html>

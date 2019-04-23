@@ -231,8 +231,9 @@ block content
                         +e('h3').title Подпишись на все лучшие цены от <span class="subscribe__title-shop" id="shop-calc">5 230</span> <span class="subscribe__title-shop-other">интернет-магазинов:</span>
 
                     +e('form').form(action="#" name="subscribe" id="subscribeForm")
-                        +e('input').email.input-default(type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail")
-                        +e('button').btn-subsc.button.button-yellow(type="submit" value="подписаться") подписаться
+                        +e('h3').title-sucsess#subscrSuccsess Вы успешно подписались
+                        +e('input').email.input-default(required type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail")
+                        +e('button').btn-subsc.button.button-yellow(id="sucsessBtn" type="submit" value="подписаться") подписаться
 
                     +b('div').social-entry
                         +e('h4').title Через соцсети:
@@ -284,7 +285,7 @@ block content
                                 +e('a').shop-card(href="#" title="#")
                                     +e('img').img(src="img/theme/shop/brand8.png" alt="#")
                             .col-6.col-sm-4.col-md-4.col-lg-4
-                                +e('a').shop-card.shop-add__shop-card-no-border(href="#" title="#")
+                                +e('a').shop-card.shop-add__shop-card-no-border(href="#addShop" title="#")
                                     +e('span').add +
                                     +e('span').add-shop-link Подключить магазин
     +b('section').service#service
