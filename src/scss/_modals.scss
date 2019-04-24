@@ -101,7 +101,7 @@
   }
 
   & .select2-container {
-    min-width: 8rem;
+    min-width: 60%;
   }
 
   &__country {
@@ -114,8 +114,8 @@
   &__regions-block {
     min-height: 10rem;
     max-height: 15rem;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     overflow-y: auto;
   }
 
@@ -128,7 +128,7 @@
 
     &:hover, &:focus {
       background-color: $bg-light-yellow;
-      text-decoration: underline!important;
+      text-decoration: none!important;
     }
   }
 }
@@ -164,5 +164,10 @@
       display: flex;
       flex: 0 0 50%;
     }
+
+    & .select2-container {
+      min-width: 50%;
+    }
   }
+
 }

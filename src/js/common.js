@@ -51,8 +51,8 @@ $(function () {
     var countryArray = [
 
         {id:0, text:'Москва', city: ['Апрелевка', 'Балашиха', 'Домодедово'] },
-        {id:1, text:'Питер', city: ['Пушкин', 'Петергоф'] } ,
-        {id:2, text:'Новгород', city: ['Боровичи', 'Великий Новгород', 'Чудово'] }
+        {id:1, text:'Санкт - Петербург', city: ['Пушкин', 'Петергоф'] } ,
+        {id:2, text:'Нижний - Новгород', city: ['Боровичи', 'Великий Новгород', 'Чудово'] }
 
     ];
 
@@ -91,7 +91,7 @@ $(function () {
 
     $('#sale-slider').slick({
 
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true,
         slidesToShow: 4,
