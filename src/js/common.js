@@ -86,12 +86,11 @@ $(function () {
         arrows: true,
         fade: true,
         cssEase: 'linear',
-
     });
 
     $('#sale-slider').slick({
 
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
         pauseOnHover: true,
         slidesToShow: 4,

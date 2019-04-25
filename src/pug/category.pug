@@ -1,0 +1,527 @@
+extends layouts/site
+
+block content
+    +b('div').breadcrumbs
+        .container
+            .row
+                +e('div').wrapper
+                    +e('a').link Главная
+                    +e('span').divider /
+                    +e('a').link Компьютеры
+                    +e('span').divider /
+                    +e('span').last-breacrumb Ноутбуки
+    +b('section').filter-section
+        .container
+            .row
+                +e('h2').title Ноутбуки
+            .row
+                .col-md-4.col-sm-3.col-lg-3
+                    +b('ul').filter
+                        +b('li').goods
+                            +e('div').link-block
+                                +e('a').link.active(href="#" title="#") Ноутбуки
+                                +e('div').amount-block
+                                    +e('span').left-bracker (
+                                    +e('span').amount 15
+                                    +e('span').right-bracker )
+                        +b('li').goods
+                            +e('div').link-block
+                                +e('a').link(href="#" title="#") Планшеты
+                                +e('div').amount-block
+                                    +e('span').left-bracker (
+                                    +e('span').amount 15
+                                    +e('span').right-bracker )
+                        +b('li').goods
+                            +e('div').link-block
+                                +e('a').link(href="#" title="#") Серверы
+                                +e('div').amount-block
+                                    +e('span').left-bracker (
+                                    +e('span').amount 15
+                                    +e('span').right-bracker )
+                        +b('li').goods
+                            +e('div').link-block
+                                +e('a').link(href="#" title="#") Тонкие клиенты
+                                +e('div').amount-block
+                                    +e('span').left-bracker (
+                                    +e('span').amount 15
+                                    +e('span').right-bracker )
+                        +b('li').goods
+                            +e('div').link-block
+                                +e('a').link(href="#" title="#") Игровые приставки
+                                +e('div').amount-block
+                                    +e('span').left-bracker (
+                                    +e('span').amount 15
+                                    +e('span').right-bracker )
+                        +b('li').goods
+                            +e('div').link-block
+                                +e('a').link(href="#" title="#") Моноблоки
+                                +e('div').amount-block
+                                    +e('span').left-bracker (
+                                    +e('span').amount 15
+                                    +e('span').right-bracker )
+                        +b('li').goods
+                            +e('div').link-block
+                                +e('a').link(href="#" title="#") Настольные компьютеры
+                                +e('div').amount-block
+                                    +e('span').left-bracker (
+                                    +e('span').amount 15
+                                    +e('span').right-bracker )
+                        +b('li').goods
+                            +e('div').link-block
+                                +e('a').link(href="#" title="#") Комплектующие
+                                +e('div').amount-block
+                                    +e('span').left-bracker (
+                                    +e('span').amount 15
+                                    +e('span').right-bracker )
+                    +b('section').selection
+                        +e('h4').title Подбор по параметрам
+
+                        +e('div').wrapper
+                            +b('section').ui-slider
+                                +e('h6').mini-title Цена. грн.
+                                +e('img').arrow(src="img/theme/icons/arrow.svg")
+                                +e('ul').amounts
+                                    +e('div').slider
+                                        +e('div').slider-wrapper
+                                            +e('div')#slider.main-slider
+                                        +e('div').input-wrapper
+                                            +e('span').from от
+                                            +e('input').from-input(placeholder="от 0" type="text" value="")
+                                            +e('input').to-input(placeholder="до 25 000" type="text" value="")
+                                            +e('span').to до
+                            +b('section').choose
+                                +e('h6').mini-title Цена. грн.
+                                +e('img').arrow(src="img/theme/icons/arrow.svg")
+                                +e('ul').amounts
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="apple")
+                                            +e('span').check
+                                            +e('span').brand Apple
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="Lenovo")
+                                            +e('span').check
+                                            +e('span').brand Lenovo
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="Dell")
+                                            +e('span').check
+                                            +e('span').brand Dell
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="MSI")
+                                            +e('span').check
+                                            +e('span').brand MSI
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="HP")
+                                            +e('span').check
+                                            +e('span').brand HP
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('button').button.button.button-blue(type="button" value="показать еще") показать еще
+                            +b('section').choose
+                                +e('h6').mini-title Тип
+                                +e('img').arrow(src="img/theme/icons/arrow.svg")
+                                +e('ul').amounts
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="Tablet PC")
+                                            +e('span').check
+                                            +e('span').brand Tablet PC
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="note")
+                                            +e('span').check
+                                            +e('span').brand Ноутбук
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="ultra")
+                                            +e('span').check
+                                            +e('span').brand Ультрабук
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                            +b('section').choose
+                                +e('h6').mini-title Разрешение экрана
+                                +e('img').arrow(src="img/theme/icons/arrow.svg")
+                                +e('ul').amounts
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="3840 x 2160")
+                                            +e('span').check
+                                            +e('span').brand 3840 x 2160
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="1920 x 1080")
+                                            +e('span').check
+                                            +e('span').brand 1920 x 1080
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="1366 x 768")
+                                            +e('span').check
+                                            +e('span').brand 1366 x 768
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="1600 x 900")
+                                            +e('span').check
+                                            +e('span').brand 1600 x 900
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="1280 x 800")
+                                            +e('span').check
+                                            +e('span').brand 1280 x 800
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                            +b('section').choose
+                                +e('h6').mini-title Тип покрытия экрана
+                                +e('img').arrow(src="img/theme/icons/arrow.svg")
+                                +e('ul').amounts
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="gl")
+                                            +e('span').check
+                                            +e('span').brand Глянцевое
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="matt")
+                                            +e('span').check
+                                            +e('span').brand Матовое
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                            +b('section').choose
+                                +e('h6').mini-title Тип матрицы
+                                +e('img').arrow(src="img/theme/icons/arrow.svg")
+                                +e('ul').amounts
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="TFT *VA")
+                                            +e('span').check
+                                            +e('span').brand TFT *VA
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="TFT IPS")
+                                            +e('span').check
+                                            +e('span').brand TFT IPS
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="TFT PLS")
+                                            +e('span').check
+                                            +e('span').brand TFT PLS
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="TFT TN")
+                                            +e('span').check
+                                            +e('span').brand TFT TN
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                            +b('section').choose
+                                +e('h6').mini-title Количество ядер процессора
+                                +e('img').arrow(src="img/theme/icons/arrow.svg")
+                                +e('ul').amounts
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="2")
+                                            +e('span').check
+                                            +e('span').brand 2
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="4")
+                                            +e('span').check
+                                            +e('span').brand 4
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="5")
+                                            +e('span').check
+                                            +e('span').brand 5
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="8")
+                                            +e('span').check
+                                            +e('span').brand 8
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                            +b('section').choose
+                                +e('h6').mini-title Видеоадаптер
+                                +e('img').arrow(src="img/theme/icons/arrow.svg")
+                                +e('ul').amounts
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="AMD")
+                                            +e('span').check
+                                            +e('span').brand AMD
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="Nvidia")
+                                            +e('span').check
+                                            +e('span').brand NVIDIA
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="ATI")
+                                            +e('span').check
+                                            +e('span').brand ATI
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+                                    +e('li').row
+                                        +e('label').label
+                                            +e('input').input(type="checkbox" name="intel")
+                                            +e('span').check
+                                            +e('span').brand INTEL
+                                            +e('div').amount-block
+                                                +e('span').left-bracker (
+                                                +e('span').amount 15
+                                                +e('span').right-bracker )
+
+                            +e('button').button.button.button-blue(type="button" value="") ВСЕ ПАРАМЕТРЫ
+                .col-md-4.col-sm-3.col-lg-9
+                    +b('div').sortable
+                        +e('div').left-side
+                            +e('span').sortBy Сортировать по:
+                            +e('a').link.active популярности
+                            +e('a').link цене
+                            +e('a').link новизне
+                        +e('div').right-side
+                            +e('div').cards
+                                +e('span').lt
+                                +e('span').rt
+                                +e('span').ld
+                                +e('span').rd
+                            +e('div').tables
+                                +e('span').first
+                                +e('span').second
+                                +e('span').third
+                    +b('div').popular#popular
+                        .container
+                            .row
+                                .col-12.col-sm-6.col-md-4.col-lg-4
+                                    +e('div').card
+                                        +e('img').sale-img(src="img/theme/icons/persent.png" alt="persent")
+                                        +e('a').img-link(href="#" title="#")
+                                            +e('img').img(src="img/card/card1.png" alt="#")
+                                        +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой
+                                        +b('div').rating
+                                            +e('div').stars-block
+                                                +e('img').star(src="img/theme/icons/star_checked.png")
+                                                +e('img').star(src="img/theme/icons/star_checked.png")
+                                                +e('img').star(src="img/theme/icons/star_checked.png")
+                                                +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                            +e('div').feed-block
+                                                +e('span').feed-count 5
+                                                +e('span').feed-title отзывов
+                                        +e('div').price-discount-block(href="#" title="#") от
+                                            +e('span').total-price.discount 5490
+                                            +e('span').old-price <span class="strike">5 555</span>
+                                        +e('div').shops
+                                            +e('span').shop-in в
+                                            +e('span').shop-count 47
+                                            +e('span').shop-title магазинах
+                                        +e('a').link-shop.button.button-yellow Сравнить цены
+                                .col-12.col-sm-6.col-md-4.col-lg-4
+                                    +e('div').card
+                                        +e('a').img-link(href="#" title="#")
+                                            +e('img').img(src="img/card/card1.png" alt="#")
+                                        +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой
+                                        +b('div').rating
+                                            +e('div').stars-block
+                                                +e('img').star(src="img/theme/icons/star_checked.png")
+                                                +e('img').star(src="img/theme/icons/star_checked.png")
+                                                +e('img').star(src="img/theme/icons/star_checked.png")
+                                                +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                            +e('div').feed-block
+                                                +e('span').feed-count 5
+                                                +e('span').feed-title отзывов
+                                        +e('div').price-discount-block(href="#" title="#") от
+                                            +e('span').total-price 5490
+                                        +e('div').shops
+                                            +e('span').shop-in в
+                                            +e('span').shop-count 47
+                                            +e('span').shop-title магазинах
+                                        +e('a').link-shop.button.button-yellow Сравнить цены
+                    +b('div').pagination
+                        +e('ul')
+                            +e('li').arrow-left
+                                +e('a').link(href="#" title="назад")
+                                    +e('img').img(src="img/theme/icons/prev.svg" alt="назад")
+                            +e('li').item
+                                +e('a').link(href="#" title="1")
+                                    +e('span') 1
+                            +e('li').item
+                                +e('a').link(href="#" title="2")
+                                    +e('span') 2
+                            +e('li').item
+                                +e('a').link(href="#" title="3")
+                                    +e('span') 3
+                            +e('li').item
+                                +e('a').link(href="#" title="4")
+                                    +e('span') 4
+                            +e('li').item
+                                +e('a').link(href="#" title="5")
+                                    +e('span') 5
+                            +e('li').arrow-right
+                                +e('a').link(href="#" title="вперед")
+                                    +e('img').img(src="img/theme/icons/next.svg" alt="вперед")
+
+    +b('section').subscribe#subscribe
+        .container
+            .row
+                .col-12.col-sm-12.col-md-12.col-lg-6
+                    +e('div').subscribe-social-block
+                        +e('h3').title Подпишись на все лучшие цены от <span class="subscribe__title-shop" id="shop-calc">5 230</span> <span class="subscribe__title-shop-other">интернет-магазинов:</span>
+
+                    +e('form').form(action="#" name="subscribe" id="subscribeForm")
+                        +e('h3').title-sucsess#subscrSuccsess Вы успешно подписались
+                        +e('input').email.input-default(required type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail")
+                        +e('button').btn-subsc.button.button-yellow(id="sucsessBtn" type="submit" value="подписаться") подписаться
+
+                    +b('div').social-entry
+                        +e('h4').title Через соцсети:
+                        +e('ul').social-block
+                            +e('li').item
+                                +e('a').link(href="#" title="#")
+                                    +e('img').img(src="img/theme/socials/twitter.png" alt="twitter")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/vk.png" alt="vk")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/youtube.png" alt="youtube")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/facebook500.png" alt="facebook")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/googleplus.png" alt="google-plus")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/instagram.png" alt="instagram")
+
+                .col-12.col-sm-12.col-md-12.col-lg-6
+                    +b('div').shop-add
+                        .row
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand2.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand3.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand4.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand5.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand6.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand7.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand8.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card.shop-add__shop-card-no-border(href="#addShop" title="#")
+                                    +e('span').add +
+                                    +e('span').add-shop-link Подключить магазин
+    +b('section').service#service
+        .container
+            .row
+                +e('h3').title Сервис поиска товаров и цен
+                +e('p').desc-title Сервис SravniPrice.ru ищет лучшие цены на все, что продается в Москве. Здесь можно сравнить цены на 23 млн товаров и среди 6 тысяч магазинов выбрать именно тот, который предлагает самую низкую стоимость. SravniPrice.ru ежедневно собирает 100 000 скидок и 5000 промокодов со всех интернет-магазинов, чтобы купить выгодно.
+                +e('p').desc Мы не продаём товары и не организовываем их доставку, мы работаем для того, чтобы покупатель мог быстро и удобно найти самое выгодное предложение. Для тех, кто определяется с выбором, в каждом разделе есть подбор по параметрам и возможность сравнить товары между собой. Доступен и удобный текстовый поиск, позволяющий искать как нужные разделы, так и конкретные товары по названию. А на странице каждой модели есть подробная информация, которая поможет принять решение: описание, технические характеристики, фото и видео, полезные ссылки и отзывы. Там же находится блок «Где купить?» со списком интернет-магазинов, ценами и прямыми ссылками на страницу покупкию
+                +e('p').desc К системе SravniPrice.ru подключено более 1000 магазинов, данные по которым постоянно обновляются. Благодаря этому вы сможете не только выбрать подходящий товар, но и купить его по самым выгодным условиям!
