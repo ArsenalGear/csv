@@ -645,19 +645,6 @@ body::-webkit-scrollbar {
       background: url(../img/header/Pointer.png) center center no-repeat;
       -webkit-transform: translate(-85%, -27%);
               transform: translate(-85%, -27%); }
-    .header__select-block:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      width: 2rem;
-      height: 42px;
-      background-size: contain;
-      background: url(../img/header/arrowDown.png) center center no-repeat;
-      -webkit-transform: translate(20%, -27%);
-              transform: translate(20%, -27%); }
     .header__select-block:hover, .header__select-block:focus {
       text-decoration: none; }
 
@@ -780,14 +767,6 @@ body::-webkit-scrollbar {
   background-color: #f4f4f4; }
   .popular .container {
     max-width: 1200px; }
-  .popular__heart {
-    position: absolute;
-    top: 0;
-    right: 0;
-    -webkit-transform: translate(-100%, 35%);
-            transform: translate(-100%, 35%);
-    z-index: 1;
-    cursor: pointer; }
   .popular__card {
     min-height: 25rem;
     padding: 1.2rem 1.875rem 1.2rem 1.875rem;
@@ -971,13 +950,6 @@ body::-webkit-scrollbar {
     border-radius: 5px;
     -webkit-clip-path: polygon(100% 0, 100% 76%, 94% 78.7%, 100% 81.7%, 100% 100%, 0 100%, 0 82%, 6% 78.7%, 0 76%, 0 0);
             clip-path: polygon(100% 0, 100% 76%, 94% 78.7%, 100% 81.7%, 100% 100%, 0 100%, 0 82%, 6% 78.7%, 0 76%, 0 0); }
-  .sale__heart {
-    position: absolute;
-    top: 0;
-    right: 0;
-    -webkit-transform: translate(45%, 35%);
-            transform: translate(45%, 35%);
-    cursor: pointer; }
   .sale__img-block {
     min-height: 16.875rem;
     display: -webkit-box;
@@ -1606,10 +1578,7 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   html {
-    font-size: 16px; }
-  .sale__heart {
-    -webkit-transform: translate(25%, 35%);
-            transform: translate(25%, 35%); } }
+    font-size: 16px; } }
 
 @media screen and (max-width: 991px) {
   .drop-down {
@@ -1725,9 +1694,6 @@ body::-webkit-scrollbar {
     margin-bottom: 1rem; }
   .overview__desc-small {
     max-height: 3.5rem; }
-  .sale__heart {
-    -webkit-transform: translate(40%, 35%);
-            transform: translate(40%, 35%); }
   .slider__slide-one {
     height: 355px; }
   .social-entry {

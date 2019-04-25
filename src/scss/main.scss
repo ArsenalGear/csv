@@ -325,19 +325,19 @@
       transform: translate(-85%, -27%);
     }
 
-    &:after {
-      content: '';
-      z-index: 2;
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      width: 2rem;
-      height: 42px;
-      background-size: contain;
-      background: url(../img/header/arrowDown.png) center center no-repeat;
-      transform: translate(20%, -27%);
-    }
+    //&:after {
+    //  content: '';
+    //  z-index: 2;
+    //  position: absolute;
+    //  top: 0;
+    //  right: 0;
+    //  display: block;
+    //  width: 2rem;
+    //  height: 42px;
+    //  background-size: contain;
+    //  background: url(../img/header/arrowDown.png) center center no-repeat;
+    //  transform: translate(20%, -27%);
+    //}
 
     &:hover, &:focus {
       text-decoration: none;
@@ -496,14 +496,14 @@
     max-width: 1200px;
   }
 
-  &__heart {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 35%);
-    z-index: 1;
-    cursor: pointer;
-  }
+  //&__heart {
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //  transform: translate(-100%, 35%);
+  //  z-index: 1;
+  //  cursor: pointer;
+  //}
 
   &__card {
     min-height: 25rem;
@@ -715,13 +715,13 @@
     clip-path: polygon(100% 0, 100% 76%, 94% 78.7%, 100% 81.7%, 100% 100%, 0 100%, 0 82%, 6% 78.7%, 0 76%, 0 0);
   }
 
-  &__heart {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(45%, 35%);
-    cursor: pointer;
-  }
+  //&__heart {
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //  transform: translate(45%, 35%);
+  //  cursor: pointer;
+  //}
 
   &__img-block {
     min-height: 16.875rem;

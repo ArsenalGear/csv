@@ -46,7 +46,7 @@
                     </a>
                     <a class="header__sale" href="#" title="Скидки">Скидки</a>
                     <form class="header__search input-default">
-                        <input id="search-input" placeholder="Какой товар ищите" type="text" />
+                        <input id="search-input" placeholder="Поиск товара" type="text" />
                         <button class="header__button-search" type="submit"></button>
                     </form>
                     <a class="header__select-block" href="#chooseRegion" title="Выбрать регион">
@@ -160,25 +160,124 @@
         </div>
     </nav>
     <main>
-        <div class="slider" id="slider">
-            <div class="slider__wrapper" id="slider-main">
-                <div class="slider__slide">
-                    <a class="slider__link" href="#" title="#">
-                        <!--+e('img').img(src="https://via.placeholder.com/1100x590.png")-->
-                        <img class="slider__img" src="img/slider/slider_4.png" alt="" role="presentation" />
-                    </a>
-                </div>
-                <div class="slider__slide">
-                    <a class="slider__link" href="#" title="#">
-                        <!--+e('img').img(src="https://via.placeholder.com/1200x530.png")-->
-                        <img class="slider__img" src="img/slider/slider_2.png" alt="" role="presentation" />
-                    </a>
-                </div>
-                <div class="slider__slide">
-                    <a class="slider__link" href="#" title="#">
-                        <!--+e('img').img(src="https://via.placeholder.com/1300x610.png")-->
-                        <img class="slider__img" src="img/slider/slider_3.png" alt="" role="presentation" />
-                    </a>
+        <div class="container slide-container">
+            <div class="slider" id="slider">
+                <div class="slider__wrapper" id="slider-main">
+                    <div class="slider__slide">
+                        <div class="slider__slide-one">
+                            <div class="slider__wrap square-wrap" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <div class="slider__wrap wrap-wb wrap-hs">
+                                    <a class="slider__link link-ws link-hs" href="#" title="sport">
+                                        <img class="slider__img" src="img/slider/slide1/sport.png" alt="" role="presentation" />
+                                    </a>
+                                    <a class="slider__link link-ws link-hs" href="#" title="tech">
+                                        <img class="slider__img" src="img/slider/slide1/tech.png" alt="" role="presentation" />
+                                    </a>
+                                </div>
+                                <div class="slider__wrap wrap-wb wrap-hs">
+                                    <a class="slider__link link-wb link-hs" href="#" title="audio">
+                                        <img class="slider__img" src="img/slider/slide1/audio.png" alt="" role="presentation" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider__wrap wrap-ws wrap-hb">
+                                <a class="slider__link link-ws" href="#" title="cell">
+                                    <img class="slider__img" src="img/slider/slide1/cell.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                            <div class="slider__wrap wrap-ws wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <a class="slider__link link-ws link-hs" href="#" title="home">
+                                    <img class="slider__img" src="img/slider/slide1/home.png" alt="" role="presentation" />
+                                </a>
+                                <a class="slider__link link-ws link-hs" href="#" title="comp">
+                                    <img class="slider__img" src="img/slider/slide1/comp.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <div class="slider__slide-one">
+                            <div class="slider__wrap wrap-wb wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <div class="slider__wrap wrap-wb wrap-hs">
+                                    <a class="slider__link link-wb link-hs" href="#" title="accessories">
+                                        <img class="slider__img" src="img/slider/slider2/accessories.png" alt="" role="presentation" />
+                                    </a>
+                                </div>
+                                <div class="slider__wrap wrap-wb wrap-hs">
+                                    <a class="slider__link link-wb link-hs" href="#" title="souvenirs">
+                                        <img class="slider__img" src="img/slider/slider2/souvenirs.png" alt="" role="presentation" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider__wrap wrap-ws wrap-hb">
+                                <a class="slider__link link-ws" href="#" title="construction">
+                                    <img class="slider__img" src="img/slider/slider2/construction.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                            <div class="slider__wrap wrap-ws wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <a class="slider__link link-ws link-hs" href="#" title="for_kids">
+                                    <img class="slider__img" src="img/slider/slider2/for_kids.png" alt="" role="presentation" />
+                                </a>
+                                <a class="slider__link link-ws link-hs" href="#" title="auto">
+                                    <img class="slider__img" src="img/slider/slider2/auto.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <div class="slider__slide-one">
+                            <div class="slider__wrap wrap-wb wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <div class="slider__wrap wrap-wb wrap-hs">
+                                    <a class="slider__link link-wb link-hs" href="#" title="health_beauty">
+                                        <img class="slider__img" src="img/slider/slider3/health_beauty.png" alt="" role="presentation" />
+                                    </a>
+                                </div>
+                                <div class="slider__wrap wrap-wb wrap-hs">
+                                    <a class="slider__link link-wb link-hs" href="#" title="books">
+                                        <img class="slider__img" src="img/slider/slider3/books.png" alt="" role="presentation" />
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider__wrap wrap-ws wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <a class="slider__link link-ws link-hs" href="#" title="clothes_ shoes">
+                                    <img class="slider__img" src="img/slider/slider3/clothes_ shoes.png" alt="" role="presentation" />
+                                </a>
+                                <a class="slider__link link-ws link-hs" href="#" title="communication">
+                                    <img class="slider__img" src="img/slider/slider3/communication.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                            <div class="slider__wrap wrap-ws wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <a class="slider__link link-ws link-hs" href="#" title="for_office">
+                                    <img class="slider__img" src="img/slider/slider3/for_office.png" alt="" role="presentation" />
+                                </a>
+                                <a class="slider__link link-ws link-hs" href="#" title="music">
+                                    <img class="slider__img" src="img/slider/slider3/music.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__slide">
+                        <div class="slider__slide-one">
+                            <div class="slider__wrap wrap-ws wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <a class="slider__link link-ws link-hs" href="#" title="services">
+                                    <img class="slider__img" src="img/slider/slider4/services.png" alt="" role="presentation" />
+                                </a>
+                                <a class="slider__link link-ws link-hs" href="#" title="stock">
+                                    <img class="slider__img" src="img/slider/slider4/stock.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                            <div class="slider__wrap wrap-wb wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <a class="slider__link link-wb link-hb" href="#" title="smart_house">
+                                    <img class="slider__img" src="img/slider/slider4/smart_house.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                            <div class="slider__wrap wrap-ws wrap-hb" style="display: flex; flex-direction: column; justify-content: space-between;">
+                                <a class="slider__link link-ws link-hb" href="#" title="presents">
+                                    <img class="slider__img" src="img/slider/slider4/presents.png" alt="" role="presentation" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
