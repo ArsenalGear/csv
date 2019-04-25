@@ -2,22 +2,85 @@ extends layouts/site
 
 block content
 
-    +b('div').slider#slider
-        +e('div').wrapper#slider-main
-            +e('div').slide
-                +e('a').link(href="#" title="#")
-                    //+e('img').img(src="https://via.placeholder.com/1100x590.png")
-                    +e('img').img(src="img/slider/slider_4.png")
+    .container.slide-container
+        +b('div').slider#slider
+            +e('div').wrapper#slider-main
+                +e('div').slide
+                    +e('div').slide-one
+                        +e('div').wrap.square-wrap(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('div').wrap.wrap-wb.wrap-hs
+                                +e('a').link.link-ws.link-hs(href="#" title="sport")
+                                    +e('img').img(src="img/slider/slide1/sport.png")
+                                +e('a').link.link-ws.link-hs(href="#" title="tech")
+                                    +e('img').img(src="img/slider/slide1/tech.png")
+                            +e('div').wrap.wrap-wb.wrap-hs
+                                +e('a').link.link-wb.link-hs(href="#" title="audio")
+                                    +e('img').img(src="img/slider/slide1/audio.png")
+                        +e('div').wrap.wrap-ws.wrap-hb
+                            +e('a').link.link-ws(href="#" title="cell")
+                                +e('img').img(src="img/slider/slide1/cell.png")
+                        +e('div').wrap.wrap-ws.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('a').link.link-ws.link-hs(href="#" title="home")
+                                +e('img').img(src="img/slider/slide1/home.png")
+                            +e('a').link.link-ws.link-hs(href="#" title="comp")
+                                +e('img').img(src="img/slider/slide1/comp.png")
+                +e('div').slide
+                    +e('div').slide-one
+                        +e('div').wrap.wrap-wb.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('div').wrap.wrap-wb.wrap-hs
+                                +e('a').link.link-wb.link-hs(href="#" title="accessories")
+                                    +e('img').img(src="img/slider/slider2/accessories.png")
+                            +e('div').wrap.wrap-wb.wrap-hs
+                                +e('a').link.link-wb.link-hs(href="#" title="souvenirs")
+                                    +e('img').img(src="img/slider/slider2/souvenirs.png")
 
-            +e('div').slide
-                +e('a').link(href="#" title="#")
-                    //+e('img').img(src="https://via.placeholder.com/1200x530.png")
-                    +e('img').img(src="img/slider/slider_2.png")
+                        +e('div').wrap.wrap-ws.wrap-hb
+                            +e('a').link.link-ws(href="#" title="construction")
+                                +e('img').img(src="img/slider/slider2/construction.png")
 
-            +e('div').slide
-                +e('a').link(href="#" title="#")
-                    //+e('img').img(src="https://via.placeholder.com/1300x610.png")
-                    +e('img').img(src="img/slider/slider_3.png")
+                        +e('div').wrap.wrap-ws.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('a').link.link-ws.link-hs(href="#" title="for_kids")
+                                +e('img').img(src="img/slider/slider2/for_kids.png")
+                            +e('a').link.link-ws.link-hs(href="#" title="auto")
+                                +e('img').img(src="img/slider/slider2/auto.png")
+
+                +e('div').slide
+                    +e('div').slide-one
+                        +e('div').wrap.wrap-wb.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('div').wrap.wrap-wb.wrap-hs
+                                +e('a').link.link-wb.link-hs(href="#" title="health_beauty")
+                                    +e('img').img(src="img/slider/slider3/health_beauty.png")
+                            +e('div').wrap.wrap-wb.wrap-hs
+                                +e('a').link.link-wb.link-hs(href="#" title="books")
+                                    +e('img').img(src="img/slider/slider3/books.png")
+
+                        +e('div').wrap.wrap-ws.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('a').link.link-ws.link-hs(href="#" title="clothes_ shoes")
+                                +e('img').img(src="img/slider/slider3/clothes_ shoes.png")
+                            +e('a').link.link-ws.link-hs(href="#" title="communication")
+                                +e('img').img(src="img/slider/slider3/communication.png")
+
+                        +e('div').wrap.wrap-ws.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('a').link.link-ws.link-hs(href="#" title="for_office")
+                                +e('img').img(src="img/slider/slider3/for_office.png")
+                            +e('a').link.link-ws.link-hs(href="#" title="music")
+                                +e('img').img(src="img/slider/slider3/music.png")
+
+                +e('div').slide
+                    +e('div').slide-one
+                        +e('div').wrap.wrap-ws.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('a').link.link-ws.link-hs(href="#" title="services")
+                                +e('img').img(src="img/slider/slider4/services.png")
+                            +e('a').link.link-ws.link-hs(href="#" title="stock")
+                                +e('img').img(src="img/slider/slider4/stock.png")
+
+                        +e('div').wrap.wrap-wb.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('a').link.link-wb.link-hb(href="#" title="smart_house")
+                                +e('img').img(src="img/slider/slider4/smart_house.png")
+
+                        +e('div').wrap.wrap-ws.wrap-hb(style="display: flex; flex-direction: column; justify-content: space-between;")
+                            +e('a').link.link-ws.link-hb(href="#" title="presents")
+                                +e('img').img(src="img/slider/slider4/presents.png")
 
 
 

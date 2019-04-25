@@ -915,13 +915,90 @@
 
   &__slide {
     height: 100%;
-    max-height: 590px;
+    //max-height: 590px;
+  }
+
+  &__slide-one {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    //height: 100%;
+    height: 586px;
+  }
+
+  & .slick-list {
+    height: 100%;
+  }
+
+  & .slick-track {
+    height: 100%;
+  }
+
+  & .slick-slide > div {
+    height: 100%;
+  }
+
+  &__link {
+    display: flex;
+
+    &.link-ws {
+      width: 100%;
+      max-width: $ws;
+    }
+
+    &.link-hs {
+      height: 100%;
+      max-height: $hs;
+    }
+
+    &:hover, &:focus {
+      cursor: pointer;
+      opacity: 0.75;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+
+    &.square-wrap {
+      width: 100%;
+      max-width: $wbp;
+      height: 100%;
+      max-height: 100%;
+    }
+
+     &.wrap-wb.wrap-hb {
+       max-width: $wbp;
+     }
+
+    &.wrap-wb {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &.wrap-hs {
+      height: 100%;
+      max-height: $hs;
+    }
+
+    &.wrap-ws {
+      width: 100%;
+      max-width: 23.846%;
+    }
+
+    &.wrap-hb {
+      height: 100%;
+      max-height: 100%;
+    }
   }
 
   &__wrapper {
     width: 100%;
     max-width: 1170px;
-    height: 590px;
+    //max-height: 586px;
+    max-height: 100%;
     margin: 0 auto;
   }
 
@@ -930,15 +1007,13 @@
     object-position: center;
     //width: 100%;
     height: 100%;
-    max-height: 590px;
   }
 
   &__link {
-    //object-fit: cover;
-    //object-position: center;
-    width: 100%;
-    max-width: 1170px;
-    height: 590px;
+    object-fit: cover;
+    object-position: center;
+    //width: 100%;
+    //max-width: 1170px;
   }
 
   & .slick-prev {
