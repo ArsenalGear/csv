@@ -35,6 +35,30 @@ $(function () {
         }
     });
 
+    //стрелка в фильтре
+    $('.choose__arrow').on('click', function(e) {
+        $(this).next('ul').slideToggle();
+        $(this).toggleClass('rotate');
+    });
+
+    //стрелка в фильтре
+    $('.ui-slider__arrow').on('click', function(e) {
+        $(this).next('.ui-slider__amounts').slideToggle();
+        $(this).toggleClass('rotate');
+    });
+
+    //показать еще в фильтре
+    $('.show-more').on('click', function(e) {
+        $(this).addClass('hide');
+        $(this).closest('ul').find('li').removeClass('hide');
+    });
+
+    //все параметры в фильтре
+    $('.selection__button').on('click', function(e) {
+        $(this).addClass('hide');
+        $(this).closest('.selection__wrapper').find('section').removeClass('hide');
+    });
+
     //закрытие модалки по крестику
     $('.modal__close-modal').on('click', function(e) {
 
@@ -78,62 +102,6 @@ $(function () {
     //вызов выбор региона из селекта в шапке и добавление в textarea там же
     $('#countrySelect').on('change', function() {
         changeSelect();
-    });
-
-    //многострадальный слайдер со ссылками на главной
-    $('#slider-main').slick({
-
-        autoplay: true,
-        autoplaySpeed: 3000,
-        speed: 1000,
-        slidesToScroll: 1,
-        infinite: true,
-        arrows: true,
-        fade: true,
-        cssEase: 'linear',
-    });
-
-    //слайдер со скидками на главной
-    $('#sale-slider').slick({
-
-        // autoplay: true,
-        autoplaySpeed: 3000,
-        pauseOnHover: true,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        speed: 1000,
-        infinite: true,
-        arrows: true,
-        adaptiveHeight: true,
-        cssEase: 'linear',
-
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 3,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 568,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true
-                }
-            }
-        ]
     });
 
     //оверлей на поиск в шапке
@@ -246,5 +214,31 @@ $(function () {
             },
             // type: 'inline'
         });
+    });
+
+    //слайдер цены в фильтре
+    $("#slider").slider({
+        range: true,
+        min: 1000,
+        max: 100000,
+        values: [ 100, 66666 ],
+        slide: function( event, ui ) {
+            $( ".ui-slider__from-input" ).val(ui.values[0] );
+            $( ".ui-slider__to-input" ).val(ui.values[1] );
+        }
+    });
+
+    //начальное значение цены в слайдере цены
+    $(".ui-slider__from-input").change(function () {
+        var value = $(this).val();
+        console.log(typeof(value));
+        $("#slider").slider("values", 0, value);
+    });
+
+    //конечное значение цены в слайдере цены
+    $(".ui-slider__to-input").change(function () {
+        var value = $(this).val();
+        console.log(typeof(value));
+        $("#slider").slider("values", 1, value);
     });
 });

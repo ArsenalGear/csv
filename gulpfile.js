@@ -55,7 +55,7 @@ gulp.task('js-libs', function () {
 		// 'node_modules/jquery-ui/ui/widgets/slider.js',
 		// 'node_modules/jquery-ui/ui/i18n/datepicker-ru.js',
         // './src/libs/share42.custom/share42.custom.min.js',
-        './src/js/jq-ui-slider/jquery-ui.min.js', //datepicker + slider
+        // './src/js/jq-ui-slider/jquery-ui.min.js', //datepicker + slider
 		// 'node_modules/timepicker/jquery.timepicker.js',
         'node_modules/select2/dist/js/select2.full.js',
         // 'node_modules/jquery-ui-touch-punch/jquery.ui.touch-punch.js',

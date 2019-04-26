@@ -659,8 +659,8 @@
         display: block;
         top: 0;
         right: 0;
-        transform: translate(130% , 25%);
-        font: 700 0.75rem/0.75rem $icons-font-regular;
+        transform: translate(130%, 45%);
+        font: 500 0.625rem/0.625rem $icons-font-regular;
         cursor: pointer;
         color: #9d9c9c;
       }
@@ -705,6 +705,7 @@
     padding: 0.7rem 1.8rem 0.7rem 1rem;
     margin-top: 1rem;
     border-radius: $bor-rad-btn;
+    text-transform: lowercase;
   }
 
   &__show-block {
@@ -725,8 +726,8 @@
         display: block;
         top: 50%;
         right: 0;
-        transform: translate(120%, -50%);
-        font: 700 0.875rem $icons-font-regular!important;
+        transform: translate(120%, -29%);
+        font: 700 0.75rem/0.75rem $icons-font-regular;
         cursor: pointer;
         color: $text-red!important;
       }
@@ -740,8 +741,8 @@
         display: block;
         top: 50%;
         right: 0;
-        transform: translate(120%, -46%);
-        font: 700 0.875rem/0.875rem $icons-font-regular;
+        transform: translate(140%, -30%);
+        font: 700 0.75rem/0.75rem $icons-font-regular;
         cursor: pointer;
         color: $text;
       }
@@ -1168,12 +1169,12 @@
 .slider {
   padding: 2rem 0;
 
-  & .ui-corner-all {
-    display: none !important;
-  }
-  & .ui-corner-all {
-    display: none !important;
-  }
+  //& .ui-corner-all {
+  //  display: none !important;
+  //}
+  //& .ui-corner-all {
+  //  display: none !important;
+  //}
 
   &__slide {
     height: 100%;

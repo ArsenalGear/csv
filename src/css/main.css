@@ -902,9 +902,9 @@ body::-webkit-scrollbar {
         display: block;
         top: 0;
         right: 0;
-        -webkit-transform: translate(130%, 25%);
-                transform: translate(130%, 25%);
-        font: 700 0.75rem/0.75rem "FontAwesome Solid";
+        -webkit-transform: translate(130%, 45%);
+                transform: translate(130%, 45%);
+        font: 500 0.625rem/0.625rem "FontAwesome Solid";
         cursor: pointer;
         color: #9d9c9c; }
   .popular__shops {
@@ -944,7 +944,8 @@ body::-webkit-scrollbar {
     width: 100%;
     padding: 0.7rem 1.8rem 0.7rem 1rem;
     margin-top: 1rem;
-    border-radius: 2rem; }
+    border-radius: 2rem;
+    text-transform: lowercase; }
   .popular__show-block {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -965,9 +966,9 @@ body::-webkit-scrollbar {
         display: block;
         top: 50%;
         right: 0;
-        -webkit-transform: translate(120%, -50%);
-                transform: translate(120%, -50%);
-        font: 700 0.875rem "FontAwesome Solid" !important;
+        -webkit-transform: translate(120%, -29%);
+                transform: translate(120%, -29%);
+        font: 700 0.75rem/0.75rem "FontAwesome Solid";
         cursor: pointer;
         color: #f33733 !important; }
     .popular__total-price.shop:after {
@@ -976,9 +977,9 @@ body::-webkit-scrollbar {
       display: block;
       top: 50%;
       right: 0;
-      -webkit-transform: translate(120%, -46%);
-              transform: translate(120%, -46%);
-      font: 700 0.875rem/0.875rem "FontAwesome Solid";
+      -webkit-transform: translate(140%, -30%);
+              transform: translate(140%, -30%);
+      font: 700 0.75rem/0.75rem "FontAwesome Solid";
       cursor: pointer;
       color: #06121c; }
     .popular__total-price:after {
@@ -1343,10 +1344,6 @@ body::-webkit-scrollbar {
 
 .slider {
   padding: 2rem 0; }
-  .slider .ui-corner-all {
-    display: none !important; }
-  .slider .ui-corner-all {
-    display: none !important; }
   .slider__slide {
     height: 100%; }
   .slider__slide-one {
