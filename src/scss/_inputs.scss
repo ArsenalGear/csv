@@ -35,15 +35,33 @@
   }
 
   &__label-span {
-    width: 20px;
-    height: 20px;
-    border: 3px solid $border-main-color;
+    width: 17px;
+    height: 17px;
+    border: 1px solid $border-grey-color;
+    border-radius: 3px;
+
+    &:hover, &:focus {
+      border: 1px solid $border-main-color;
+    }
   }
 
   &__input-hidden:checked + .label-checkbox__label-span {
-    width: 20px;
-    height: 20px;
-    background-color: $bg-blue-color;
-    border: 3px solid $border-main-color;
+    position: relative;
+    width: 17px;
+    height: 17px;
+    //background-color: $bg-blue-color;
+    border-radius: 3px;
+    border: 1px solid $border-main-color;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 17px;
+      height: 17px;
+      top: 0;
+      left: 2px;
+      background: url('../img/theme/icons/Check_Icon.png') no-repeat;
+    }
   }
 }

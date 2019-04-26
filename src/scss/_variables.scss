@@ -25,6 +25,7 @@ $border-main-color: #31bcfe;
 $border-red-color: #f33733;
 $border-dark-color: #222222;
 $border-grey-color: #f0f0f0;
+$border-grey-filter: #f4f4f4;
 
 // Texts colors
 $text: #06121c;
@@ -67,6 +68,13 @@ $font-main: GothamPro, sans-serif;
   font-family: 'GothamPro';
   src: local('GothamPro'), url('../fonts/gotham-pro/GothamPro-Light.woff') format('woff'), url('../fonts/gotham-pro/GothamPro-Light.ttf') format('truetype');
   font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamPro';
+  src: local('GothamPro'), url('../fonts/gotham-pro/GothamPro-Medium.woff') format('woff'), url('../fonts/gotham-pro/GothamPro-Medium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
 }
 

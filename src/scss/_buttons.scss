@@ -42,6 +42,7 @@
 
     &:hover,
     &:focus {
+      box-shadow: 0 5px 24px rgba(49, 188, 254, 0.6);
       background-color: $text-blue;
       border: 2px solid $border-main-color;
       color: $white;

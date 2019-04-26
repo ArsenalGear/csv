@@ -26,12 +26,11 @@
     }
   }
 
-  .subscribe {
+  .subscribe, .filter-section {
 
     & > .container {
       max-width: 1200px;
     }
-
   }
 
 }
