@@ -396,20 +396,20 @@ block content
                             +e('a').link(href="#" title="цене") цене
                             +e('a').link(href="#" title="новизне") новизне
                         +e('div').right-side
-                            +e('a').cards.active(href="#" title="таблица")
+                            +e('a').cards(href="/category.html" title="таблица")
                                 +e('span').lt
                                 +e('span').rt
                                 +e('span').ld
                                 +e('span').rd
-                            +e('a').tables(href="/category-list.html" title="список")
+                            +e('a').tables.active(href="#" title="список")
                                 +e('span').first
                                 +e('span').second
                                 +e('span').third
                     +b('div').popular.light-theme#popular
                         .container
                             .row
-                                .col-12.col-sm-6.col-md-4.col-lg-4
-                                    +e('div').card
+                                .col-12
+                                    +e('div').card.reverse-card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
                                         +e('div').reverse-block
@@ -432,32 +432,8 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-6.col-md-4.col-lg-4
-                                    +e('div').card
-                                        +e('a').img-link(href="#" title="#")
-                                            +e('img').img(src="img/card/card1.png" alt="#")
-                                        +e('div').reverse-block
-                                            +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой
-                                            +b('div').rating
-                                                +e('div').stars-block
-                                                    +e('img').star(src="img/theme/icons/star_checked.png")
-                                                    +e('img').star(src="img/theme/icons/star_checked.png")
-                                                    +e('img').star(src="img/theme/icons/star_checked.png")
-                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
-                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
-                                                +e('div').feed-block
-                                                    +e('span').feed-count 5
-                                                    +e('span').feed-title отзывов
-                                        +e('div').reverse-right-block
-                                            +e('div').price-shop от
-                                                +e('span').total-price.shop 999 490
-                                            +e('div').shops
-                                                +e('span').shop-in в
-                                                +e('span').shop-count 47
-                                                +e('span').shop-title магазинах
-                                            +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-6.col-md-4.col-lg-4
-                                    +e('div').card
+                                .col-12
+                                    +e('div').card.reverse-card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
                                         +e('div').reverse-block

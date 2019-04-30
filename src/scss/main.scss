@@ -622,6 +622,38 @@
       border: 3px solid $border-main-color;
       box-shadow: 0 5px 24px rgba(49, 188, 254, 0.6);
     }
+
+    &.reverse-card {
+      display: flex;
+      min-height: 18rem;
+
+      & .popular__img-link {
+        width: 100%;
+        max-width: 33.3333%;
+      }
+
+      & .popular__reverse-block {
+        width: 100%;
+        max-width: 45%;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        border-right: 1px solid $border-grey-filter;
+      }
+
+      & .rating {
+        border-bottom: none;
+      }
+
+      & .popular__reverse-right-block {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
   }
 
   //&__old-price {
