@@ -18,7 +18,7 @@ block content
     +b('div').filter-section
         .container
             .row
-                .col-md-4.col-sm-3.col-lg-3
+                .col-12.col-xl-3
                     +b('ul').filter
                         +e('li').goods
                             +e('div').link-block
@@ -388,7 +388,7 @@ block content
                                                 +e('span').right-bracker )
 
 
-                .col-md-4.col-sm-3.col-lg-9
+                .col-12.col-xl-9
                     +b('div').sortable
                         +e('div').left-side
                             +e('span').sortBy Сортировать по:
@@ -408,12 +408,12 @@ block content
                     +b('div').popular.light-theme#popular
                         .container
                             .row
-                                .col-12.col-sm-6.col-md-4.col-lg-4
+                                .col-12.col-sm-12.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
                                         +e('div').reverse-block
-                                            +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой
+                                            +e('a').img-link-desc(href="#" title="#") Товар с
                                             +b('div').rating
                                                 +e('div').stars-block
                                                     +e('img').star(src="img/theme/icons/star_checked.png")
@@ -425,14 +425,14 @@ block content
                                                     +e('span').feed-count 5
                                                     +e('span').feed-title отзывов
                                         +e('div').reverse-right-block
-                                            +e('div').price-shop от
-                                                +e('span').total-price.shop 999 490
+                                            +e('div').price-shop <span class="popular__from-word">от</span>
+                                                +e('span').total-price.shop 999
                                             +e('div').shops
                                                 +e('span').shop-in в
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-6.col-md-4.col-lg-4
+                                .col-12.col-sm-12.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -446,17 +446,66 @@ block content
                                                     +e('img').star(src="img/theme/icons/star_unchecked.png")
                                                     +e('img').star(src="img/theme/icons/star_unchecked.png")
                                                 +e('div').feed-block
-                                                    +e('span').feed-count 5
+                                                    +e('span').feed-count 55
                                                     +e('span').feed-title отзывов
                                         +e('div').reverse-right-block
-                                            +e('div').price-shop от
-                                                +e('span').total-price.shop 999 490
+                                            +e('div').price-shop <span class="popular__from-word">от</span>
+                                                +e('span').total-price.shop 10 000
                                             +e('div').shops
                                                 +e('span').shop-in в
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-6.col-md-4.col-lg-4
+                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                    +e('div').card
+                                        +e('a').img-link(href="#" title="#")
+                                            +e('img').img(src="img/card/card1.png" alt="#")
+                                        +e('div').reverse-block
+                                            +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой Товар с хорошими качествами и ценой Товар с хорошими качествами и ценой Товар с хорошими качествами и ценой
+                                            +b('div').rating
+                                                +e('div').stars-block
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                +e('div').feed-block
+                                                    +e('span').feed-count 555
+                                                    +e('span').feed-title отзывов
+                                        +e('div').reverse-right-block
+                                            +e('div').price-shop.discount <span class="popular__from-word">от</span>
+                                                +e('span').total-price.shop.discount 99 949
+                                                +e('span').old-price <span class="strike">99 999</span>
+                                            +e('div').shops
+                                                +e('span').shop-in в
+                                                +e('span').shop-count 47
+                                                +e('span').shop-title магазинах
+                                            +e('a').link-shop.button.button-yellow Сравнить цены
+                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                    +e('div').card
+                                        +e('a').img-link(href="#" title="#")
+                                            +e('img').img(src="img/card/card1.png" alt="#")
+                                        +e('div').reverse-block
+                                            +e('a').img-link-desc(href="#" title="#") Товар с
+                                            +b('div').rating
+                                                +e('div').stars-block
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                +e('div').feed-block
+                                                    +e('span').feed-count 5
+                                                    +e('span').feed-title отзывов
+                                        +e('div').reverse-right-block
+                                            +e('div').price-shop <span class="popular__from-word">от</span>
+                                                +e('span').total-price.shop 999
+                                            +e('div').shops
+                                                +e('span').shop-in в
+                                                +e('span').shop-count 47
+                                                +e('span').shop-title магазинах
+                                            +e('a').link-shop.button.button-yellow Сравнить цены
+                                .col-12.col-sm-12.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -470,10 +519,107 @@ block content
                                                     +e('img').star(src="img/theme/icons/star_unchecked.png")
                                                     +e('img').star(src="img/theme/icons/star_unchecked.png")
                                                 +e('div').feed-block
+                                                    +e('span').feed-count 55
+                                                    +e('span').feed-title отзывов
+                                        +e('div').reverse-right-block
+                                            +e('div').price-shop <span class="popular__from-word">от</span>
+                                                +e('span').total-price.shop 10 000
+                                            +e('div').shops
+                                                +e('span').shop-in в
+                                                +e('span').shop-count 47
+                                                +e('span').shop-title магазинах
+                                            +e('a').link-shop.button.button-yellow Сравнить цены
+                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                    +e('div').card
+                                        +e('a').img-link(href="#" title="#")
+                                            +e('img').img(src="img/card/card1.png" alt="#")
+                                        +e('div').reverse-block
+                                            +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой Товар с хорошими качествами и ценой
+                                            +b('div').rating
+                                                +e('div').stars-block
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                +e('div').feed-block
+                                                    +e('span').feed-count 555
+                                                    +e('span').feed-title отзывов
+                                        +e('div').reverse-right-block
+                                            +e('div').price-shop.discount <span class="popular__from-word">от</span>
+                                                +e('span').total-price.shop.discount 999 490
+                                                +e('span').old-price <span class="strike">999 999</span>
+                                            +e('div').shops
+                                                +e('span').shop-in в
+                                                +e('span').shop-count 47
+                                                +e('span').shop-title магазинах
+                                            +e('a').link-shop.button.button-yellow Сравнить цены
+                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                    +e('div').card
+                                        +e('a').img-link(href="#" title="#")
+                                            +e('img').img(src="img/card/card1.png" alt="#")
+                                        +e('div').reverse-block
+                                            +e('a').img-link-desc(href="#" title="#") Товар с
+                                            +b('div').rating
+                                                +e('div').stars-block
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                +e('div').feed-block
                                                     +e('span').feed-count 5
                                                     +e('span').feed-title отзывов
                                         +e('div').reverse-right-block
-                                            +e('div').price-shop.discount от
+                                            +e('div').price-shop <span class="popular__from-word">от</span>
+                                                +e('span').total-price.shop 999
+                                            +e('div').shops
+                                                +e('span').shop-in в
+                                                +e('span').shop-count 47
+                                                +e('span').shop-title магазинах
+                                            +e('a').link-shop.button.button-yellow Сравнить цены
+                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                    +e('div').card
+                                        +e('a').img-link(href="#" title="#")
+                                            +e('img').img(src="img/card/card1.png" alt="#")
+                                        +e('div').reverse-block
+                                            +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой
+                                            +b('div').rating
+                                                +e('div').stars-block
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                +e('div').feed-block
+                                                    +e('span').feed-count 55
+                                                    +e('span').feed-title отзывов
+                                        +e('div').reverse-right-block
+                                            +e('div').price-shop <span class="popular__from-word">от</span>
+                                                +e('span').total-price.shop 10 000
+                                            +e('div').shops
+                                                +e('span').shop-in в
+                                                +e('span').shop-count 47
+                                                +e('span').shop-title магазинах
+                                            +e('a').link-shop.button.button-yellow Сравнить цены
+                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                    +e('div').card
+                                        +e('a').img-link(href="#" title="#")
+                                            +e('img').img(src="img/card/card1.png" alt="#")
+                                        +e('div').reverse-block
+                                            +e('a').img-link-desc(href="#" title="#") Товар с хорошими качествами и ценой Товар с хорошими качествами и ценой
+                                            +b('div').rating
+                                                +e('div').stars-block
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                                +e('div').feed-block
+                                                    +e('span').feed-count 555
+                                                    +e('span').feed-title отзывов
+                                        +e('div').reverse-right-block
+                                            +e('div').price-shop.discount <span class="popular__from-word">от</span>
                                                 +e('span').total-price.shop.discount 999 490
                                                 +e('span').old-price <span class="strike">999 999</span>
                                             +e('div').shops
@@ -484,9 +630,8 @@ block content
                     +b('div').pagination
                         +e('ul')
                             +e('li').arrow-left
-                                +e('a').link(href="#" title="назад")
-                                    +e('img').img(src="img/theme/icons/prev.svg" alt="назад")
-                            +e('li').item
+                                +e('a').link#prev(href="#" title="назад") <
+                            +e('li').item.active
                                 +e('a').link(href="#" title="1")
                                     +e('span') 1
                             +e('li').item
@@ -502,8 +647,7 @@ block content
                                 +e('a').link(href="#" title="5")
                                     +e('span') 5
                             +e('li').arrow-right
-                                +e('a').link(href="#" title="вперед")
-                                    +e('img').img(src="img/theme/icons/next.svg" alt="вперед")
+                                +e('a').link#next(href="#" title="вперед") >
 
     +b('section').subscribe#subscribe
         .container

@@ -72,6 +72,7 @@ gulp.task('css-libs', function () {
         'node_modules/bootstrap/dist/css/bootstrap-grid.css',
         // 'node_modules/jquery.scrollbar/jquery.scrollbar.css',
         // './src/css/jq-ui-slider/jquery-ui.min.css', //datepicker + slider
+        // './src/css/fonts/all.css', //datepicker + slider
         'node_modules/magnific-popup/dist/magnific-popup.css',
         // 'node_modules/jquery-ui/themes/base/datepicker.css',
         // 'node_modules/jquery-ui/themes/base/slider.css',

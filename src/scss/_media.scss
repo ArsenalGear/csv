@@ -37,6 +37,10 @@
 
 @media screen and (max-width: 1199px) {
 
+  .filter {
+    display: none;
+  }
+
   .header {
 
     &__wrapper {
@@ -86,10 +90,19 @@
     }
   }
 
+  .pagination {
+    margin: 0 0 1rem 0;
+  }
+
   .popular {
 
     &__card {
-      padding: 1rem;
+      padding: 0.5rem;
+
+      &.reverse-card {
+        min-height: 15rem;
+        padding: 0;
+      }
     }
   }
 
@@ -102,6 +115,10 @@
     &__price-block {
       padding: 0 0 0.07rem 0;
     }
+  }
+
+  .selection {
+    display: none;
   }
 
   .shop-add {
@@ -138,6 +155,12 @@
     }
   }
 
+  .sortable {
+
+    &__cards {
+      align-items: flex-start;
+    }
+  }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
@@ -286,6 +309,9 @@
   //.sale__heart {
   //  transform: translate(40%, 35%);
   //}
+  .popular__card.reverse-card .popular__reverse-right-block {
+    padding-left: 0.5rem;
+  }
 
   .slider {
 
@@ -296,6 +322,14 @@
 
   .social-entry {
     margin-bottom: 1rem;
+  }
+
+  .sortable {
+    padding: 0.5rem;
+
+    &__left-side * {
+      margin-right: 0.5rem;
+    }
   }
 
   .subscribe {
@@ -323,8 +357,6 @@
 }
 
 @media screen and (max-width: 767px) {
-
-
 
   .drop-down {
 
@@ -357,6 +389,20 @@
 
   .overview__small-card {
     margin-bottom: 1rem;
+  }
+
+  .popular__card.reverse-card .popular__reverse-block {
+    max-width: 40%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .popular__card.reverse-card .popular__reverse-right-block {
+    max-width: 30%;
+  }
+
+  .popular__card.reverse-card .popular__link-shop{
+    padding: 0.5rem 0.1rem;
   }
 
   .slider {
@@ -452,6 +498,34 @@
   .popular__total-price:after {
     //top: -3px;
     //right: -1px;
+  }
+
+  .popular__card.reverse-card .popular__reverse-block {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+
+  .popular__card.reverse-card .popular__reverse-right-block {
+    padding-left: 0.3rem;
+  }
+
+  .popular__price-shop.discount span {
+
+    font: 500 1rem/1rem $font-main;
+  }
+
+  .popular__card.reverse-card .popular__link-shop {
+    padding: 0.5rem 0.1rem;
+    font: 500 0.6rem/0.6rem $font-main;
+  }
+
+  .popular.light-theme > .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .rating__star {
+    max-width: 15px;
   }
 
   .sale {

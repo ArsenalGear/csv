@@ -437,6 +437,10 @@
   }
 }
 
+.hide {
+  display: none;
+}
+
 .input-overlay {
   z-index: 11;
 }
@@ -579,6 +583,80 @@
   //background-color: #000;
 }
 
+.pagination {
+  margin: 5rem 0;
+
+  & > ul {
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: 2.6875rem;
+    height: 2.6875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid $border-main-color;
+
+    &:hover, &:focus {
+      border: 2px solid $bg-light-yellow;
+    }
+
+    & span {
+      font: 700 1rem/1rem $font-main;
+      text-transform: uppercase;
+      color: $text-blue;
+    }
+
+    &.active {
+      box-shadow: 0 5px 24px rgba(49, 188, 254, 0.6);
+      background-color:$bg-blue-color;
+
+      &:hover, &:focus {
+        border: 2px solid $border-main-color;
+      }
+
+      & span {
+        font: 700 1rem/1rem $font-main;
+        text-transform: uppercase;
+        color: $text-white;
+      }
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+
+  &__arrow-left a, &__arrow-right a {
+    font: 500 2.5rem/2.5rem $font-main;
+    color: $text;
+    text-decoration: none;
+    
+    &:hover, &:focus {
+      text-decoration: none;
+      color: $text-blue;
+    }
+  }
+}
+
 .popular {
   position: relative;
   padding: 2rem 0;
@@ -624,18 +702,20 @@
     }
 
     &.reverse-card {
-      display: flex;
       min-height: 18rem;
+      padding: 0;
+      display: flex;
 
       & .popular__img-link {
         width: 100%;
-        max-width: 33.3333%;
+        max-width: 30%;
       }
 
       & .popular__reverse-block {
         width: 100%;
         max-width: 45%;
         padding-right: 1rem;
+        padding-left: 1rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -643,15 +723,28 @@
         border-right: 1px solid $border-grey-filter;
       }
 
+      & .popular__old-price {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+      }
+
       & .rating {
         border-bottom: none;
       }
+      
+      & .popular__img-link-desc {
+        text-align: left;
+      }
 
       & .popular__reverse-right-block {
+        width: 100%;
+        max-width: 25%;
         padding-left: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
       }
     }
   }
@@ -676,7 +769,7 @@
   //}
 
   &__old-price {
-    padding-left: 1rem;
+    padding-left: 1.2rem;
     font: 700 0.9375rem/1.125rem $font-main;
     color: $text-red;
     text-decoration: line-through;
@@ -726,6 +819,7 @@
     display: block;
     min-height: 3.5625rem;
     max-height: 3.6rem;
+    margin-bottom: 0.5rem;
     overflow-y: hidden;
     text-align: center;
     font: 300 1rem/1.2rem $font-main;
@@ -799,12 +893,23 @@
 
   }
 
+  &__from-word {
+    margin-right: 4px;
+  }
+
   &__price-shop {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
     padding: 0.5rem 0 0 0;
     font: 700 1.125rem/1.5rem $font-main;
     text-align: center;
 
     &.discount {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      flex-wrap: wrap;
       color: $text-red;
     }
 
@@ -822,10 +927,11 @@
 
 .rating {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   padding-bottom: 0.8rem;
   border-bottom: 1px solid $bg-light-color;
-
 
   &__feed-block {
     display: flex;
@@ -1371,14 +1477,14 @@
 }
 
 .sortable {
-  padding: 1.125rem 1.375rem;
+  padding: 0.56rem 1.375rem;
   background-color: $bg-light-color;
   display: flex;
   justify-content: space-between;
 
   &__left-side * {
     margin-right: 1.5rem;
-    font: 300 0.875rem/1rem $font-main;
+    font: 300 0.875rem/2rem $font-main;
   }
 
   &__left-side a {
@@ -1395,6 +1501,7 @@
 
   &__right-side {
     display: flex;
+    align-items: center;
   }
 
   &__cards {
@@ -1403,6 +1510,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: initial;
     cursor: pointer;
 
     &:hover, &:focus {
@@ -1630,11 +1738,6 @@
     }
   }
 }
-
-.hide {
-  display: none;
-}
-
 
 @import "modals";
 @import "media";
