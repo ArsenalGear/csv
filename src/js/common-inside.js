@@ -53,6 +53,36 @@ $(function () {
         $(this).closest('ul').find('li').removeClass('hide');
     });
 
+    $('.title-goods__choose').on('click', function(e) {
+        $('.filter, .selection').slideToggle();
+    });
+
+    //переключить сортировку в карточный вид
+    $('.sortable__tables').on('click', function(e) {
+
+        e.preventDefault();
+
+        if ( $(this).hasClass('no-active') ) {
+            $(this).removeClass('no-active').addClass('active');
+            $('.sortable__cards').removeClass('active').addClass('no-active');
+            $('#popular').find('.col-12').removeClass('col-lg-4').removeClass('col-md-6').removeClass('col-sm-6');
+            $('.popular__card').addClass('reverse-card');
+        }
+    });
+
+    //переключить сортировку в табличный вид
+    $('.sortable__cards').on('click', function(e) {
+
+        e.preventDefault();
+
+        if ( $(this).hasClass('no-active') ) {
+            $(this).removeClass('no-active').addClass('active');
+            $('.sortable__tables').removeClass('active').addClass('no-active');
+            $('#popular').find('.col-12').addClass('col-lg-4').addClass('col-md-6').addClass('col-sm-6');
+            $('.popular__card').removeClass('reverse-card');
+        }
+    });
+
     //все параметры в фильтре
     $('.selection__button').on('click', function(e) {
         $(this).addClass('hide');

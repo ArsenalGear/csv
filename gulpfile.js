@@ -88,11 +88,11 @@ gulp.task('css-libs', function () {
 });
 
 gulp.task('browser-sync', function () {
-    browserSync({
+    browserSync.init({
         server: {
             baseDir: 'src'
         },
-        // online: true,
+        online: true,
         // tunnel: true,
         notify: false
     });

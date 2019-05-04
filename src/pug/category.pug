@@ -4,16 +4,20 @@ block content
     +b('div').breadcrumbs
         .container
             .row
-                +e('div').wrapper
-                    +e('a').link Главная
-                    +e('span').divider /
-                    +e('a').link Компьютеры
-                    +e('span').divider /
-                    +e('span').link.breadcrumbs__link-last Ноутбуки
+                .col-12
+                    +e('div').wrapper
+                        +e('a').link Главная
+                        +e('span').divider /
+                        +e('a').link Компьютеры
+                        +e('span').divider /
+                        +e('span').link.breadcrumbs__link-last Ноутбуки
     +b('section').title-goods
         .container
             .row
-                +e('h2').title Ноутбуки
+                .col-12
+                    +e('h2').title Ноутбуки
+                .col-12
+                    +e('p').choose <span> Уточнить выбор </span>
 
     +b('div').filter-section
         .container
@@ -401,14 +405,14 @@ block content
                                 +e('span').rt
                                 +e('span').ld
                                 +e('span').rd
-                            +e('a').tables(href="/category-list.html" title="список")
+                            +e('a').tables.no-active(href="/category-list.html" title="список")
                                 +e('span').first
                                 +e('span').second
                                 +e('span').third
                     +b('div').popular.light-theme#popular
                         .container
                             .row
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -432,7 +436,7 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -456,7 +460,7 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -481,7 +485,7 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -505,7 +509,7 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -529,7 +533,7 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -554,7 +558,7 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -578,7 +582,7 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")
@@ -602,7 +606,7 @@ block content
                                                 +e('span').shop-count 47
                                                 +e('span').shop-title магазинах
                                             +e('a').link-shop.button.button-yellow Сравнить цены
-                                .col-12.col-sm-12.col-md-6.col-lg-4
+                                .col-12.col-sm-6.col-md-6.col-lg-4
                                     +e('div').card
                                         +e('a').img-link(href="#" title="#")
                                             +e('img').img(src="img/card/card1.png" alt="#")

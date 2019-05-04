@@ -4,16 +4,20 @@ block content
     +b('div').breadcrumbs
         .container
             .row
-                +e('div').wrapper
-                    +e('a').link Главная
-                    +e('span').divider /
-                    +e('a').link Компьютеры
-                    +e('span').divider /
-                    +e('span').link.breadcrumbs__link-last Ноутбуки
+                .col-12
+                    +e('div').wrapper
+                        +e('a').link Главная
+                        +e('span').divider /
+                        +e('a').link Компьютеры
+                        +e('span').divider /
+                        +e('span').link.breadcrumbs__link-last Ноутбуки
     +b('section').title-goods
         .container
             .row
-                +e('h2').title Ноутбуки
+                .col-12
+                    +e('h2').title Ноутбуки
+                .col-12
+                    +e('p').choose <span> Уточнить выбор </span>
 
     +b('div').filter-section
         .container
@@ -396,7 +400,7 @@ block content
                             +e('a').link(href="#" title="цене") цене
                             +e('a').link(href="#" title="новизне") новизне
                         +e('div').right-side
-                            +e('a').cards(href="/category.html" title="таблица")
+                            +e('a').cards.no-active(href="/category.html" title="таблица")
                                 +e('span').lt
                                 +e('span').rt
                                 +e('span').ld

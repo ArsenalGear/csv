@@ -203,7 +203,7 @@ body::-webkit-scrollbar {
     background-color: transparent;
     color: #31bcfe;
     border: 2px solid #31bcfe;
-    padding: 0.7rem 2.25rem;
+    padding: 0.63rem .8rem;
     font: 700 0.75rem/1rem GothamPro, sans-serif; }
     .button-blue:hover, .button-blue:focus {
       -webkit-box-shadow: 0 5px 24px rgba(49, 188, 254, 0.6);
@@ -225,7 +225,7 @@ body::-webkit-scrollbar {
     background-color: transparent;
     color: #222222;
     border: 2px solid #222222;
-    padding: 0.7rem 2.25rem;
+    padding: 0.63rem .8rem;
     font: 700 0.75rem/1rem GothamPro, sans-serif; }
     .button-dark:hover, .button-dark:focus {
       background-color: #222222;
@@ -749,13 +749,16 @@ body::-webkit-scrollbar {
       text-decoration: none; }
 
 .hide {
-  display: none; }
+  display: none !important; }
 
 .input-overlay {
   z-index: 11; }
 
 .nav-opacity {
   background-color: #808080; }
+
+.opacity {
+  opacity: 0.5; }
 
 .overlay {
   display: none;
@@ -861,9 +864,6 @@ body::-webkit-scrollbar {
         -ms-flex-pack: center;
             justify-content: center; }
 
-.opacity {
-  opacity: 0.5; }
-
 .pagination {
   margin: 5rem 0; }
   .pagination > ul {
@@ -952,7 +952,7 @@ body::-webkit-scrollbar {
   .popular__card {
     position: relative;
     min-height: 25rem;
-    padding: 1.2rem 1.1rem 1.2rem 1.1rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     border: 3px solid white;
     border-radius: 5px;
@@ -962,7 +962,7 @@ body::-webkit-scrollbar {
       -webkit-box-shadow: 0 5px 24px rgba(49, 188, 254, 0.6);
               box-shadow: 0 5px 24px rgba(49, 188, 254, 0.6); }
     .popular__card.reverse-card {
-      min-height: 18rem;
+      min-height: 15rem;
       padding: 0;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1000,7 +1000,7 @@ body::-webkit-scrollbar {
       .popular__card.reverse-card .popular__reverse-right-block {
         width: 100%;
         max-width: 25%;
-        padding-left: 1rem;
+        padding: 0 0.5rem;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -1067,10 +1067,15 @@ body::-webkit-scrollbar {
     text-align: center;
     font: 300 1rem/1.2rem GothamPro, sans-serif;
     color: #222222; }
+    .popular__img-link-desc:hover, .popular__img-link-desc:focus {
+      text-decoration: none;
+      color: #31bcfe; }
   .popular__price {
     width: 100%;
+    max-width: 13.125rem;
     padding: 0.7rem 1.8rem 0.7rem 1rem;
-    margin-top: 1rem;
+    margin: 1rem auto 0 auto;
+    display: block;
     border-radius: 2rem;
     text-transform: lowercase; }
   .popular__show-block {
@@ -1158,6 +1163,10 @@ body::-webkit-scrollbar {
       font: 700 1.25rem/1.25rem GothamPro, sans-serif; }
   .popular__link-shop {
     width: 100%;
+    max-width: 13.125rem;
+    padding: .782rem;
+    margin: 0.22rem auto;
+    display: block;
     font: 700 0.75rem/1rem GothamPro, sans-serif;
     color: #303030; }
 
@@ -1383,9 +1392,9 @@ body::-webkit-scrollbar {
         display: block;
         top: 0;
         right: 0;
-        -webkit-transform: translate(130%, 15%);
-                transform: translate(130%, 15%);
-        font: 700 0.8125rem/0.875rem "FontAwesome Solid";
+        -webkit-transform: translate(130%, 25%);
+                transform: translate(130%, 25%);
+        font: 700 0.75rem/0.75rem "FontAwesome Solid";
         cursor: pointer;
         color: #9d9c9c; }
   .sale + .show-block {
@@ -1465,7 +1474,7 @@ body::-webkit-scrollbar {
   padding: 0.5rem;
   display: block;
   color: #31bcfe;
-  font: 700 3rem/3rem GothamPro, sans-serif;
+  font: 500 2.5rem/2.5rem GothamPro, sans-serif;
   width: 45px;
   height: 45px;
   display: -webkit-box;
@@ -1656,11 +1665,11 @@ body::-webkit-scrollbar {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: initial;
-        -ms-flex-align: initial;
-            align-items: initial;
     cursor: pointer; }
-    .sortable__cards:hover, .sortable__cards:focus {
+    .sortable__cards > span {
+      display: block;
+      margin-bottom: 1px; }
+    .sortable__cards:hover {
       opacity: 0.5; }
     .sortable__cards * {
       display: block;
@@ -1682,7 +1691,7 @@ body::-webkit-scrollbar {
         -ms-flex-pack: justify;
             justify-content: space-between;
     cursor: pointer; }
-    .sortable__tables:hover, .sortable__tables:focus {
+    .sortable__tables:hover {
       opacity: 0.5; }
     .sortable__tables * {
       display: block;
@@ -1789,6 +1798,9 @@ body::-webkit-scrollbar {
 .title-goods__title {
   text-align: left; }
 
+.title-goods__choose {
+  display: none; }
+
 .ui-slider__arrow {
   cursor: pointer;
   -webkit-transition: all 0.4s ease;
@@ -1845,12 +1857,12 @@ body::-webkit-scrollbar {
 .ui-slider__from-input, .ui-slider__to-input {
   display: block;
   width: 100%;
-  max-width: 5.5rem;
-  padding: 1rem;
+  max-width: 5.625rem;
+  padding: 0.845rem 1rem;
   border: 1px solid #f4f4f4;
   background-color: #f4f4f4;
   text-align: center;
-  font: 300 0.875rem/1.125rem GothamPro, sans-serif;
+  font: 300 0.875rem/0.875rem GothamPro, sans-serif;
   border-radius: 30px;
   outline: none; }
   .ui-slider__from-input:focus, .ui-slider__to-input:focus {
@@ -2028,7 +2040,7 @@ body::-webkit-scrollbar {
   .overview .container .row:nth-child(2) div:nth-child(2) .row div:nth-child(6) {
     -ms-flex-item-align: end;
         align-self: flex-end; }
-  .subscribe > .container, .filter-section > .container {
+  .subscribe > .container, .filter-section > .container, .breadcrumbs > .container, .title-goods > .container {
     max-width: 1200px; } }
 
 @media screen and (max-width: 1199px) {
@@ -2071,7 +2083,7 @@ body::-webkit-scrollbar {
   .pagination {
     margin: 0 0 1rem 0; }
   .popular__card {
-    padding: 0.5rem; }
+    padding: 0.4rem; }
     .popular__card.reverse-card {
       min-height: 15rem;
       padding: 0; }
@@ -2080,6 +2092,7 @@ body::-webkit-scrollbar {
   .sale__price-block {
     padding: 0 0 0.07rem 0; }
   .selection {
+    margin-bottom: 2rem;
     display: none; }
   .shop-add__shop-card {
     margin-bottom: 1.88rem; }
@@ -2095,10 +2108,33 @@ body::-webkit-scrollbar {
     display: none !important; }
   .slider .slick-next, .sale .slick-next {
     display: none !important; }
-  .sortable__cards {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start; } }
+  .title-goods__choose {
+    position: relative;
+    width: 100%;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: block;
+    cursor: pointer; }
+    .title-goods__choose span {
+      position: relative;
+      width: 100%;
+      max-width: -webkit-fit-content;
+      max-width: -moz-fit-content;
+      max-width: fit-content;
+      margin-left: 1.5rem;
+      display: block;
+      border-bottom: 1px dotted; }
+    .title-goods__choose:before {
+      content: '\f1de';
+      z-index: 1;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      font: 500 1rem/1rem "FontAwesome Solid"; } }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
   html {
@@ -2269,15 +2305,12 @@ body::-webkit-scrollbar {
   .popular__card.reverse-card .popular__reverse-right-block {
     max-width: 30%; }
   .popular__card.reverse-card .popular__link-shop {
-    padding: 0.5rem 0.1rem; }
+    padding: 0.5rem 0.1rem;
+    font: 700 0.7rem/0.7rem GothamPro, sans-serif; }
   .slider__slide-one {
     height: 260px; }
   .sub-footer__all-rights {
     margin-right: 2rem; } }
-
-@media screen and (max-width: 374px) {
-  html {
-    font-size: 14px; } }
 
 @media screen and (max-width: 575px) {
   html {
@@ -2326,19 +2359,26 @@ body::-webkit-scrollbar {
           -ms-flex-align: center;
               align-items: center;
       max-width: 8rem; }
+  .popular.light-theme > .container {
+    padding-left: 0;
+    padding-right: 0; }
+  .popular__from-word {
+    font: 500 1rem/1rem GothamPro, sans-serif; }
+  .popular__price-shop .popular__total-price {
+    font: 500 1rem/1rem GothamPro, sans-serif; }
+    .popular__price-shop .popular__total-price:after {
+      font: 500 0.7rem/0.7rem "FontAwesome Solid"; }
+  .popular__price-shop.discount span {
+    font: 500 1rem/1rem GothamPro, sans-serif; }
   .popular__card.reverse-card .popular__reverse-block {
     padding-left: 0.1rem;
     padding-right: 0.1rem; }
   .popular__card.reverse-card .popular__reverse-right-block {
-    padding-left: 0.3rem; }
-  .popular__price-shop.discount span {
-    font: 500 1rem/1rem GothamPro, sans-serif; }
+    padding-left: 0.1rem;
+    padding-right: 0.1rem; }
   .popular__card.reverse-card .popular__link-shop {
-    padding: 0.5rem 0.1rem;
+    padding: 0.5rem 0.3rem;
     font: 500 0.6rem/0.6rem GothamPro, sans-serif; }
-  .popular.light-theme > .container {
-    padding-left: 0;
-    padding-right: 0; }
   .rating__star {
     max-width: 15px; }
   .sale {
@@ -2352,6 +2392,8 @@ body::-webkit-scrollbar {
       max-width: unset; }
     .sale__old-price .strike:after {
       top: -2px; }
+  .selection__button {
+    margin-bottom: 1rem; }
   .service {
     padding: 1rem; }
   .slider__slide-one {
@@ -2365,3 +2407,11 @@ body::-webkit-scrollbar {
     display: contents; }
   .sub-footer__add-shop {
     margin: 0 0 1rem 0; } }
+
+@media screen and (max-width: 374px) {
+  .popular__card.reverse-card .popular__link-shop {
+    font: 500 0.49rem/0.5rem GothamPro, sans-serif; }
+  .popular__img-link-desc {
+    font: 300 0.8rem/0.9rem GothamPro, sans-serif; }
+  html {
+    font-size: 14px; } }
