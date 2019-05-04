@@ -2370,15 +2370,20 @@ body::-webkit-scrollbar {
       font: 500 0.7rem/0.7rem "FontAwesome Solid"; }
   .popular__price-shop.discount span {
     font: 500 1rem/1rem GothamPro, sans-serif; }
-  .popular__card.reverse-card .popular__reverse-block {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem; }
-  .popular__card.reverse-card .popular__reverse-right-block {
-    padding-left: 0.1rem;
-    padding-right: 0.1rem; }
-  .popular__card.reverse-card .popular__link-shop {
-    padding: 0.5rem 0.3rem;
-    font: 500 0.6rem/0.6rem GothamPro, sans-serif; }
+  .popular__card.reverse-card {
+    min-height: 10rem; }
+    .popular__card.reverse-card .popular__reverse-block {
+      padding-left: 0.1rem;
+      padding-right: 0.1rem; }
+    .popular__card.reverse-card .popular__reverse-right-block {
+      padding-left: 0.2rem;
+      padding-right: 0; }
+    .popular__card.reverse-card .popular__link-shop {
+      padding: 0.5rem 0.3rem;
+      font: 500 0.6rem/0.6rem GothamPro, sans-serif; }
+    .popular__card.reverse-card .popular__img-link {
+      min-height: 10rem;
+      height: 10rem; }
   .rating__star {
     max-width: 15px; }
   .sale {
