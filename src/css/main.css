@@ -372,9 +372,7 @@ body::-webkit-scrollbar {
   font: 300 0.875rem/2.25rem GothamPro, sans-serif; }
 
 .choose__amount-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-left: 0.5rem;
   color: #31bcfe; }
   .choose__amount-block > * {

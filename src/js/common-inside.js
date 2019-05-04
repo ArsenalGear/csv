@@ -57,6 +57,32 @@ $(function () {
         $('.filter, .selection').slideToggle();
     });
 
+    $('.choose__row').on('mouseup', function(e) {
+
+        if ( $(this).find('input').prop('checked') == true ) {
+
+            $('.selection__wrapper').find('.choose__amount-block').hide();
+            $('.choose__amount').text('ищем...');
+
+            // $('.selection__wrapper').find('.choose__input:checked:first').closest('.choose__label').find('.choose__amount-block').css('display', 'flex');
+            $(this).find('.choose__amount-block').css('display', 'flex');
+            setTimeout(function () {
+                $('.choose__amount').text('123');
+            }, 1500);
+        }
+
+        else {
+
+            $('.choose__amount-block').hide();
+            $(this).find('.choose__amount-block').css('display', 'flex');
+            $('.choose__amount').text('ищем...');
+
+            setTimeout(function () {
+                $('.choose__amount').text('123');
+            }, 1500);
+        }
+    });
+
     //переключить сортировку в карточный вид
     $('.sortable__tables').on('click', function(e) {
 
