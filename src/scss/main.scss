@@ -35,7 +35,8 @@
   }
 
   &__amount-block {
-    display: none;
+    //display: none;
+    display: flex;
     margin-left: 0.5rem;
     color: $text-blue;
 
