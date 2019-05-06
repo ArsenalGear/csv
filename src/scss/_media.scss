@@ -92,8 +92,8 @@
       padding: 0.4rem;
 
       &.reverse-card {
-        min-height: 15rem;
         padding: 0;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -327,13 +327,14 @@
 
   .popular {
 
-    &__sale-img {
-      max-width: 50px;
-    }
-
     &__card {
 
       &.reverse-card {
+
+        & .popular__sale-img {
+          width: 36px;
+          height: 36px;
+        }
 
         & .popular__reverse-right-block {
           padding-left: 0.5rem;
@@ -426,7 +427,7 @@
       &.reverse-card {
 
         & .popular__reverse-block {
-          max-width: 40%;
+          max-width: 50%;
           padding-left: 0.5rem;
           padding-right: 0.5rem;
         }
@@ -558,7 +559,7 @@
     &__card {
 
       &.reverse-card {
-        min-height: 10rem;
+        min-height: 8rem;
 
         & .popular__reverse-block {
           padding-left: 0.1rem;
@@ -576,8 +577,8 @@
         }
 
         & .popular__img-link {
-          min-height: 10rem;
-          height: 10rem;
+          min-height: 8rem;
+          height: 8rem;
         }
       }
     }

@@ -26,6 +26,7 @@
   &__arrow {
     display: inline-block;
     cursor: pointer;
+    margin-left: 1rem;
   }
 
   &__brand {
@@ -58,6 +59,17 @@
       transition: all 0.4s ease;
       transform: rotate(-90deg);
     }
+  }
+
+  &__mini-title {
+    margin-bottom: 0;
+  }
+
+  &__mini-title-block {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 }
 
@@ -110,7 +122,7 @@
   & a span {
     padding: 0 0.5rem;
     text-align: center;
-    font: 500 0.875rem/1.125rem $font-main;
+    font: 300 0.875rem/1.125rem $font-main;
     color: $text-white;
 
     &:hover, &:focus, &:active {
@@ -677,18 +689,25 @@
     }
 
     &.reverse-card {
-      min-height: 15rem;
+      min-height: 10rem;
       padding: 0;
       display: flex;
 
       & .popular__img-link {
         width: 100%;
-        max-width: 30%;
+        max-width: 20%;
+        min-height: 10rem;
+        height: 10rem;
+      }
+
+      & .popular__sale-img {
+        width: 50px;
+        height: 50px;
       }
 
       & .popular__reverse-block {
         width: 100%;
-        max-width: 45%;
+        max-width: 55%;
         padding-right: 1rem;
         padding-left: 1rem;
         display: flex;
@@ -1615,6 +1634,7 @@
 .ui-slider {
 
   &__arrow {
+    margin-left: 1rem;
     cursor: pointer;
     transition: all 0.4s ease;
 
@@ -1633,7 +1653,7 @@
 
   &__main-slider {
     height: 7px;
-    margin-top: 5px;
+    margin-top: 1.5rem;;
     margin-left: 7px;
     background-color: $border-grey-filter;
     border-color: $border-grey-filter;
@@ -1644,6 +1664,7 @@
   }
 
   &__input-wrapper {
+    max-width: 250px;
     margin-top: 2rem;
     display: flex;
     justify-content: space-between;
@@ -1687,6 +1708,16 @@
       outline: none;
       border: 1px solid $border-main-color;
     }
+  }
+
+  &__mini-title {
+    margin-bottom: 0;
+  }
+
+  &__mini-title-block {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 }
 

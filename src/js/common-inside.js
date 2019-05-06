@@ -36,15 +36,15 @@ $(function () {
     });
 
     //стрелка в фильтре
-    $('.choose__arrow').on('click', function(e) {
+    $('.choose__mini-title-block').on('click', function(e) {
         $(this).next('ul').slideToggle();
-        $(this).toggleClass('rotate');
+        $(this).find('img').toggleClass('rotate');
     });
 
     //стрелка в фильтре
-    $('.ui-slider__arrow').on('click', function(e) {
+    $('.ui-slider__mini-title-block').on('click', function(e) {
         $(this).next('.ui-slider__amounts').slideToggle();
-        $(this).toggleClass('rotate');
+        $(this).find('img').toggleClass('rotate');
     });
 
     //показать еще в фильтре
