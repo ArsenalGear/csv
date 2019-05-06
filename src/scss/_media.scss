@@ -327,6 +327,10 @@
 
   .popular {
 
+    &__sale-img {
+      max-width: 50px;
+    }
+
     &__card {
 
       &.reverse-card {
@@ -576,6 +580,10 @@
           height: 10rem;
         }
       }
+    }
+
+    &__sale-img {
+      max-width: 36px;
     }
   }
 

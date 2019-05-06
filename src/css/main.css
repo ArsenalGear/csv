@@ -2254,6 +2254,8 @@ body::-webkit-scrollbar {
     margin-bottom: 1rem; }
   .overview__desc-small {
     max-height: 3.5rem; }
+  .popular__sale-img {
+    max-width: 50px; }
   .popular__card.reverse-card .popular__reverse-right-block {
     padding-left: 0.5rem; }
   .slider__slide-one {
@@ -2384,6 +2386,8 @@ body::-webkit-scrollbar {
     .popular__card.reverse-card .popular__img-link {
       min-height: 10rem;
       height: 10rem; }
+  .popular__sale-img {
+    max-width: 36px; }
   .rating__star {
     max-width: 15px; }
   .sale {
