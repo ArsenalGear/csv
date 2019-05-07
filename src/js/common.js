@@ -80,6 +80,16 @@ $(function () {
         changeSelect();
     });
 
+    $("#goodSlider").slick({
+        autoplay: false,
+        dots: true,
+        customPaging : function(slider, i) {
+            var thumb = $(slider.$slides[i]).find('img');
+            console.log(thumb);
+            return '<a><img src="'+thumb[0].currentSrc+'"></a>';
+        },
+    });
+
     //многострадальный слайдер со ссылками на главной
     $('#slider-main').slick({
 

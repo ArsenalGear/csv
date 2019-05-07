@@ -1,0 +1,209 @@
+extends layouts/site
+
+block content
+    +b('div').breadcrumbs
+        .container
+            .row
+                .col-12
+                    +e('div').wrapper
+                        +e('a').link Главная
+                        +e('span').divider /
+                        +e('a').link Компьютеры
+                        +e('span').divider /
+                        +e('span').link.breadcrumbs__link-last Ноутбуки
+    +b('section').title-goods
+        .container
+            .row
+                .col-12
+                    +e('h2').title Ноутбуки
+                .col-12
+                    +e('p').choose <span> Уточнить выбор </span>
+
+    +b('div').goods-desc
+        .container
+            .row
+                .col-12
+                    +e('ul')
+                        +e('li')
+                            +e('a').link(href="#charac" title="Характеристики")
+                        +e('li')
+                            +e('a').link(href="#price" title="Цены")
+                        +e('li')
+                            +e('a').link(href="#desc" title="Описание")
+                        +e('li')
+                            +e('a').link(href="#video" title="Видео")
+                        +e('li')
+                            +e('a').link(href="#feed" title="Отзывы")
+                        +e('li')
+                            +e('a').link(href="#similar" title="Похожие товары")
+            .row
+                .col-6
+                    +b('div').good-slider
+                        +e('div').slider#goodSlider
+                            <img src="https://smartideal.net/wp-content/uploads/2018/08/guitar4.jpg" alt="#">
+                            <img src="https://smartideal.net/wp-content/uploads/2018/08/guitar2.jpg" alt="#">
+                            <img src="https://smartideal.net/wp-content/uploads/2018/08/guitar3.jpg" alt="#">
+                .col-6
+                    +b('div').buy
+                        +e('div').rating-block
+                            +e('p').middle-price-desc Средняя цена
+                            +b('div').rating
+                                +e('div').stars-block
+                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                    +e('img').star(src="img/theme/icons/star_checked.png")
+                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                    +e('img').star(src="img/theme/icons/star_unchecked.png")
+                                +e('div').feed-block
+                                    +e('span').feed-count 5
+                                    +e('span').feed-title отзывов
+                        +e('div').midle-price-block
+                            +e('span').red-price#red-price 28 280
+                            +e('span').from от
+                            +e('a').link-shop(href="#" title="магазин") Ozon.ru
+                        +e('div').price-range-block
+                            +e('div').price-range-wrapper
+                                +e('span').from-word от
+                                +e('span').from-range 23 990
+                                +e('span').from-line -
+                                +e('span').to-range 24 990
+                            +e('div').shop-count
+                                +e('span').in-word в
+                                +e('span').inshop-count 23
+                                +e('span').in-word-shop магазинах
+                        +e('div').btn-block
+                            +e('a').buy-btn.button.button-yellow(href="#" title="#") Купить
+                            +e('a').match-btn.button.button-blue(href="#" title="#") Сравнить
+                        +e('div').charac-block
+                            +e('div').charac-row
+                                +e('span').charac-key производитель
+                                +e('span').charac-value Dell
+                            +e('div').charac-row
+                                +e('span').charac-key производитель
+                                +e('span').charac-value Dell
+                            +e('div').charac-row
+                                +e('span').charac-key производитель
+                                +e('span').charac-value Dell
+                            +e('div').charac-row
+                                +e('span').charac-key производитель
+                                +e('span').charac-value Dell
+            .row
+                .col-12
+                    +b('section').characteristic
+                        +e('div').title-block
+                            +e('h2').title Характеристики Dell 5570
+                            +e('div').invisible-rotate-block
+                            +e('table').table#charac-table
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+                                +e('tr')
+                                    +e('td').key Макс. объем оперативной памяти:
+                                    +e('td').value Intel Core i3 / i3-6100U / 256 Гб / DVD
+
+
+
+    +b('section').subscribe#subscribe
+        .container
+            .row
+                .col-12.col-sm-12.col-md-12.col-lg-6
+                    +e('div').subscribe-social-block
+                        +e('h3').title Подпишись на все лучшие цены от <span class="subscribe__title-shop" id="shop-calc">5 230</span> <span class="subscribe__title-shop-other">интернет-магазинов:</span>
+
+                    +e('form').form(action="#" name="subscribe" id="subscribeForm")
+                        +e('h3').title-sucsess#subscrSuccsess Вы успешно подписались
+                        +e('input').email.input-default(required type="email" name="emailaddress" id="email" placeholder="Введите свой e-mail")
+                        +e('button').btn-subsc.button.button-yellow(id="sucsessBtn" type="submit" value="подписаться") подписаться
+
+                    +b('div').social-entry
+                        +e('h4').title Через соцсети:
+                        +e('ul').social-block
+                            +e('li').item
+                                +e('a').link(href="#" title="#")
+                                    +e('img').img(src="img/theme/socials/twitter.png" alt="twitter")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/vk.png" alt="vk")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/youtube.png" alt="youtube")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/facebook500.png" alt="facebook")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/googleplus.png" alt="google-plus")
+                            +e('li').item
+                                +e('a').link
+                                    +e('img').img(src="img/theme/socials/instagram.png" alt="instagram")
+
+                .col-12.col-sm-12.col-md-12.col-lg-6
+                    +b('div').shop-add
+                        .row
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand2.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand3.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand4.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand5.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand6.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand7.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card(href="#" title="#")
+                                    +e('img').img(src="img/theme/shop/brand8.png" alt="#")
+                            .col-6.col-sm-4.col-md-4.col-lg-4
+                                +e('a').shop-card.shop-add__shop-card-no-border(href="#addShop" title="#")
+                                    +e('span').add +
+                                    +e('span').add-shop-link Подключить магазин
+    +b('section').service#service
+        .container
+            .row
+                +e('h3').title Сервис поиска товаров и цен
+                +e('p').desc-title Сервис SravniPrice.ru ищет лучшие цены на все, что продается в Москве. Здесь можно сравнить цены на 23 млн товаров и среди 6 тысяч магазинов выбрать именно тот, который предлагает самую низкую стоимость. SravniPrice.ru ежедневно собирает 100 000 скидок и 5000 промокодов со всех интернет-магазинов, чтобы купить выгодно.
+                +e('p').desc Мы не продаём товары и не организовываем их доставку, мы работаем для того, чтобы покупатель мог быстро и удобно найти самое выгодное предложение. Для тех, кто определяется с выбором, в каждом разделе есть подбор по параметрам и возможность сравнить товары между собой. Доступен и удобный текстовый поиск, позволяющий искать как нужные разделы, так и конкретные товары по названию. А на странице каждой модели есть подробная информация, которая поможет принять решение: описание, технические характеристики, фото и видео, полезные ссылки и отзывы. Там же находится блок «Где купить?» со списком интернет-магазинов, ценами и прямыми ссылками на страницу покупкию
+                +e('p').desc К системе SravniPrice.ru подключено более 1000 магазинов, данные по которым постоянно обновляются. Благодаря этому вы сможете не только выбрать подходящий товар, но и купить его по самым выгодным условиям!
