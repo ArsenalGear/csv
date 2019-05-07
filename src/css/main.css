@@ -357,7 +357,7 @@ body::-webkit-scrollbar {
   padding: 1rem 0; }
   .breadcrumbs__link {
     color: #757575;
-    font: 300 0.875rem/1.125rem GothamPro, sans-serif;
+    font: 300 0.875rem/1.125rem sans-serif;
     text-decoration: none; }
     .breadcrumbs__link-last {
       color: #31bcfe; }
@@ -370,7 +370,7 @@ body::-webkit-scrollbar {
 .choose__brand {
   margin-left: 0.5rem;
   color: #222222;
-  font: 300 0.875rem/2.25rem GothamPro, sans-serif; }
+  font: 300 0.875rem/2.25rem sans-serif; }
 
 .choose__amount-block {
   display: -webkit-box;
@@ -495,7 +495,7 @@ body::-webkit-scrollbar {
         -ms-flex-align: baseline;
             align-items: baseline; }
   .filter__link {
-    font: 300 1rem/1.875rem GothamPro, sans-serif;
+    font: 300 1rem/1.875rem sans-serif;
     color: #222222;
     margin-right: 5px; }
     .filter__link.active {
@@ -1084,7 +1084,7 @@ body::-webkit-scrollbar {
     margin-bottom: 0.5rem;
     overflow-y: hidden;
     text-align: center;
-    font: 300 1rem/1.2rem GothamPro, sans-serif;
+    font: 300 1.125rem/1.25rem sans-serif;
     color: #222222; }
     .popular__img-link-desc:hover, .popular__img-link-desc:focus {
       text-decoration: none;
@@ -1659,7 +1659,7 @@ body::-webkit-scrollbar {
           justify-content: space-between; }
   .sortable__left-side * {
     margin-right: 1.5rem;
-    font: 300 0.875rem/2rem GothamPro, sans-serif; }
+    font: 300 0.875rem/2rem sans-serif; }
   .sortable__left-side a {
     text-decoration: none; }
     .sortable__left-side a:hover, .sortable__left-side a:focus {
@@ -1872,7 +1872,7 @@ body::-webkit-scrollbar {
     outline: 0; }
 
 .ui-slider__from, .ui-slider__to {
-  font: 300 0.875rem/1.125rem GothamPro, sans-serif;
+  font: 300 0.875rem/1.125rem sans-serif;
   color: #757575; }
 
 .ui-slider__from-input, .ui-slider__to-input {
@@ -1886,6 +1886,14 @@ body::-webkit-scrollbar {
   font: 300 0.875rem/0.875rem GothamPro, sans-serif;
   border-radius: 30px;
   outline: none; }
+  .ui-slider__from-input::-webkit-input-placeholder, .ui-slider__to-input::-webkit-input-placeholder {
+    font: 300 0.875rem/1.125rem sans-serif; }
+  .ui-slider__from-input:-ms-input-placeholder, .ui-slider__to-input:-ms-input-placeholder {
+    font: 300 0.875rem/1.125rem sans-serif; }
+  .ui-slider__from-input::-ms-input-placeholder, .ui-slider__to-input::-ms-input-placeholder {
+    font: 300 0.875rem/1.125rem sans-serif; }
+  .ui-slider__from-input::placeholder, .ui-slider__to-input::placeholder {
+    font: 300 0.875rem/1.125rem sans-serif; }
   .ui-slider__from-input:focus, .ui-slider__to-input:focus {
     outline: none;
     border: 1px solid #31bcfe; }
@@ -2421,7 +2429,8 @@ body::-webkit-scrollbar {
       min-height: 8rem;
       height: 8rem; }
   .popular__sale-img {
-    max-width: 36px; }
+    width: 25px !important;
+    height: 25px !important; }
   .rating__star {
     max-width: 15px; }
   .sale {
@@ -2455,6 +2464,6 @@ body::-webkit-scrollbar {
   .popular__card.reverse-card .popular__link-shop {
     font: 500 0.49rem/0.5rem GothamPro, sans-serif; }
   .popular__img-link-desc {
-    font: 300 0.8rem/0.9rem GothamPro, sans-serif; }
+    font: 300 0.8rem/0.9rem sans-serif; }
   html {
     font-size: 14px; } }

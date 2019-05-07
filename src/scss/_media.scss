@@ -584,7 +584,8 @@
     }
 
     &__sale-img {
-      max-width: 36px;
+      width: 25px!important;
+      height: 25px !important;
     }
   }
 
@@ -655,7 +656,7 @@
   }
 
   .popular__img-link-desc {
-    font: 300 0.8rem/0.9rem $font-main;
+    font: 300 0.8rem/0.9rem sans-serif;
   }
 
   html {

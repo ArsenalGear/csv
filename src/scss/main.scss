@@ -12,7 +12,7 @@
 
   &__link {
     color: $text-placeholder-color;
-    font: 300 0.875rem/1.125rem $font-main;
+    font: 300 0.875rem/1.125rem sans-serif;
     text-decoration: none;
 
     &-last {
@@ -32,7 +32,7 @@
   &__brand {
     margin-left: 0.5rem;
     color: $text-main;
-    font: 300 0.875rem/2.25rem $font-main;
+    font: 300 0.875rem/2.25rem sans-serif;
   }
 
   &__amount-block {
@@ -157,7 +157,7 @@
   }
 
   &__link {
-    font: 300 1rem/1.875rem $font-main;
+    font: 300 1rem/1.875rem sans-serif;
     color: $text-main;
     margin-right: 5px;
 
@@ -797,7 +797,7 @@
     margin-bottom: 0.5rem;
     overflow-y: hidden;
     text-align: center;
-    font: 300 1rem/1.2rem $font-main;
+    font: 300 1.125rem/1.25rem sans-serif;
     color: $text-main;
 
     &:hover, &:focus {
@@ -1446,7 +1446,7 @@
 
   &__left-side * {
     margin-right: 1.5rem;
-    font: 300 0.875rem/2rem $font-main;
+    font: 300 0.875rem/2rem sans-serif;
   }
 
   &__left-side a {
@@ -1688,7 +1688,7 @@
   }
 
   &__from, &__to {
-    font: 300 0.875rem/1.125rem $font-main;
+    font: 300 0.875rem/1.125rem sans-serif;
     color: $text-placeholder-color;
   }
 
@@ -1703,6 +1703,10 @@
     font: 300 0.875rem/0.875rem $font-main;
     border-radius: 30px;
     outline: none;
+
+    &::placeholder {
+      font: 300 0.875rem/1.125rem sans-serif;
+    }
 
     &:focus {
       outline: none;
