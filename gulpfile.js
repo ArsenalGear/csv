@@ -13,7 +13,9 @@ var autoprefixer = require('gulp-autoprefixer'),
     pug          = require('gulp-pug'),
     sass         = require('gulp-sass'),
 	typograf     = require('gulp-typograf'),
-    uglify       = require('gulp-uglifyjs');
+    uglify       = require('gulp-uglifyjs'),
+    connectPHP   = require('gulp-connect-php'),
+    exec         = require('child_process').exec;
 
 gulp.task('pug', function () {
     return gulp.src('src/pug/*.pug')
@@ -99,7 +101,7 @@ gulp.task('browser-sync', function () {
 });
 
 gulp.task('clean', function () {
-    return del.sync('dist');
+    return del.sync('src/dist');
 });
 
 gulp.task('clear', function () {
@@ -113,7 +115,7 @@ gulp.task('img', function () {
             progressive: true,
             svgoPlugins: [{removeViewBox: false}]
         })))
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('src/dist/img'));
 });
 
 gulp.task('watch', ['browser-sync', 'pug', 'scss', 'css-libs', 'js-libs'], function () {
@@ -122,23 +124,57 @@ gulp.task('watch', ['browser-sync', 'pug', 'scss', 'css-libs', 'js-libs'], funct
     // gulp.watch('src/css/*.css', browserSync.reload);
     gulp.watch('src/*.html', browserSync.reload);
     gulp.watch('src/js/**/*.js', browserSync.reload);
+    gulp.watch('resources/views/**/*.php', browserSync.reload);
+    gulp.watch('resources/views/**/*.php', ['onphp']);
 });
 
-gulp.task('build', ['clean', 'img', 'pug', 'scss', 'css-libs', 'js-libs'], function () {
+gulp.task('build', ['clean', 'img', 'pug', 'scss', 'css-libs', 'js-libs',  'onphp'], function () {
 
     var buildCss = gulp.src('src/css/**/*')
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('src/dist/css'));
 
     var buildFonts = gulp.src('src/fonts/**/*')
-        .pipe(gulp.dest('dist/fonts'));
+        .pipe(gulp.dest('src/dist/fonts'));
 
     var buildJs = gulp.src('src/js/**/*')
-        .pipe(gulp.dest('dist/js'));
+        .pipe(gulp.dest('src/dist/js'));
 
     var buildHtml = gulp.src('src/*.html')
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('src/dist'));
 
     var buildImages = gulp.src('src/images/**/*')
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest('src/dist/images'));
 
 });
+
+
+gulp.task('php', function () {
+    console.log('12');
+    connectPHP.server({
+        keepalive: true,
+        hostname: 'http://127.0.0.1:8085',
+        open: false
+    });
+});
+
+gulp.task('onphp', function () {
+    gulp.src('resources/views/**/*.php')
+        .pipe(browserSync.reload({stream: true})); // перезагружаем после изменения в файлах php
+    exec('sudo docker-compose exec app php artisan serve --host=0.0.0.0 --port=8000', function (err, stdout, stderr) {
+        console.log(stdout);
+        // console.log(stderr);
+        //cb(err);
+    });
+    exec('sudo docker-compose exec app php artisan view:clear', function (err, stdout, stderr) {
+        console.log(stdout);
+        // console.log(stderr);
+        //cb(err);
+    });
+    exec('sudo docker-compose exec app php artisan cache:clear', function (err, stdout, stderr) {
+        console.log(stdout);
+        // console.log(stderr);
+        //cb(err);
+    });
+});
+
+gulp.task('default', ['watch', 'browserSync', 'php']);

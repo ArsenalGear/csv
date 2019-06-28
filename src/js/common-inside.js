@@ -1,6 +1,30 @@
 //Функции инициализирующиеся или срабатывающие по document.ready
 $(function () {
 
+    function table() {
+        $('.sortable__cards').removeClass('active').addClass('no-active');
+        $('#popular').find('.col-12').removeClass('col-lg-4').removeClass('col-md-6').removeClass('col-sm-6');
+        $('.popular__card').addClass('reverse-card');
+    }
+
+    function cards() {
+        $('.sortable__tables').removeClass('active').addClass('no-active');
+        $('#popular').find('.col-12').addClass('col-lg-4').addClass('col-md-6').addClass('col-sm-6');
+        $('.popular__card').removeClass('reverse-card');
+    }
+
+    var myCookie = Cookies.get('type');
+
+    if (myCookie == "table") {
+        $('.sortable__tables').removeClass('no-active').addClass('active');
+        table();
+
+    }
+    else if (myCookie == "cards") {
+        $('.sortable__cards').removeClass('no-active').addClass('active');
+        cards();
+    }
+
     // Убираем плейсхолдер у поля формы при фокусе на нем
     if ($('input, textarea').length > 0) {
         $('input, textarea').focus(function () {
@@ -36,8 +60,9 @@ $(function () {
     });
 
     //стрелка в фильтре
-    $('.choose__mini-title-block').on('click', function(e) {
+    $('body').on('click', '.choose__mini-title-block', function(e) {
         $(this).next('ul').slideToggle();
+        $(this).closest('.choose').find('.choose__filter-button').fadeToggle();
         $(this).find('img').toggleClass('rotate');
     });
 
@@ -45,12 +70,6 @@ $(function () {
     $('.ui-slider__mini-title-block').on('click', function(e) {
         $(this).next('.ui-slider__amounts').slideToggle();
         $(this).find('img').toggleClass('rotate');
-    });
-
-    //показать еще в фильтре
-    $('.show-more').on('click', function(e) {
-        $(this).addClass('hide');
-        $(this).closest('ul').find('li').removeClass('hide');
     });
 
     $('.title-goods__choose').on('click', function(e) {
@@ -90,9 +109,8 @@ $(function () {
 
         if ( $(this).hasClass('no-active') ) {
             $(this).removeClass('no-active').addClass('active');
-            $('.sortable__cards').removeClass('active').addClass('no-active');
-            $('#popular').find('.col-12').removeClass('col-lg-4').removeClass('col-md-6').removeClass('col-sm-6');
-            $('.popular__card').addClass('reverse-card');
+            table();
+            Cookies.set('type', 'table');
         }
     });
 
@@ -103,16 +121,9 @@ $(function () {
 
         if ( $(this).hasClass('no-active') ) {
             $(this).removeClass('no-active').addClass('active');
-            $('.sortable__tables').removeClass('active').addClass('no-active');
-            $('#popular').find('.col-12').addClass('col-lg-4').addClass('col-md-6').addClass('col-sm-6');
-            $('.popular__card').removeClass('reverse-card');
+            cards();
+            Cookies.set('type', 'cards');
         }
-    });
-
-    //все параметры в фильтре
-    $('.selection__button').on('click', function(e) {
-        $(this).addClass('hide');
-        $(this).closest('.selection__wrapper').find('section').removeClass('hide');
     });
 
     //закрытие модалки по крестику
@@ -174,12 +185,12 @@ $(function () {
     });
 
     //вы успешно подписались на главной
-    $('#subscribeForm').submit(function( e ) {
+ /*   $('#subscribeForm').submit(function( e ) {
 
         e.preventDefault();
         $('#email, #sucsessBtn').hide();
         $('#subscrSuccsess').show();
-    });
+    });*/
 
     //добавление магазина из субфутера
     $('.sub-footer__add-shop').magnificPopup({
@@ -208,8 +219,10 @@ $(function () {
         callbacks: {
             beforeOpen: function() {
                 if($(window).width() < 700) {
+                    $('#addShop').find('button').css('pointer-events', 'unset');
                     this.st.focus = false;
                 } else {
+                    $('#addShop').find('button').css('pointer-events', 'unset');
                     this.st.focus = '#name';
                 }
             }
@@ -252,7 +265,7 @@ $(function () {
     });
 
     //вы успешно добавили магазин, вызов второй модалки после заполнения полей в первой при подключении магазина
-    $('#addShop').submit(function( e ) {
+   /* $('#addShop').submit(function( e ) {
 
         e.preventDefault();
 
@@ -270,20 +283,24 @@ $(function () {
             },
             // type: 'inline'
         });
-    });
+    });*/
 
+    // $( "#slider" ).on( "slidestop", function( event, ui ) {
+    //     alert('2');
+    // } );
+    //
     //слайдер цены в фильтре
     $("#slider").slider({
         range: true,
-        min: 1000,
-        max: 100000,
-        values: [ 100, 66666 ],
+        min: 0,
+        max: 60000,
+        values: [ 0, 60000 ],
         slide: function( event, ui ) {
             $( ".ui-slider__from-input" ).val(ui.values[0] );
             $( ".ui-slider__to-input" ).val(ui.values[1] );
         }
     });
-
+    //
     //начальное значение цены в слайдере цены
     $(".ui-slider__from-input").change(function () {
         var value = $(this).val();
